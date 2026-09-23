@@ -85,10 +85,15 @@ export interface PaymentEntity {
   subscription_id?: string;
   amount: number;
   currency: string;
-  method: 'credit_card' | 'check';
+  method: 'credit_card' | 'check' | 'paypal' | 'bank_transfer';
   status: 'pending' | 'paid' | 'failed' | 'refunded';
   transaction_date: string;
   check_number?: string;
+  po_number?: string;
+  company_name?: string;
+  paypal_email?: string;
+  wire_reference?: string;
+  card_last4?: string;
 }
 
 export interface SubscriptionEntity {

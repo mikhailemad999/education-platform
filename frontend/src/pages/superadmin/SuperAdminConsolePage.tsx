@@ -4,30 +4,72 @@ import { Modal } from '../../components/common/Modal';
 
 export const SuperAdminConsolePage: React.FC = () => {
   const payments = useCartStore((state) => state.payments);
+  const approveCheckPayment = useCartStore((state) => state.approveCheckPayment);
+  const refundPayment = useCartStore((state) => state.refundPayment);
 
   const [showInviteModal, setShowInviteModal] = useState(false);
   const [inviteEmail, setInviteEmail] = useState('');
   const [adminRole, setAdminRole] = useState('Curriculum Moderator');
-  const [inviteSuccessNotice, setInviteSuccessNotice] = useState('');
-  const [ledgerPayments, setLedgerPayments] = useState(payments);
+  const [actionNotice, setActionNotice] = useState('');
+  const [filterStatus, setFilterStatus] = useState<'all' | 'paid' | 'pending' | 'refunded'>('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleDispatchInvitation = () => {
     if (!inviteEmail) return;
-    setInviteSuccessNotice(`Administrator provisioned for "${inviteEmail}" (${adminRole}). Credentials dispatched.`);
+    setActionNotice(`Administrator provisioned for "${inviteEmail}" (${adminRole}). Credentials dispatched.`);
     setShowInviteModal(false);
     setInviteEmail('');
-    setTimeout(() => setInviteSuccessNotice(''), 4000);
+    setTimeout(() => setActionNotice(''), 4000);
   };
 
-  const handleRefund = (id: string) => {
-    setLedgerPayments((prev) =>
-      prev.map((p) => (p.id === id ? { ...p, status: 'refunded' as const } : p))
-    );
+  const handleApprove = (id: string, orderNumber: string) => {
+    approveCheckPayment(id);
+    setActionNotice(`✓ Order ${orderNumber} approved! Student course access unlocked immediately.`);
+    setTimeout(() => setActionNotice(''), 4000);
   };
 
-  const totalGross = ledgerPayments
+  const handleRefund = (id: string, orderNumber: string) => {
+    refundPayment(id);
+    setActionNotice(`✓ Order ${orderNumber} refunded. Access license revoked.`);
+    setTimeout(() => setActionNotice(''), 4000);
+  };
+
+  const handleExportCSV = () => {
+    const headers = 'Order Number,Learner Name,Email,Course/Plan,Amount,Method,Status,Date\n';
+    const rows = payments
+      .map(
+        (p) =>
+          `"${p.orderNumber}","${p.userName}","${p.userEmail}","${p.courseTitle || p.subscriptionName || ''}","${p.amount}","${p.method}","${p.status}","${p.transactionDate}"`
+      )
+      .join('\n');
+    const blob = new Blob([headers + rows], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `obsidian-financial-ledger-${new Date().toISOString().split('T')[0]}.csv`;
+    a.click();
+  };
+
+  const filteredPayments = payments.filter((p) => {
+    const matchesFilter = filterStatus === 'all' || p.status === filterStatus;
+    const query = searchQuery.toLowerCase();
+    const matchesSearch =
+      !query ||
+      p.orderNumber.toLowerCase().includes(query) ||
+      p.userName.toLowerCase().includes(query) ||
+      p.userEmail.toLowerCase().includes(query) ||
+      (p.courseTitle && p.courseTitle.toLowerCase().includes(query)) ||
+      (p.checkNumber && p.checkNumber.toLowerCase().includes(query)) ||
+      (p.wireReference && p.wireReference.toLowerCase().includes(query));
+
+    return matchesFilter && matchesSearch;
+  });
+
+  const totalGross = payments
     .filter((p) => p.status === 'paid')
     .reduce((acc, p) => acc + p.amount, 0);
+
+  const pendingCount = payments.filter((p) => p.status === 'pending').length;
 
   return (
     <div className="space-y-8">
@@ -43,23 +85,30 @@ export const SuperAdminConsolePage: React.FC = () => {
             </span>
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-status-success/15 text-status-success text-[11px] font-mono">
               <span className="w-1.5 h-1.5 rounded-full bg-status-success animate-pulse"></span>
-              REALTIME SYNC ACTIVE
+              REALTIME GATEWAY SYNC ACTIVE
             </span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl font-extrabold text-text-contrast tracking-tight flex items-center gap-3">
-            Master Operations Core
+            Master Financial & Operations Core
             <span className="text-xs text-text-secondary px-2.5 py-0.5 rounded bg-surface-elevated font-mono">
               v4.18.2-prod
             </span>
           </h1>
           <p className="text-xs text-text-secondary max-w-2xl leading-relaxed">
-            Global instructional governance, sovereign revenue clearing, identity compliance, and emergency telemetry switchboards.
+            Global instructional governance, multi-channel settlement clearing, check/wire verification, and emergency financial controls.
           </p>
         </div>
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-3 relative z-10">
+          <button
+            onClick={handleExportCSV}
+            className="px-4 py-2.5 rounded-lg bg-surface-interactive hover:bg-surface-elevated text-text-primary text-xs font-semibold border border-border-control transition-colors flex items-center gap-1.5"
+          >
+            <span className="material-symbols-outlined text-base">download</span>
+            <span>Export CSV</span>
+          </button>
           <button
             onClick={() => setShowInviteModal(true)}
             className="px-4 py-2.5 rounded-lg bg-primary-container hover:brightness-110 active:scale-95 text-white text-xs font-bold transition-all shadow-md flex items-center gap-1.5"
@@ -70,10 +119,10 @@ export const SuperAdminConsolePage: React.FC = () => {
         </div>
       </div>
 
-      {inviteSuccessNotice && (
+      {actionNotice && (
         <div className="p-3.5 rounded-xl bg-status-success/10 border border-status-success/30 text-status-success text-xs flex items-center gap-2 animate-fade-in font-medium">
-          <span className="material-symbols-outlined text-base">verified_user</span>
-          <span>{inviteSuccessNotice}</span>
+          <span className="material-symbols-outlined text-base font-bold">verified</span>
+          <span>{actionNotice}</span>
         </div>
       )}
 
@@ -90,38 +139,67 @@ export const SuperAdminConsolePage: React.FC = () => {
         <div className="bg-surface-card border border-border-standard rounded-xl p-5 space-y-1 shadow-sm">
           <span className="text-[11px] font-mono text-text-muted uppercase">Monthly Recurring (MRR)</span>
           <div className="text-2xl font-bold font-mono text-primary-bright">$184,200.00</div>
-          <span className="text-[11px] text-text-muted font-mono">4,120 Pro Subscriptions</span>
+          <span className="text-[11px] text-text-muted font-mono">4,120 Active Subscribers</span>
         </div>
 
         <div className="bg-surface-card border border-border-standard rounded-xl p-5 space-y-1 shadow-sm">
-          <span className="text-[11px] font-mono text-text-muted uppercase">Total Transactions</span>
-          <div className="text-2xl font-bold font-mono text-text-contrast">
-            {ledgerPayments.length + 1420}
+          <span className="text-[11px] font-mono text-text-muted uppercase">Offline Queue</span>
+          <div className="text-2xl font-bold font-mono text-status-warning">
+            {pendingCount} Pending
           </div>
-          <span className="text-[11px] text-status-success font-mono">99.8% gateway uptime</span>
+          <span className="text-[11px] text-text-muted font-mono">Checks & Wire Remittances</span>
         </div>
 
         <div className="bg-surface-card border border-border-standard rounded-xl p-5 space-y-1 shadow-sm">
-          <span className="text-[11px] font-mono text-text-muted uppercase">Active Admins</span>
-          <div className="text-2xl font-bold font-mono text-text-contrast">4 Core Admins</div>
-          <span className="text-[11px] text-text-muted font-mono">All 2FA enforced</span>
+          <span className="text-[11px] font-mono text-text-muted uppercase">Global Clearing Channels</span>
+          <div className="text-2xl font-bold font-mono text-text-contrast">4 Channels</div>
+          <span className="text-[11px] text-status-success font-mono">Card • PayPal • Wire • Check</span>
         </div>
       </div>
 
       {/* Global Financial Ledger */}
-      <div className="bg-surface-card border border-border-standard rounded-2xl p-6 space-y-4 shadow-xl">
-        <div className="flex items-center justify-between pb-3 border-b border-border-subtle">
+      <div className="bg-surface-card border border-border-standard rounded-2xl p-6 space-y-5 shadow-xl">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-3 border-b border-border-subtle">
           <div>
             <h3 className="text-sm font-semibold text-text-contrast uppercase tracking-wider font-mono">
               Global Platform Financial Ledger
             </h3>
             <p className="text-xs text-text-muted">
-              Live settlement audit of credit card gateways, manual checks, and corporate invoices.
+              Live settlement audit of Stripe credit card transactions, PayPal captures, offline checks, and wire transfers.
             </p>
           </div>
-          <span className="text-[11px] font-mono text-text-muted">
-            {ledgerPayments.length} Active Records
-          </span>
+
+          {/* Filter Pills & Search */}
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search orders, emails, refs..."
+                className="bg-surface-secondary border border-border-control rounded-lg px-3 py-1.5 text-xs text-text-primary font-mono focus:outline-none focus:border-primary-container pl-8 w-56"
+              />
+              <span className="material-symbols-outlined text-text-muted text-sm absolute left-2.5 top-2">
+                search
+              </span>
+            </div>
+
+            <div className="flex items-center gap-1 bg-surface-secondary p-1 rounded-lg border border-border-control text-[11px] font-mono">
+              {(['all', 'paid', 'pending', 'refunded'] as const).map((s) => (
+                <button
+                  key={s}
+                  onClick={() => setFilterStatus(s)}
+                  className={`px-2.5 py-1 rounded capitalize transition-all ${
+                    filterStatus === s
+                      ? 'bg-primary-container text-white font-bold shadow-sm'
+                      : 'text-text-muted hover:text-text-primary'
+                  }`}
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="overflow-x-auto">
@@ -132,13 +210,13 @@ export const SuperAdminConsolePage: React.FC = () => {
                 <th className="py-3 px-4">Learner Identity</th>
                 <th className="py-3 px-4">Enrolled Course / SaaS Plan</th>
                 <th className="py-3 px-4">Amount</th>
-                <th className="py-3 px-4">Method</th>
+                <th className="py-3 px-4">Method & Ref</th>
                 <th className="py-3 px-4">Status</th>
-                <th className="py-3 px-4 text-right">Emergency Action</th>
+                <th className="py-3 px-4 text-right">Administrative Action</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border-subtle text-text-secondary">
-              {ledgerPayments.map((p) => (
+              {filteredPayments.map((p) => (
                 <tr key={p.id} className="hover:bg-surface-interactive/60 transition-colors">
                   <td className="py-3 px-4 font-mono font-bold text-text-contrast">{p.orderNumber}</td>
                   <td className="py-3 px-4">
@@ -151,8 +229,20 @@ export const SuperAdminConsolePage: React.FC = () => {
                   <td className="py-3 px-4 font-mono font-bold text-text-contrast">
                     ${p.amount.toFixed(2)}
                   </td>
-                  <td className="py-3 px-4 font-mono uppercase text-[10px]">
-                    {p.method === 'credit_card' ? 'Credit Card' : 'Check / Invoice'}
+                  <td className="py-3 px-4 font-mono text-[10px]">
+                    <div className="uppercase font-bold text-text-primary">
+                      {p.method === 'credit_card'
+                        ? 'Credit Card'
+                        : p.method === 'paypal'
+                        ? 'PayPal'
+                        : p.method === 'bank_transfer'
+                        ? 'Bank Wire'
+                        : 'Check / PO'}
+                    </div>
+                    {p.checkNumber && <div className="text-status-warning">{p.checkNumber}</div>}
+                    {p.wireReference && <div className="text-emerald-400">{p.wireReference}</div>}
+                    {p.cardLast4 && <div className="text-text-muted">•••• {p.cardLast4}</div>}
+                    {p.paypalEmail && <div className="text-sky-400">{p.paypalEmail}</div>}
                   </td>
                   <td className="py-3 px-4">
                     <span
@@ -168,16 +258,28 @@ export const SuperAdminConsolePage: React.FC = () => {
                     </span>
                   </td>
                   <td className="py-3 px-4 text-right">
-                    {p.status === 'paid' ? (
-                      <button
-                        onClick={() => handleRefund(p.id)}
-                        className="px-2.5 py-1 rounded bg-surface-interactive hover:bg-status-danger/20 text-status-danger text-[11px] font-semibold transition-colors"
-                      >
-                        Refund Order
-                      </button>
-                    ) : (
-                      <span className="text-text-muted text-[11px] font-mono">None</span>
-                    )}
+                    <div className="flex items-center justify-end gap-2">
+                      {p.status === 'pending' && (
+                        <button
+                          onClick={() => handleApprove(p.id, p.orderNumber)}
+                          className="px-2.5 py-1 rounded bg-status-success text-black font-bold text-[11px] hover:brightness-110 transition-colors shadow-sm flex items-center gap-1"
+                        >
+                          <span className="material-symbols-outlined text-xs font-bold">check</span>
+                          <span>Verify & Unlock</span>
+                        </button>
+                      )}
+                      {p.status === 'paid' && (
+                        <button
+                          onClick={() => handleRefund(p.id, p.orderNumber)}
+                          className="px-2.5 py-1 rounded bg-surface-interactive hover:bg-status-danger/20 text-status-danger text-[11px] font-semibold transition-colors"
+                        >
+                          Refund
+                        </button>
+                      )}
+                      {p.status === 'refunded' && (
+                        <span className="text-text-muted text-[11px] font-mono">Settled Refund</span>
+                      )}
+                    </div>
                   </td>
                 </tr>
               ))}

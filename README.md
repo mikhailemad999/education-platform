@@ -6,10 +6,11 @@
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38bdf8.svg?logo=tailwindcss)](https://tailwindcss.com/)
 [![Zustand](https://img.shields.io/badge/State-Zustand-orange.svg)](https://github.com/pmndrs/zustand)
 [![Responsive](https://img.shields.io/badge/Design-Desktop%20%7C%20Tablet%20%7C%20Mobile-emerald.svg)](#responsive-design--cross-device-support)
+[![Payment Engine](https://img.shields.io/badge/Payments-Card%20%7C%20PayPal%20%7C%20Check%20%7C%20Wire-amber.svg)](#multi-channel-financial-settlement-engine)
 [![RBAC](https://img.shields.io/badge/Security-Dual--Gate%20RBAC-violet.svg)](#multi-portal-architecture--strict-role-isolation)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-An enterprise-grade, high-aesthetic SaaS e-learning platform architected specifically for advanced software engineering, distributed systems, and cloud infrastructure courses. Built with a unified **Obsidian Dark** aesthetic (`#0c0f17` / `#161b26`), strictly isolated multi-portal role-based access control, dual payment options, responsive views, interactive practice quizzes, and an intuitive curriculum builder.
+An enterprise-grade, high-aesthetic SaaS e-learning platform architected specifically for advanced software engineering, distributed systems, and cloud infrastructure courses. Built with a unified **Obsidian Dark** aesthetic (`#0c0f17` / `#161b26`), strictly isolated multi-portal role-based access control, a 4-channel financial clearing engine, responsive views, interactive practice quizzes, and an intuitive curriculum builder.
 
 ---
 
@@ -21,61 +22,94 @@ An enterprise-grade, high-aesthetic SaaS e-learning platform architected specifi
 
 ---
 
-### 2. Student Self-Registration & Security
-*Student registration interface with client-side credential validation, instant profile initialization, and seamless onboarding.*
-![Student Registration](docs/screenshots/02_student_register.png)
+### 2. Multi-Channel Payment & Settlement Gateway
+*Enterprise checkout supporting Credit Card with live brand detection, PayPal Express, Corporate Check / PO, and Direct Bank Wire.*
+![Multi-Channel Checkout](docs/screenshots/09_checkout_dual_payment.png)
 
 ---
 
-### 3. Student Learning Dashboard & Analytics
+### 3. 3D-Secure 2.0 Cardholder Verification
+*Simulated two-factor cardholder authentication challenge for high-security commercial course transactions.*
+![3D Secure Verification](docs/screenshots/12_3ds_verification.png)
+
+---
+
+### 4. Immediate Cryptographic License Activation
+*Real-time settlement confirmation screen granting instant student access and generating an immutable order receipt.*
+![Payment Success](docs/screenshots/11_payment_success.png)
+
+---
+
+### 5. Official Printable Invoice & Tax Receipt
+*Detailed institutional invoice with itemized curriculum lines, tax breakdown, company address, remit details, and printable PDF dialog.*
+![Official Invoice Modal](docs/screenshots/13_official_invoice_modal.png)
+
+---
+
+### 6. Student Learning Dashboard & Analytics
 *Comprehensive student dashboard displaying enrolled courses, overall completion rate, total learning hours, and quick 'Resume Course' actions.*
 ![Student Learning Dashboard](docs/screenshots/03_student_dashboard.png)
 
 ---
 
-### 4. Staff & Faculty Gateway Login
-*Dedicated, isolated faculty gateway login (`/portal/login`) restricted exclusively to Instructors, Admins, and Super Administrators.*
-![Staff & Faculty Gateway](docs/screenshots/04_staff_gateway.png)
-
----
-
-### 5. Instructor Studio & Course Management
-*Instructor studio displaying published courses, active student metrics, average ratings, and a button to launch the 4-step Course Builder Wizard.*
-![Instructor Studio](docs/screenshots/05_instructor_studio.png)
-
----
-
-### 6. Admin Operations & Instructor Governance
-*Administrative control center featuring instructor applications, verification workflows, and cross-course analytics.*
-![Admin Operations](docs/screenshots/06_admin_operations.png)
-
----
-
-### 7. Super Admin Governance & Global System Metrics
-*Super Admin governance hub (`/superadmin`) with platform uptime monitoring, global audit logs, emergency maintenance toggles, and user management.*
-![Super Admin Governance](docs/screenshots/07_superadmin_governance.png)
-
----
-
-### 8. Course Detail & Interactive Curriculum
-*Detailed syllabus with video runtimes, downloadable resources, instructor credentials, and single-click enrollment trigger.*
-![Course Detail](docs/screenshots/08_course_detail.png)
-
----
-
-### 9. Dual-Engine Checkout & Payment Processing
-*Flexible payment checkout offering Credit Card processing (with 3D Secure simulation) and PayPal express checkout.*
-![Dual-Engine Checkout](docs/screenshots/09_checkout_dual_payment.png)
-
----
-
-### 10. Interactive Learning Player & Practice Quizzes
+### 7. Interactive Learning Player & Practice Quizzes
 *Rich distraction-free learning player featuring video playback, persistent lecture notes, and a built-in 3-question practice quiz.*
 ![Interactive Learning Player](docs/screenshots/10_interactive_quiz.png)
 
 ---
 
+### 8. Staff & Faculty Gateway Login
+*Dedicated, isolated faculty gateway login (`/portal/login`) restricted exclusively to Instructors, Admins, and Super Administrators.*
+![Staff & Faculty Gateway](docs/screenshots/04_staff_gateway.png)
+
+---
+
+### 9. Instructor Studio & Course Management
+*Instructor studio displaying published courses, active student metrics, average ratings, and a button to launch the 4-step Course Builder Wizard.*
+![Instructor Studio](docs/screenshots/05_instructor_studio.png)
+
+---
+
+### 10. Admin Operations & Offline Verification Queue
+*Administrative control center featuring instructor applications, verification workflows, and check/wire receipt approvals.*
+![Admin Operations](docs/screenshots/06_admin_operations.png)
+
+---
+
+### 11. Super Admin Governance & Global Financial Ledger
+*Super Admin governance hub (`/superadmin`) with platform uptime monitoring, global audit logs, emergency maintenance toggles, and live payment moderation.*
+![Super Admin Governance](docs/screenshots/07_superadmin_governance.png)
+
+---
+
 ## ✨ Core Features & Platform Capabilities
+
+### 💳 Multi-Channel Financial Settlement Engine
+The platform implements a comprehensive payment suite handling both digital instant clearing and institutional offline workflows:
+1. **Credit / Debit Cards (Stripe Simulation)**:
+   - Real-time card brand detection (Visa, Mastercard, Amex, JCB).
+   - Cardholder verification and formatting (`XXXX XXXX XXXX XXXX`).
+   - Simulated **3D-Secure 2.0** OTP challenge.
+   - Immediate course enrollment and receipt issuance.
+2. **PayPal Express Wallet**:
+   - One-click global digital wallet settlement.
+   - Interactive PayPal authorization modal dialog.
+   - Real-time balance or connected account charging.
+3. **Corporate Checks & Purchase Orders (PO)**:
+   - Check Reference / Bank Draft and PO Number entry.
+   - Corporate institution / university accounts payable mapping.
+   - Orders placed in **Pending Verification** queue for administrator approval upon clearance.
+4. **Direct Bank Wire / ACH (SWIFT & Fedwire)**:
+   - Direct wire instructions: Beneficiary, Bank, SWIFT/BIC (`CHASUS33XXX`), IBAN (`US89CHAS12345678901234`).
+   - Unique generated Remittance Reference (`OBS-WIRE-XXXXX`).
+   - Queueing for administrative bank reconciliation.
+5. **Administrative Payment Moderation**:
+   - Admin and SuperAdmin dashboards featuring an **Offline Verification Queue**.
+   - One-click "Confirm Receipt & Unlock" action immediately activates student courses.
+   - Single-click refund action revoking access when required.
+   - CSV export of global platform financial ledgers.
+
+---
 
 ### 📱 Responsive Design & Cross-Device Support
 - **Mobile (< 768px)**:
@@ -89,6 +123,8 @@ An enterprise-grade, high-aesthetic SaaS e-learning platform architected specifi
 - **Desktop (≥ 1024px)**:
   - Fixed 64-width obsidian navigation bar with contextual badges and profile menu.
   - 3-column & 4-column bento grids with hover states.
+
+---
 
 ### 🛡️ Multi-Portal Architecture & Strict Role Isolation
 The platform implements strict role-based authorization with separate entry portals:
@@ -107,23 +143,13 @@ The platform implements strict role-based authorization with separate entry port
    - Instructors attempting to visit `/admin` or `/superadmin` receive a 403 Forbidden screen.
    - Admins attempting to visit `/superadmin` receive a 403 Forbidden screen.
 
+---
+
 ### 🎓 Dynamic Course Builder (4-Step Wizard)
 - **Step 1: Core Metadata**: Title, subtitle, engineering category, difficulty level, prerequisites.
 - **Step 2: Curriculum & Lectures**: Add sections, attach video URLs, lecture summaries, and estimated runtimes.
 - **Step 3: Pricing & Access**: Set regular price, discount price, and enrollment caps.
 - **Step 4: Review & Publish**: Comprehensive preview with status set to `pending_review` or `published`.
-
-### 💳 Dual-Tier Checkout & Instant Enrollment
-- **Credit Card (Stripe Simulation)**: Card number validation, expiry, CVC, and 3D Secure simulation.
-- **PayPal Integration**: Express checkout simulation with instant confirmation.
-- **Immediate Grant**: Upon checkout completion, the student is instantly enrolled and redirected to the course player.
-
-### 🧠 Modern Learning Player with Quizzes & Notes
-- Video lecture viewer with lecture completion toggle.
-- Tabbed workspace:
-  - **Overview**: Lecture synopsis, key takeaways, and references.
-  - **Practice Quiz**: 3 questions per lecture with instant scoring, pass/fail feedback, and explanations.
-  - **My Notes**: LocalStorage-persisted notes editor with timestamps and save status.
 
 ---
 
@@ -133,13 +159,10 @@ All accounts come pre-seeded with sample data:
 
 | Portal | Role | Email | Password | Allowed Dashboards |
 | :--- | :--- | :--- | :--- | :--- |
-| **Student** | `student` | `alex.rivera@engineer.io` | `StudentPass123!` | `/dashboard`, `/courses`, `/learn/*` |
+| **Student** | `student` | `alex.rivera@engineer.io` | `StudentPass123!` | `/dashboard`, `/courses`, `/learn/*`, `/account/billing` |
 | **Staff Gateway** | `instructor` | `marcus.vance@obsidian.edu` | `InstructorPass123!` | `/instructor/*` |
 | **Staff Gateway** | `admin` | `elena.rostova@obsidian.edu` | `AdminPass123!` | `/admin/*` |
 | **Staff Gateway** | `superadmin` | `viktor.kane@obsidian.edu` | `SuperAdminPass123!` | `/superadmin/*`, `/admin/*`, `/instructor/*` |
-
-> [!NOTE]
-> New students can also register instantly via the [Registration Page](http://localhost:5173/auth/register).
 
 ---
 
@@ -151,8 +174,11 @@ education-platform/
 │   ├── src/
 │   │   ├── auth/             # Multi-role authentication & JWT guards
 │   │   ├── courses/          # Course catalog, curriculum & reviews
-│   │   ├── orders/           # Checkout & enrollment management
-│   │   ├── admin/            # Administrative metrics & approvals
+│   │   ├── enrollments/      # Student course enrollments & progress
+│   │   ├── payments/         # Multi-channel payments (Card, PayPal, Check, Wire)
+│   │   ├── subscriptions/    # Recurring SaaS subscription plans
+│   │   ├── admin/            # Administrative metrics, approvals & moderation
+│   │   ├── superadmin/       # Sovereign governance, ledger & audit logs
 │   │   ├── users/            # User repository & RBAC definitions
 │   │   ├── app.module.ts     # Root NestJS module
 │   │   └── main.ts           # Server bootstrap (Port 3001)
@@ -163,26 +189,21 @@ education-platform/
 │   │   ├── components/       # Shared UI, layout & navigation
 │   │   │   └── layout/       # Responsive DashboardSidebar, Navbar, Footer
 │   │   ├── pages/
-│   │   │   ├── public/       # Home, Search, CourseDetail, Cart, Checkout
+│   │   │   ├── public/       # Home, Search, CourseDetail, Cart, Checkout, Pricing
 │   │   │   ├── auth/         # Student Login, Register, Staff Gateway
-│   │   │   ├── student/      # Student Dashboard, Learning Player
-│   │   │   ├── instructor/   # Studio Dashboard, Course Builder Wizard
-│   │   │   ├── admin/        # Admin Dashboard, Instructor/Course Mgmt
-│   │   │   └── superadmin/   # System Health, Audit Logs, Platform Settings
-│   │   ├── store/            # Zustand stores (Auth, Cart, Courses)
+│   │   │   ├── student/      # Student Dashboard, Learning Player, Billing
+│   │   │   ├── instructor/   # Studio Dashboard, Course Builder Wizard, Analytics
+│   │   │   ├── admin/        # Admin Dashboard, Instructor/Course Mgmt, Check Queue
+│   │   │   └── superadmin/   # System Health, Ledger, Audit Logs, Settings
+│   │   ├── store/            # Zustand stores (Auth, Cart/Payments, Courses, Learning)
 │   │   ├── types/            # TypeScript interfaces & domain models
 │   │   ├── App.tsx           # Route tree & RBAC protected routes
 │   │   └── index.css         # Obsidian dark design tokens & utilities
 │   └── public/               # Static assets & icons
 │
 └── docs/
-    └── screenshots/          # 10 High-resolution platform screenshots
+    └── screenshots/          # 13 High-resolution platform screenshots
 ```
-
-### Technology Highlights
-- **Frontend**: React 18, Vite, TypeScript, Tailwind CSS, Lucide Icons, Zustand State Management, React Router v6.
-- **Backend**: NestJS 10, TypeScript, Express, Class Validator, Passport JWT, CORS enabled.
-- **Styling**: Obsidian Dark theme with tailored color tokens (`bg-[#0c0f17]`, `border-border/40`, `text-primary/emerald-400`).
 
 ---
 
@@ -237,24 +258,6 @@ education-platform/
 
 ---
 
-## 🧪 Production Build & Verification
-
-To verify that both frontend and backend build without any errors:
-
-```bash
-# Build frontend (Vite + TypeScript)
-cd frontend
-npm run build
-
-# Build backend (NestJS + TypeScript)
-cd ../backend
-npm run build
-```
-
-Both builds compile cleanly with **0 errors**.
-
----
-
 ## 📡 REST API Reference
 
 | Method | Endpoint | Description | Auth Required |
@@ -264,11 +267,17 @@ Both builds compile cleanly with **0 errors**.
 | `POST` | `/api/auth/register` | Student self-registration | No |
 | `GET` | `/api/courses` | List all published courses with filters | No |
 | `GET` | `/api/courses/:id` | Retrieve single course with full syllabus | No |
-| `POST` | `/api/courses` | Create new course (Instructor/Admin) | Yes (JWT) |
-| `POST` | `/api/orders/checkout` | Process payment & enroll user | Yes (JWT) |
-| `GET` | `/api/orders/my-enrollments` | List enrolled courses for user | Yes (JWT) |
-| `GET` | `/api/admin/metrics` | System-wide revenue & enrollment stats | Yes (Admin) |
-| `GET` | `/api/admin/instructors` | List faculty members & pending requests | Yes (Admin) |
+| `POST` | `/api/payments/credit-card` | Process Stripe card payment & instant enrollment | Yes (JWT) |
+| `POST` | `/api/payments/paypal` | Process PayPal express capture & instant enrollment | Yes (JWT) |
+| `POST` | `/api/payments/check` | Register check/PO order (status: pending) | Yes (JWT) |
+| `POST` | `/api/payments/bank-transfer`| Register direct wire remittance (status: pending) | Yes (JWT) |
+| `PUT` | `/api/payments/:id/approve` | Approve check/wire payment & unlock course | Yes (Admin/SuperAdmin) |
+| `PUT` | `/api/payments/:id/refund` | Refund payment and revoke access | Yes (SuperAdmin) |
+| `POST` | `/api/payments/webhook` | Webhook listener for external gateway events | No |
+| `GET` | `/api/superadmin/payments` | Retrieve global transaction ledger | Yes (SuperAdmin) |
+| `GET` | `/api/subscriptions/plans` | List available SaaS recurring subscription tiers | No |
+| `POST` | `/api/payments/subscribe` | Activate recurring subscription | Yes (JWT) |
+| `PUT` | `/api/superadmin/subscriptions/:id/cancel` | Cancel active user subscription | Yes (SuperAdmin) |
 
 ---
 

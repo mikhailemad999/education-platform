@@ -93,10 +93,15 @@ export interface Payment {
   subscriptionName?: string;
   amount: number;
   currency: string;
-  method: 'credit_card' | 'check';
+  method: 'credit_card' | 'check' | 'paypal' | 'bank_transfer';
   status: 'pending' | 'paid' | 'failed' | 'refunded';
   transactionDate: string;
   checkNumber?: string;
+  poNumber?: string;
+  companyName?: string;
+  paypalEmail?: string;
+  wireReference?: string;
+  cardLast4?: string;
   invoiceUrl?: string;
 }
 
