@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#ffdad5","tertiary":"#ffb4ab","surface-container-low":"#1c1b1b","on-primary-fixed-variant":"#930007","surface-container-lowest":"#0e0e0e","error":"#ffb4ab","status-info":"#3B82F6","surface-card":"#0F0F0F","secondary-fixed":"#ffdad6","surface-bright":"#3a3939","bg-canvas":"#050505","inverse-on-surface":"#313030","status-danger":"#EF4444","border-subtle":"#202020","on-secondary":"#690005","on-tertiary-container":"#fff7f6","border-control":"#2A2A2A","on-error-container":"#ffdad6","on-surface-variant":"#e9bcb6","outline-variant":"#5e3f3b","surface-secondary":"#111111","border-standard":"#252525","on-primary-fixed":"#410001","primary-container":"#e50914","primary":"#ffb4aa","on-error":"#690005","border-card":"#232323","surface-interactive":"#151515","tertiary-fixed":"#ffdad6","surface-variant":"#353534","secondary-container":"#a4020e","surface-dim":"#131313","on-secondary-container":"#ffaea5","outline":"#af8782","tertiary-container":"#e40d1a","status-success":"#22C55E","background":"#131313","text-muted":"#737373","on-background":"#e5e2e1","error-container":"#93000a","text-secondary":"#A3A3A3","on-secondary-fixed-variant":"#93000a","surface-container-highest":"#353534","on-secondary-fixed":"#410002","inverse-primary":"#c0000c","tertiary-fixed-dim":"#ffb4ab","surface-container-high":"#2a2a2a","accent-ambient-subtle":"#3A0508","on-tertiary":"#690005","surface-tint":"#ffb4aa","status-warning":"#F59E0B","secondary":"#ffb4ab","secondary-fixed-dim":"#ffb4ab","accent-ambient-dark":"#240406","on-primary":"#690003","inverse-surface":"#e5e2e1","on-tertiary-fixed-variant":"#93000a","on-surface":"#e5e2e1","surface-container":"#201f1f","surface":"#131313","primary-fixed-dim":"#ffb4aa","border-soft":"#1B1B1B","text-contrast":"#FFFFFF","on-primary-container":"#fff7f6","surface-elevated":"#171717","on-tertiary-fixed":"#410002","text-primary":"#F5F5F5","surface-hover":"#161616"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","margin-mobile":"1rem",gutter:"1.5rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-tablet":"2rem","space-lg":"1.5rem","gutter-lg":"2rem",margin:"2.5rem","space-md":"1rem","space-xs":"0.25rem"},fontFamily:{"display-mobile":["Geist"],"title-md":["Geist"],"title-sm":["Geist"],"label-sm":["Geist"],"headline-lg-mobile":["Geist"],"headline-md":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-md":["Geist"],"headline-sm":["Geist"],display:["Geist"],"headline-lg":["Geist"],"body-lg":["Inter"]},fontSize:{"display-mobile":["40px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-sm":["24px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["64px",{lineHeight:"68px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-lg":["48px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}]}}}}</script></head><body class="bg-bg-canvas font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-border-standard z-50 flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-border-subtle"><img alt="Obsidian Education Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm text-text-contrast uppercase font-bold tracking-tight">Studio<span class="text-primary-container">.Console</span></span></div><div class="p-space-sm border-b border-border-subtle"><div class="flex items-center justify-between p-2 rounded bg-surface-card border border-border-standard"><span class="font-label-sm text-label-sm text-text-secondary">Workspace Mode</span><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-semibold">Instructor</span></div></div><nav class="flex-1 px-space-sm py-space-md space-y-1 overflow-y-auto" data-active-classes="bg-surface-interactive text-text-contrast border-l-2 border-primary-container font-semibold"><a class="flex items-center px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="instructor-studio" href="#">Studio Overview</a><a aria-current="page" class="flex items-center px-space-sm py-2.5 rounded transition-colors bg-surface-interactive text-text-contrast border-l-2 border-primary-container font-semibold" data-path="course-editor" href="#">Course Builder</a><a class="flex items-center px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="admin-console" href="#">Admin Console</a><a class="flex items-center px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="analytics" href="#">Learner Metrics</a><a class="flex items-center px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="payouts" href="#">Revenue &amp; Royalties</a></nav><div class="p-space-sm border-t border-border-subtle"><a class="flex items-center font-label-sm text-label-sm text-text-secondary hover:text-text-contrast" data-path="courses" href="#">Back to Student Portal</a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-standard z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md w-full max-w-sm"><div class="flex items-center w-full h-9 px-space-sm bg-surface-card rounded-lg border border-border-control focus-within:border-primary-container transition-colors"><span class="material-symbols-outlined text-text-muted text-base mr-space-xs">search</span><input class="w-full bg-transparent border-none text-text-primary placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" placeholder="Filter projects or curriculum..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded-lg text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-standard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkj3xSZQ5l9_5PidbG_OITvATwxFFi5drjxJW-P5b-v-CBjsct1mQ8T0GHfHRBD8S-nWESMnYTBpnKPRLxb44DjZ6IwMKiYi3-J63iyv2X-1M4MaadlYloTKmYYZArTNRJlCekMbJL575FvU8CEithLs7HPggi3M129LZCHldN8mmj5mka6fwsZb5l4_ZztBlwt3L5DXr7woj5ovMj8K_fvulc2qDu6BVmAL7J4SuCMxsF4irdfskc"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-status-success rounded-full ring-2 ring-surface-container-lowest"></span></div></div></header><main class="w-full pt-16 bg-bg-canvas min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Command & Autosave Status Bar -->
+<header class="w-full bg-surface-container-lowest border-b border-border-standard px-space-lg py-3 flex flex-col md:flex-row md:items-center justify-between gap-4 sticky top-16 z-30 shadow-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Draft v2.4</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-status-warning font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning mr-1.5 animate-pulse"></span>Draft Unshared
+          </span>
+<div class="flex items-center gap-1 text-text-muted font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-status-success">cloud_done</span>
+<span>Saved 12 seconds ago to cloud draft</span>
+</div>
+</div>
+<h1 class="font-title-sm text-title-sm text-text-contrast truncate mt-0.5 tracking-tight">
+          Editing: <span class="font-semibold text-text-primary">Advanced Linux Kernel Observability &amp; eBPF Telemetry</span>
+</h1>
+</div>
+</div>
+<!-- Top Action CTAs -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-10 px-4 rounded-lg bg-surface-interactive text-text-secondary hover:text-text-contrast hover:bg-surface-hover transition-colors font-label-md text-label-md flex items-center gap-1.5 border border-border-control">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>Preview Course as Student</span>
+</button>
+<button class="h-10 px-5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-opacity-90 active:scale-[0.98] transition-all flex items-center gap-1.5 shadow-sm">
+<span>Save &amp; Continue</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</header>
+<!-- Multi-Step Wizard Stepper Bar -->
+<section class="w-full bg-surface-container-low border-b border-border-subtle px-space-lg py-space-sm overflow-x-auto">
+<ol class="flex items-center min-w-[760px] justify-between gap-2" role="list">
+<!-- Step 1 -->
+<li class="flex items-center gap-2.5 opacity-80 group cursor-pointer hover:opacity-100 transition-opacity">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-status-success flex items-center justify-center font-label-sm text-label-sm font-bold border border-border-standard">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="font-label-md text-label-md text-text-secondary">1. Course Basics</span>
+</li>
+<div class="h-px flex-1 bg-border-standard mx-2"></div>
+<!-- Step 2 -->
+<li class="flex items-center gap-2.5 opacity-80 group cursor-pointer hover:opacity-100 transition-opacity">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-status-success flex items-center justify-center font-label-sm text-label-sm font-bold border border-border-standard">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<span class="font-label-md text-label-md text-text-secondary">2. Media &amp; Branding</span>
+</li>
+<div class="h-px flex-1 bg-primary-container mx-2"></div>
+<!-- Step 3 (Active) -->
+<li aria-current="step" class="flex items-center gap-2.5 shrink-0">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold ring-2 ring-primary-container/30">
+          3
+        </div>
+<span class="font-label-md text-label-md text-text-contrast font-semibold tracking-tight">3. Curriculum &amp; Lectures</span>
+</li>
+<div class="h-px flex-1 bg-border-standard mx-2"></div>
+<!-- Step 4 -->
+<li class="flex items-center gap-2.5 opacity-50 group hover:opacity-75 transition-opacity">
+<div class="w-7 h-7 rounded-full bg-surface-card text-text-muted flex items-center justify-center font-label-sm text-label-sm border border-border-subtle">
+          4
+        </div>
+<span class="font-label-md text-label-md text-text-muted">4. Video &amp; PDF Uploads</span>
+</li>
+<div class="h-px flex-1 bg-border-standard mx-2"></div>
+<!-- Step 5 -->
+<li class="flex items-center gap-2.5 opacity-50 group hover:opacity-75 transition-opacity">
+<div class="w-7 h-7 rounded-full bg-surface-card text-text-muted flex items-center justify-center font-label-sm text-label-sm border border-border-subtle">
+          5
+        </div>
+<span class="font-label-md text-label-md text-text-muted">5. Pricing &amp; Settlement</span>
+</li>
+<div class="h-px flex-1 bg-border-standard mx-2"></div>
+<!-- Step 6 -->
+<li class="flex items-center gap-2.5 opacity-50 group hover:opacity-75 transition-opacity">
+<div class="w-7 h-7 rounded-full bg-surface-card text-text-muted flex items-center justify-center font-label-sm text-label-sm border border-border-subtle">
+          6
+        </div>
+<span class="font-label-md text-label-md text-text-muted">6. Review &amp; Publish</span>
+</li>
+</ol>
+</section>
+<!-- Workspace Split Grid -->
+<div class="w-full max-w-[1440px] mx-auto py-space-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Curriculum Builder & Section Management (7 cols) -->
+<main class="lg:col-span-7 flex flex-col gap-space-md min-w-0">
+<!-- Section Management Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-card p-space-sm rounded-xl border border-border-card">
+<div class="flex items-center gap-2">
+<button class="h-9 px-3 rounded-lg bg-surface-interactive hover:bg-surface-hover text-text-contrast border border-border-control font-label-sm text-label-sm flex items-center gap-1.5 transition-colors" id="addSectionBtn">
+<span class="material-symbols-outlined text-primary-container text-base">add_circle</span>
+<span>Add New Section</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-surface-interactive hover:bg-surface-hover text-text-secondary hover:text-text-contrast border border-border-control font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-base">drag_indicator</span>
+<span>Reorder Sections</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-9 px-2.5 rounded-lg text-text-muted hover:text-text-contrast font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-base">unfold_more</span>
+<span>Expand All</span>
+</button>
+<span class="text-border-control">|</span>
+<span class="font-label-sm text-label-sm text-text-muted">2 Sections • 7 Lectures • 3h 55m</span>
+</div>
+</div>
+<!-- SECTION 01: Foundations -->
+<article class="flex flex-col bg-surface-card rounded-xl border border-border-card overflow-hidden shadow-sm">
+<!-- Section Header -->
+<header class="p-space-md bg-surface-container-low border-b border-border-standard flex items-center justify-between gap-3">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-text-muted cursor-grab hover:text-text-contrast">drag_indicator</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-bold">Section 01</span>
+<span class="w-1 h-1 rounded-full bg-text-muted"></span>
+<span class="font-label-sm text-label-sm text-text-secondary">4 lectures • 1 hr 45 min</span>
+</div>
+<h2 class="font-title-sm text-title-sm text-text-contrast truncate">Foundations of eBPF &amp; Kernel Tracing</h2>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Edit section" class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast transition-colors">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button aria-label="Collapse section" class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast transition-colors">
+<span class="material-symbols-outlined text-base">expand_less</span>
+</button>
+</div>
+</header>
+<!-- Lectures List inside Section 01 -->
+<div class="divide-y divide-border-subtle bg-surface-card">
+<!-- Lecture 1.1 -->
+<div class="p-3.5 flex items-center justify-between gap-3 hover:bg-surface-hover/60 transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-text-muted text-sm cursor-grab opacity-40 group-hover:opacity-100">drag_indicator</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-base">smart_display</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">1.1</span>
+<p class="font-body-sm text-body-sm text-text-contrast font-medium truncate">Kernel Architecture &amp; Ring Buffer Primitives</p>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-label-sm text-label-sm">
+<span>Video • 24:10</span>
+<span>•</span>
+<span class="text-status-success flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>Transcoded 1080p HLS
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 opacity-70 group-hover:opacity-100 transition-opacity shrink-0">
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast" title="Edit lecture metadata">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast" title="Duplicate lecture">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-status-danger" title="Remove lecture">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<!-- Lecture 1.2 -->
+<div class="p-3.5 flex items-center justify-between gap-3 hover:bg-surface-hover/60 transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-text-muted text-sm cursor-grab opacity-40 group-hover:opacity-100">drag_indicator</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-base">smart_display</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">1.2</span>
+<p class="font-body-sm text-body-sm text-text-contrast font-medium truncate">Setting up libbpf and Clang Toolchain</p>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-label-sm text-label-sm">
+<span>Video • 31:18</span>
+<span>•</span>
+<span class="text-status-success flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>Transcoded 1080p HLS
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 opacity-70 group-hover:opacity-100 transition-opacity shrink-0">
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-status-danger">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<!-- Lecture 1.3 -->
+<div class="p-3.5 flex items-center justify-between gap-3 hover:bg-surface-hover/60 transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-text-muted text-sm cursor-grab opacity-40 group-hover:opacity-100">drag_indicator</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-status-info shrink-0">
+<span class="material-symbols-outlined text-base">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">1.3</span>
+<p class="font-body-sm text-body-sm text-text-contrast font-medium truncate">eBPF Architectural Blueprint &amp; Memory Layout</p>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-label-sm text-label-sm">
+<span>PDF Document • 18 Pages (6.8 MB)</span>
+<span>•</span>
+<span class="text-status-success">Verified</span>
+<span>•</span>
+<span class="text-text-secondary">Download Allowed</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 opacity-70 group-hover:opacity-100 transition-opacity shrink-0">
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-status-danger">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<!-- Lecture 1.4 -->
+<div class="p-3.5 flex items-center justify-between gap-3 hover:bg-surface-hover/60 transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-text-muted text-sm cursor-grab opacity-40 group-hover:opacity-100">drag_indicator</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-status-warning shrink-0">
+<span class="material-symbols-outlined text-base">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">1.4</span>
+<p class="font-body-sm text-body-sm text-text-contrast font-medium truncate">Tracepoint vs Kprobe Performance Benchmark</p>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-label-sm text-label-sm">
+<span>Interactive Code Lab • 45 min allocation</span>
+<span>•</span>
+<span class="text-primary">Docker Sandbox Ready</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 opacity-70 group-hover:opacity-100 transition-opacity shrink-0">
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">terminal</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-status-danger">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 01 Footer Add Lecture Button -->
+<footer class="p-2.5 bg-surface-secondary border-t border-border-subtle flex items-center justify-center">
+<button class="h-8 px-3 rounded-lg text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-primary-container text-sm">add</span>
+<span>Add Lecture to Section 01</span>
+</button>
+</footer>
+</article>
+<!-- SECTION 02: XDP High-Speed Packet Filtering -->
+<article class="flex flex-col bg-surface-card rounded-xl border border-border-card overflow-hidden shadow-sm">
+<!-- Section Header -->
+<header class="p-space-md bg-surface-container-low border-b border-border-standard flex items-center justify-between gap-3">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-text-muted cursor-grab hover:text-text-contrast">drag_indicator</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-bold">Section 02</span>
+<span class="w-1 h-1 rounded-full bg-text-muted"></span>
+<span class="font-label-sm text-label-sm text-text-secondary">3 lectures • 2 hrs 10 min</span>
+</div>
+<h2 class="font-title-sm text-title-sm text-text-contrast truncate">XDP High-Speed Packet Filtering &amp; Network Telemetry</h2>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Edit section" class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast transition-colors">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button aria-label="Collapse section" class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast transition-colors">
+<span class="material-symbols-outlined text-base">expand_less</span>
+</button>
+</div>
+</header>
+<!-- Lectures List inside Section 02 -->
+<div class="divide-y divide-border-subtle bg-surface-card">
+<!-- Lecture 2.1 (Active Transcode) -->
+<div class="p-3.5 flex flex-col gap-2 hover:bg-surface-hover/60 transition-colors group">
+<div class="flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-text-muted text-sm cursor-grab opacity-40 group-hover:opacity-100">drag_indicator</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-container/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-base">hourglass_top</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">2.1</span>
+<p class="font-body-sm text-body-sm text-text-contrast font-medium truncate">Packet Ingestion Lifecycle at Network Driver Level</p>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-label-sm text-label-sm">
+<span>Video • 42:00</span>
+<span>•</span>
+<span class="text-status-warning font-medium">Transcoding 88% (Ladder 720p pending)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 opacity-70 group-hover:opacity-100 transition-opacity shrink-0">
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-status-danger">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<!-- Progress Bar for Transcoding -->
+<div class="w-full bg-border-soft h-1.5 rounded-full overflow-hidden mt-1 ml-9 max-w-[calc(100%-2.25rem)]">
+<div class="bg-primary-container h-full rounded-full transition-all duration-300" style="width: 88%;"></div>
+</div>
+</div>
+<!-- Lecture 2.2 -->
+<div class="p-3.5 flex items-center justify-between gap-3 hover:bg-surface-hover/60 transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-text-muted text-sm cursor-grab opacity-40 group-hover:opacity-100">drag_indicator</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-base">smart_display</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">2.2</span>
+<p class="font-body-sm text-body-sm text-text-contrast font-medium truncate">Writing Your First XDP Drop Program in C</p>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-label-sm text-label-sm">
+<span>Video • 38:15</span>
+<span>•</span>
+<span class="text-status-success flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>Ready for distribution
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 opacity-70 group-hover:opacity-100 transition-opacity shrink-0">
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-status-danger">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<!-- Lecture 2.3 -->
+<div class="p-3.5 flex items-center justify-between gap-3 hover:bg-surface-hover/60 transition-colors group">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-text-muted text-sm cursor-grab opacity-40 group-hover:opacity-100">drag_indicator</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-status-info shrink-0">
+<span class="material-symbols-outlined text-base">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted">2.3</span>
+<p class="font-body-sm text-body-sm text-text-contrast font-medium truncate">Companion Architecture Whitepaper: XDP Kernel Bypassing</p>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-label-sm text-label-sm">
+<span>PDF Document • 24 Pages (4.2 MB)</span>
+<span>•</span>
+<span class="text-status-success">Verified</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 opacity-70 group-hover:opacity-100 transition-opacity shrink-0">
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-interactive text-text-secondary hover:text-status-danger">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Add Lecture Dropdown Trigger Area -->
+<footer class="p-3 bg-surface-secondary border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-2">
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<div class="relative inline-block text-left w-full sm:w-auto">
+<button class="w-full sm:w-auto h-9 px-4 rounded-lg bg-surface-card hover:bg-surface-interactive text-text-contrast border border-border-control font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" id="addLectureDropdownBtn">
+<span class="material-symbols-outlined text-primary-container text-base">add_box</span>
+<span>Add Lecture to Section 02</span>
+<span class="material-symbols-outlined text-sm text-text-muted">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Quick action chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto">
+<button class="px-2.5 py-1 rounded bg-surface-card hover:bg-surface-interactive border border-border-subtle text-text-secondary hover:text-text-contrast font-label-sm text-label-sm shrink-0 transition-colors">
+              + Video (Max 60m)
+            </button>
+<button class="px-2.5 py-1 rounded bg-surface-card hover:bg-surface-interactive border border-border-subtle text-text-secondary hover:text-text-contrast font-label-sm text-label-sm shrink-0 transition-colors">
+              + PDF Lesson Guide
+            </button>
+<button class="px-2.5 py-1 rounded bg-surface-card hover:bg-surface-interactive border border-border-subtle text-text-secondary hover:text-text-contrast font-label-sm text-label-sm shrink-0 transition-colors">
+              + Interactive Lab
+            </button>
+</div>
+</footer>
+</article>
+<!-- Bottom Add Section Quick Callout -->
+<div class="w-full border-2 border-dashed border-border-control rounded-xl p-6 flex flex-col items-center justify-center gap-2 hover:border-primary-container/60 hover:bg-surface-card/40 transition-all cursor-pointer group">
+<div class="w-10 h-10 rounded-full bg-surface-interactive group-hover:bg-primary-container/20 flex items-center justify-center text-text-muted group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">add</span>
+</div>
+<p class="font-title-sm text-title-sm text-text-secondary group-hover:text-text-contrast font-medium">Create Section 03</p>
+<span class="font-body-sm text-body-sm text-text-muted text-center max-w-sm">Group your topics into structured modules. Recommended: 3 to 7 lessons per section.</span>
+</div>
+</main>
+<!-- RIGHT COLUMN: Direct-to-Object Storage Uploader & Ingestion Pipeline (5 cols) -->
+<aside class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- PANEL 1: Video Asset Uploader (Production Pipeline) -->
+<section class="bg-surface-card rounded-xl border border-border-card p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-xl">cloud_upload</span>
+<h2 class="font-title-sm text-title-sm text-text-contrast">Direct Storage Ingestion</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+            Wasabi S3 Direct
+          </span>
+</div>
+<!-- Drag & Drop Zone -->
+<div class="w-full bg-surface-secondary border border-dashed border-border-control rounded-lg p-5 flex flex-col items-center justify-center text-center gap-2 hover:border-text-secondary transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-xl bg-surface-card flex items-center justify-center text-text-secondary group-hover:text-primary-container group-hover:scale-105 transition-all shadow-sm">
+<span class="material-symbols-outlined text-2xl">video_file</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-text-contrast font-semibold">Drop video master files here</span>
+<span class="font-body-sm text-body-sm text-text-muted">Maximum duration: 60 minutes per lesson</span>
+</div>
+<p class="font-label-sm text-label-sm text-text-muted max-w-xs mt-1">
+            Formats: MP4, ProRes, WebM. Master files are encrypted client-side and streamed to adaptive HLS ladders.
+          </p>
+<button class="mt-2 h-8 px-4 rounded bg-surface-interactive hover:bg-surface-hover text-text-contrast font-label-sm text-label-sm border border-border-control transition-colors">
+            Browse Hard Drive
+          </button>
+</div>
+<!-- Active Upload Card -->
+<div class="bg-surface-elevated rounded-lg p-3.5 border border-border-standard flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary-container text-xl shrink-0">movie</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-text-contrast font-medium truncate">xdp-packet-filtering-deepdive.mp4</span>
+<span class="font-label-sm text-label-sm text-text-muted">1.42 GB • Video Lecture 2.1</span>
+</div>
+</div>
+<button class="text-text-muted hover:text-text-contrast p-1" title="Cancel upload">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<!-- Progress Data -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-primary font-medium">Uploading to Wasabi S3 • 78%</span>
+<span class="text-text-muted">Speed: 42.4 MB/s • ETA: 14s</span>
+</div>
+<div class="w-full bg-border-soft h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-200" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Pipeline Processing Steps -->
+<div class="bg-surface-card rounded p-2.5 flex flex-col gap-1.5 text-label-sm font-label-sm border border-border-subtle">
+<div class="flex items-center justify-between text-text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-status-success text-sm font-bold">check_circle</span>
+                AES-128 DRM Encryption
+              </span>
+<span class="text-status-success">Armed</span>
+</div>
+<div class="flex items-center justify-between text-text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-status-success text-sm font-bold">check_circle</span>
+                AI Whisper Transcription &amp; Captions
+              </span>
+<span class="text-status-success">Queued</span>
+</div>
+<div class="flex items-center justify-between text-text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-status-warning text-sm animate-spin">sync</span>
+                Adaptive HLS Transcode (1080p, 720p, 480p)
+              </span>
+<span class="text-status-warning font-medium">Processing...</span>
+</div>
+</div>
+</div>
+</section>
+<!-- PANEL 2: PDF & Technical Architecture Assets Ingestion -->
+<section class="bg-surface-card rounded-xl border border-border-card p-space-md flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-info text-xl">description</span>
+<h2 class="font-title-sm text-title-sm text-text-contrast">PDF Lesson Guides &amp; Blueprints</h2>
+</div>
+<button class="h-7 px-2 rounded bg-surface-interactive hover:bg-surface-hover text-text-contrast font-label-sm text-label-sm border border-border-control transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">upload_file</span>
+<span>Attach PDF</span>
+</button>
+</div>
+<!-- Attached Documents Mini-List -->
+<div class="flex flex-col gap-2">
+<!-- Document item 1 -->
+<div class="p-2.5 rounded-lg bg-surface-secondary border border-border-subtle flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-status-info text-lg shrink-0">picture_as_pdf</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-text-contrast font-medium truncate">ebpf_kernel_internals_v2.pdf</span>
+<span class="font-label-sm text-label-sm text-text-muted">18 pages • 6.8 MB • Lecture 1.3</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="px-1.5 py-0.5 rounded bg-status-success/10 text-status-success font-label-sm text-label-sm">Indexed</span>
+<button class="p-1 rounded text-text-muted hover:text-text-contrast">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Document item 2 -->
+<div class="p-2.5 rounded-lg bg-surface-secondary border border-border-subtle flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-status-info text-lg shrink-0">picture_as_pdf</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-text-contrast font-medium truncate">xdp_flow_architecture.pdf</span>
+<span class="font-label-sm text-label-sm text-text-muted">24 pages • 4.2 MB • Lecture 2.3</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="px-1.5 py-0.5 rounded bg-status-success/10 text-status-success font-label-sm text-label-sm">Indexed</span>
+<button class="p-1 rounded text-text-muted hover:text-text-contrast">
+<span class="material-symbols-outlined text-sm">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security & Distribution Toggles -->
+<div class="pt-2 border-t border-border-subtle flex flex-col gap-2.5">
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-text-contrast group-hover:text-primary transition-colors">Allow student offline PDF download</span>
+<span class="font-label-sm text-label-sm text-text-muted">Students can save the raw file locally outside browser view</span>
+</div>
+<input checked="" class="w-4 h-4 accent-primary-container rounded bg-surface-card border-border-control cursor-pointer" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-text-contrast group-hover:text-primary transition-colors">Watermark with student crypto-hash</span>
+<span class="font-label-sm text-label-sm text-text-muted">Dynamic invisible &amp; visible identity stamping to deter leaks</span>
+</div>
+<input checked="" class="w-4 h-4 accent-primary-container rounded bg-surface-card border-border-control cursor-pointer" type="checkbox"/>
+</label>
+</div>
+</section>
+<!-- PANEL 3: Course Readiness & Publishing Checklist -->
+<section class="bg-surface-card rounded-xl border border-border-card p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-success text-xl">fact_check</span>
+<h2 class="font-title-sm text-title-sm text-text-contrast">Publishing Readiness</h2>
+</div>
+<span class="font-label-sm text-label-sm text-status-success font-semibold">5 / 5 Criteria Met</span>
+</div>
+<!-- Progress ring bar -->
+<div class="w-full bg-border-soft h-1.5 rounded-full overflow-hidden my-1">
+<div class="bg-status-success h-full rounded-full" style="width: 100%;"></div>
+</div>
+<ul class="flex flex-col gap-2 pt-1 font-body-sm text-body-sm">
+<li class="flex items-center justify-between text-text-secondary">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-success text-base">check_circle</span>
+<span>Course details, slug &amp; SEO metadata</span>
+</span>
+<span class="font-label-sm text-label-sm text-text-muted">Valid</span>
+</li>
+<li class="flex items-center justify-between text-text-secondary">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-success text-base">check_circle</span>
+<span>Minimum 5 published lectures</span>
+</span>
+<span class="font-label-sm text-label-sm text-status-success font-semibold">7 / 5</span>
+</li>
+<li class="flex items-center justify-between text-text-secondary">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-success text-base">check_circle</span>
+<span>At least 1 downloadable architecture PDF</span>
+</span>
+<span class="font-label-sm text-label-sm text-status-success font-semibold">2 guides</span>
+</li>
+<li class="flex items-center justify-between text-text-secondary">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-success text-base">check_circle</span>
+<span>Promotional 2-minute video preview</span>
+</span>
+<span class="font-label-sm text-label-sm text-text-muted">Attached</span>
+</li>
+<li class="flex items-center justify-between text-text-secondary">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-success text-base">check_circle</span>
+<span>Stripe Settlement revenue split verified</span>
+</span>
+<span class="font-label-sm text-label-sm text-status-success">Connected</span>
+</li>
+</ul>
+<!-- Bottom Guidance Note -->
+<div class="mt-2 p-2.5 rounded bg-surface-secondary border border-border-subtle flex items-start gap-2 text-text-muted font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-text-secondary shrink-0 mt-0.5">info</span>
+<span>Your curriculum fulfills all automated accreditation checks. When ready, advance to Step 4 to configure asset pricing rules.</span>
+</div>
+</section>
+</aside>
+</div>
+</div></main></div></body></html>

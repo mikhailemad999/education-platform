@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#ffdad5","tertiary":"#ffb4ab","surface-container-low":"#1c1b1b","on-primary-fixed-variant":"#930007","surface-container-lowest":"#0e0e0e","error":"#ffb4ab","status-info":"#3B82F6","surface-card":"#0F0F0F","secondary-fixed":"#ffdad6","surface-bright":"#3a3939","bg-canvas":"#050505","inverse-on-surface":"#313030","status-danger":"#EF4444","border-subtle":"#202020","on-secondary":"#690005","on-tertiary-container":"#fff7f6","border-control":"#2A2A2A","on-error-container":"#ffdad6","on-surface-variant":"#e9bcb6","outline-variant":"#5e3f3b","surface-secondary":"#111111","border-standard":"#252525","on-primary-fixed":"#410001","primary-container":"#e50914","primary":"#ffb4aa","on-error":"#690005","border-card":"#232323","surface-interactive":"#151515","tertiary-fixed":"#ffdad6","surface-variant":"#353534","secondary-container":"#a4020e","surface-dim":"#131313","on-secondary-container":"#ffaea5","outline":"#af8782","tertiary-container":"#e40d1a","status-success":"#22C55E","background":"#131313","text-muted":"#737373","on-background":"#e5e2e1","error-container":"#93000a","text-secondary":"#A3A3A3","on-secondary-fixed-variant":"#93000a","surface-container-highest":"#353534","on-secondary-fixed":"#410002","inverse-primary":"#c0000c","tertiary-fixed-dim":"#ffb4ab","surface-container-high":"#2a2a2a","accent-ambient-subtle":"#3A0508","on-tertiary":"#690005","surface-tint":"#ffb4aa","status-warning":"#F59E0B","secondary":"#ffb4ab","secondary-fixed-dim":"#ffb4ab","accent-ambient-dark":"#240406","on-primary":"#690003","inverse-surface":"#e5e2e1","on-tertiary-fixed-variant":"#93000a","on-surface":"#e5e2e1","surface-container":"#201f1f","surface":"#131313","primary-fixed-dim":"#ffb4aa","border-soft":"#1B1B1B","text-contrast":"#FFFFFF","on-primary-container":"#fff7f6","surface-elevated":"#171717","on-tertiary-fixed":"#410002","text-primary":"#F5F5F5","surface-hover":"#161616"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","margin-mobile":"1rem",gutter:"1.5rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-tablet":"2rem","space-lg":"1.5rem","gutter-lg":"2rem",margin:"2.5rem","space-md":"1rem","space-xs":"0.25rem"},fontFamily:{"display-mobile":["Geist"],"title-md":["Geist"],"title-sm":["Geist"],"label-sm":["Geist"],"headline-lg-mobile":["Geist"],"headline-md":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-md":["Geist"],"headline-sm":["Geist"],display:["Geist"],"headline-lg":["Geist"],"body-lg":["Inter"]},fontSize:{"display-mobile":["40px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-sm":["24px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["64px",{lineHeight:"68px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-lg":["48px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}]}}}}</script></head><body class="bg-bg-canvas font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-border-standard z-50 flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-border-subtle"><img alt="Obsidian Education Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm text-text-contrast uppercase font-bold tracking-tight">Studio<span class="text-primary-container">.Console</span></span></div><div class="p-space-sm border-b border-border-subtle"><div class="flex items-center justify-between p-2 rounded bg-surface-card border border-border-standard"><span class="font-label-sm text-label-sm text-text-secondary">Workspace Mode</span><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-semibold">Instructor</span></div></div><nav class="flex-1 px-space-sm py-space-md space-y-1 overflow-y-auto" data-active-classes="bg-surface-interactive text-text-contrast border-l-2 border-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="instructor-studio" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>Studio Overview</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="course-editor" href="#"><span class="material-symbols-outlined text-lg">video_library</span>Curriculum Builder</a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 rounded transition-colors bg-surface-interactive text-text-contrast border-l-2 border-primary-container font-semibold" data-path="admin-console" href="#"><span class="material-symbols-outlined text-lg">admin_panel_settings</span>Admin Console</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-lg">insights</span>Learner Metrics</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="payouts" href="#"><span class="material-symbols-outlined text-lg">payments</span>Revenue &amp; Royalties</a></nav><div class="p-space-sm border-t border-border-subtle"><a class="flex items-center gap-space-xs font-label-sm text-label-sm text-text-secondary hover:text-text-contrast" data-path="courses" href="#"><span class="material-symbols-outlined text-sm">arrow_back</span>Back to Student Portal</a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-standard z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md w-full max-w-sm"><div class="flex items-center w-full h-9 px-space-sm bg-surface-card rounded-lg border border-border-control focus-within:border-primary-container transition-colors"><span class="material-symbols-outlined text-text-muted text-base mr-space-xs">search</span><input class="w-full bg-transparent border-none text-text-primary placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" placeholder="Filter projects or curriculum..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded-lg text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-standard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkj3xSZQ5l9_5PidbG_OITvATwxFFi5drjxJW-P5b-v-CBjsct1mQ8T0GHfHRBD8S-nWESMnYTBpnKPRLxb44DjZ6IwMKiYi3-J63iyv2X-1M4MaadlYloTKmYYZArTNRJlCekMbJL575FvU8CEithLs7HPggi3M129LZCHldN8mmj5mka6fwsZb5l4_ZztBlwt3L5DXr7woj5ovMj8K_fvulc2qDu6BVmAL7J4SuCMxsF4irdfskc"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-status-success rounded-full ring-2 ring-surface-container-lowest"></span></div></div></header><main class="w-full pt-16 bg-bg-canvas min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full space-y-space-xl">
+<!-- Top SuperAdmin Security Header & Control Strip -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-card p-space-lg rounded-xl shadow-xl relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs relative z-10">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-ambient-dark text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-sm">lock</span>
+          SUPERADMIN PRIVILEGES - FULL SYSTEM AUDIT
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-status-success/15 text-status-success font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success animate-pulse"></span>
+          REALTIME SYNC ACTIVE
+        </span>
+</div>
+<h1 class="font-headline-md text-headline-md text-text-contrast tracking-tight flex items-center gap-3">
+        Master Operations Core
+        <span class="font-label-md text-label-md text-text-secondary px-2.5 py-0.5 rounded bg-surface-elevated font-mono">v4.18.2-prod</span>
+</h1>
+<p class="font-body-md text-body-md text-text-secondary max-w-2xl">
+        Global instructional governance, sovereign revenue clearing, identity compliance, and emergency telemetry switchboards.
+      </p>
+</div>
+<!-- Quick Administrative Actions -->
+<div class="flex flex-wrap items-center gap-space-sm relative z-10">
+<button class="flex items-center gap-space-xs px-4 h-11 rounded-lg bg-surface-interactive hover:bg-surface-bright text-text-primary font-label-md text-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-lg">download</span>
+        Export Financial Audit (CSV)
+      </button>
+<button class="flex items-center gap-space-xs px-4 h-11 rounded-lg bg-surface-interactive hover:bg-surface-bright text-text-primary font-label-md text-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-lg">tune</span>
+        Platform Settings
+      </button>
+<button class="flex items-center gap-space-xs px-5 h-11 rounded-lg bg-primary-container hover:bg-inverse-primary text-text-contrast font-label-md text-label-md font-semibold transition-all transform active:scale-95 shadow-md">
+<span class="material-symbols-outlined text-lg">person_add</span>
+        Invite Administrator
+      </button>
+</div>
+</div>
+<!-- Top Platform Health & Finance Metrics Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-md">
+<!-- Metric 1: Platform Gross Volume -->
+<div class="flex flex-col justify-between bg-surface-card p-space-md rounded-xl shadow-md relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-secondary">Gross Volume (YTD)</span>
+<div class="w-8 h-8 rounded-lg bg-surface-interactive flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-base">payments</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-headline-sm text-text-contrast tracking-tight">$1,842,910.00</div>
+<div class="flex items-center gap-1 mt-1 text-text-secondary font-body-sm text-body-sm">
+<span>MRR:</span>
+<span class="text-text-primary font-semibold">$184,200.00</span>
+<span class="text-status-success font-label-sm text-label-sm ml-auto">+14.2%</span>
+</div>
+</div>
+<div class="mt-3 w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 76%"></div>
+</div>
+</div>
+<!-- Metric 2: Active Learners -->
+<div class="flex flex-col justify-between bg-surface-card p-space-md rounded-xl shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-secondary">Active Learners</span>
+<div class="w-8 h-8 rounded-lg bg-surface-interactive flex items-center justify-center text-status-info">
+<span class="material-symbols-outlined text-base">school</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-headline-sm text-text-contrast tracking-tight">84,120</div>
+<div class="flex items-center gap-2 mt-1 text-text-secondary font-body-sm text-body-sm">
+<span class="text-status-info font-label-sm text-label-sm">3,890 daily concurrent</span>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-status-success"></span>
+<span class="font-label-sm text-label-sm text-text-muted">Edge routing optimal</span>
+</div>
+</div>
+<!-- Metric 3: Total Instructors -->
+<div class="flex flex-col justify-between bg-surface-card p-space-md rounded-xl shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-secondary">Faculty Directory</span>
+<div class="w-8 h-8 rounded-lg bg-surface-interactive flex items-center justify-center text-status-warning">
+<span class="material-symbols-outlined text-base">badge</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-headline-sm text-text-contrast tracking-tight">420</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-status-warning/15 text-status-warning font-label-sm text-label-sm font-semibold">
+            14 Pending Review
+          </span>
+</div>
+</div>
+<div class="mt-3 font-label-sm text-label-sm text-text-muted">
+        406 Verified / Sovereign Tier
+      </div>
+</div>
+<!-- Metric 4: Offline Pending Payments -->
+<div class="flex flex-col justify-between bg-surface-card p-space-md rounded-xl shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-secondary">Manual Settlement</span>
+<div class="w-8 h-8 rounded-lg bg-surface-interactive flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">pending_actions</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-headline-sm text-primary tracking-tight">8 Orders</div>
+<div class="flex items-center gap-1 mt-1 font-body-sm text-body-sm text-text-secondary">
+<span class="text-text-primary font-semibold">$2,450.00</span>
+<span>pending action</span>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-1.5 text-status-warning font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">hourglass_empty</span>
+        Oldest order: 18h ago
+      </div>
+</div>
+<!-- Metric 5: System Telemetry & Uptime -->
+<div class="flex flex-col justify-between bg-surface-card p-space-md rounded-xl shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-secondary">Global Health</span>
+<div class="w-8 h-8 rounded-lg bg-surface-interactive flex items-center justify-center text-status-success">
+<span class="material-symbols-outlined text-base">dns</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-headline-sm text-status-success tracking-tight">99.98%</div>
+<div class="flex items-center gap-2 mt-1 text-text-secondary font-body-sm text-body-sm">
+<span>Latency:</span>
+<span class="text-text-contrast font-mono">24ms avg</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between text-text-muted font-label-sm text-label-sm">
+<span>Cloudflare CDN OK</span>
+<span class="text-status-success">0 Incidents</span>
+</div>
+</div>
+</div>
+<!-- Operational Workflow Navigation Tabs -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm bg-surface-secondary p-1.5 rounded-xl shadow-inner">
+<div class="flex flex-wrap items-center gap-1">
+<button class="tab-btn flex items-center gap-space-xs px-4 py-2.5 rounded-lg bg-surface-card text-text-contrast font-label-md text-label-md font-semibold shadow-sm transition-all" id="tab-instructors">
+<span class="material-symbols-outlined text-base text-primary-container">how_to_reg</span>
+        Pending Instructor Approvals
+        <span class="ml-1.5 px-2 py-0.5 rounded-full bg-primary-container text-text-contrast text-label-sm font-bold">14</span>
+</button>
+<button class="tab-btn flex items-center gap-space-xs px-4 py-2.5 rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-interactive font-label-md text-label-md transition-all" id="tab-payments">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+        Check Payments &amp; Invoices
+        <span class="ml-1.5 px-2 py-0.5 rounded-full bg-status-warning/20 text-status-warning text-label-sm font-semibold">8</span>
+</button>
+<button class="tab-btn flex items-center gap-space-xs px-4 py-2.5 rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-interactive font-label-md text-label-md transition-all" id="tab-courses">
+<span class="material-symbols-outlined text-base">fact_check</span>
+        Course Moderation Queue
+        <span class="ml-1.5 px-2 py-0.5 rounded-full bg-surface-container text-text-muted text-label-sm">3</span>
+</button>
+<button class="tab-btn flex items-center gap-space-xs px-4 py-2.5 rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-interactive font-label-md text-label-md transition-all" id="tab-payouts">
+<span class="material-symbols-outlined text-base">account_balance</span>
+        Subscription &amp; Payout Governance
+      </button>
+</div>
+<div class="flex items-center gap-space-xs px-2">
+<span class="font-label-sm text-label-sm text-text-muted">Batch Filter:</span>
+<select class="bg-surface-card text-text-primary font-body-sm text-body-sm rounded px-2.5 py-1.5 focus:outline-none">
+<option>All Jurisdictions</option>
+<option>North America (Stripe US)</option>
+<option>EU / UK (VAT Direct)</option>
+<option>Enterprise Offline Wire</option>
+</select>
+</div>
+</div>
+<!-- Operational Flow Data Section 1: Check Payments & Invoices Verification -->
+<section class="flex flex-col bg-surface-card rounded-xl shadow-xl overflow-hidden">
+<div class="p-space-lg bg-surface-card flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-status-warning"></span>
+<h2 class="font-title-md text-title-md text-text-contrast">Pending Check &amp; Offline Payments</h2>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">
+          Requires manual admin ledger reconciliation prior to granting LMS course access &amp; sending tax credit memos.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-text-muted">8 Unprocessed Transactions</span>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-interactive text-text-secondary hover:text-text-contrast text-label-sm font-label-sm transition-colors">
+<span class="material-symbols-outlined text-sm">refresh</span> Refresh Queue
+        </button>
+</div>
+</div>
+<!-- Data Table 1 -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-secondary text-text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-space-md">Order ID</th>
+<th class="py-3.5 px-space-md">Learner / Entity</th>
+<th class="py-3.5 px-space-md">Course / Plan</th>
+<th class="py-3.5 px-space-md">Amount</th>
+<th class="py-3.5 px-space-md">Invoice Reference</th>
+<th class="py-3.5 px-space-md">Issuance Date</th>
+<th class="py-3.5 px-space-md">Status</th>
+<th class="py-3.5 px-space-md text-right">Verification Controls</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-sm text-body-sm">
+<!-- Row 1: ORD-9821 -->
+<tr class="hover:bg-surface-hover transition-colors group">
+<td class="py-4 px-space-md font-mono text-primary font-semibold">#ORD-9821</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-elevated flex items-center justify-center font-bold text-text-contrast">
+                  MR
+                </div>
+<div>
+<div class="font-title-sm text-title-sm text-text-contrast leading-tight">Marcus Reed</div>
+<div class="text-text-muted font-body-sm text-body-sm">m.reed@vanguard-lab.io</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="text-text-primary font-medium">Distributed Kernel Architecture</span>
+<div class="text-text-muted text-xs">Self-Paced Specialization</div>
+</td>
+<td class="py-4 px-space-md font-mono text-text-contrast font-semibold">$89.99</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1 font-mono text-text-secondary">
+<span>INV-2024-0982</span>
+<button class="text-text-muted hover:text-text-contrast transition-colors" title="View Invoice PDF">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-space-md text-text-secondary">Oct 24, 2024 (11:20 UTC)</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-status-warning/15 text-status-warning font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning animate-pulse"></span>
+                Check Verification Pending
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive text-text-secondary hover:text-text-contrast text-label-sm font-label-sm flex items-center gap-1 transition-colors" title="View Invoice PDF">
+<span class="material-symbols-outlined text-sm">visibility</span> View PDF
+                </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive text-status-danger hover:bg-status-danger/20 text-label-sm font-label-sm font-semibold transition-colors" onclick="confirmAction('Reject Invoice #ORD-9821', 'danger')">
+                  Reject
+                </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-status-success/20 text-status-success hover:bg-status-success hover:text-surface-lowest text-label-sm font-label-sm font-semibold flex items-center gap-1 transition-colors" onclick="confirmAction('Verify &amp; Grant Access to Marcus Reed ($89.99)', 'success')">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                  Verify &amp; Grant Access
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 2: ORD-9820 Acme Corp Enterprise -->
+<tr class="hover:bg-surface-hover transition-colors group">
+<td class="py-4 px-space-md font-mono text-primary font-semibold">#ORD-9820</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 text-primary flex items-center justify-center font-bold">
+                  AC
+                </div>
+<div>
+<div class="font-title-sm text-title-sm text-text-contrast leading-tight">Acme Corp Global</div>
+<div class="text-text-muted font-body-sm text-body-sm">procurement@acmecorp.com</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="text-text-primary font-medium">Enterprise Site License (10 Seats)</span>
+<div class="text-text-muted text-xs">Annual Multi-Seat Agreement</div>
+</td>
+<td class="py-4 px-space-md font-mono text-text-contrast font-bold">$1,200.00</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1 font-mono text-text-secondary">
+<span>INV-ACME-4410</span>
+<button class="text-text-muted hover:text-text-contrast transition-colors" title="View Invoice PDF">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-space-md text-text-secondary">Oct 23, 2024 (16:45 UTC)</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-status-warning/15 text-status-warning font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning animate-pulse"></span>
+                ACH/Wire Clearance
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive text-text-secondary hover:text-text-contrast text-label-sm font-label-sm flex items-center gap-1 transition-colors" title="View Invoice PDF">
+<span class="material-symbols-outlined text-sm">visibility</span> View PDF
+                </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive text-status-danger hover:bg-status-danger/20 text-label-sm font-label-sm font-semibold transition-colors" onclick="confirmAction('Reject Invoice #ORD-9820 Acme Corp', 'danger')">
+                  Reject
+                </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-status-success/20 text-status-success hover:bg-status-success hover:text-surface-lowest text-label-sm font-label-sm font-semibold flex items-center gap-1 transition-colors" onclick="confirmAction('Verify &amp; Grant Access to Acme Corp ($1,200.00)', 'success')">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                  Verify &amp; Grant Access
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 3: ORD-9819 -->
+<tr class="hover:bg-surface-hover transition-colors group">
+<td class="py-4 px-space-md font-mono text-primary font-semibold">#ORD-9819</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-elevated flex items-center justify-center font-bold text-text-contrast">
+                  EK
+                </div>
+<div>
+<div class="font-title-sm text-title-sm text-text-contrast leading-tight">Elena Kovač</div>
+<div class="text-text-muted font-body-sm text-body-sm">e.kovac@zurich-neuro.ch</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="text-text-primary font-medium">Applied Quantum Cryptography</span>
+<div class="text-text-muted text-xs">Cohort 04 Masterclass</div>
+</td>
+<td class="py-4 px-space-md font-mono text-text-contrast font-semibold">$350.00</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1 font-mono text-text-secondary">
+<span>INV-2024-0980</span>
+<button class="text-text-muted hover:text-text-contrast transition-colors" title="View Invoice PDF">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span>
+</button>
+</div>
+</td>
+<td class="py-4 px-space-md text-text-secondary">Oct 23, 2024 (09:12 UTC)</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-status-info/15 text-status-info font-label-sm text-label-sm font-semibold">
+                Postal Check Logged
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive text-text-secondary hover:text-text-contrast text-label-sm font-label-sm flex items-center gap-1 transition-colors" title="View Invoice PDF">
+<span class="material-symbols-outlined text-sm">visibility</span> View PDF
+                </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive text-status-danger hover:bg-status-danger/20 text-label-sm font-label-sm font-semibold transition-colors" onclick="confirmAction('Reject Invoice #ORD-9819', 'danger')">
+                  Reject
+                </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-status-success/20 text-status-success hover:bg-status-success hover:text-surface-lowest text-label-sm font-label-sm font-semibold flex items-center gap-1 transition-colors" onclick="confirmAction('Verify &amp; Grant Access to Elena Kovač ($350.00)', 'success')">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                  Verify &amp; Grant Access
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Navigation -->
+<div class="px-space-md py-3 bg-surface-card flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>Showing 3 of 8 pending invoices</span>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface-interactive text-text-secondary hover:text-text-contrast disabled:opacity-40" disabled="">Previous</button>
+<span class="px-2 text-text-primary">1 / 3</span>
+<button class="px-2.5 py-1 rounded bg-surface-interactive text-text-secondary hover:text-text-contrast">Next</button>
+</div>
+</div>
+</section>
+<!-- Operational Flow Data Section 2: Instructor Verification & Governance -->
+<section class="flex flex-col bg-surface-card rounded-xl shadow-xl overflow-hidden">
+<div class="p-space-lg bg-surface-card flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<h2 class="font-title-md text-title-md text-text-contrast">Instructor Account Verification &amp; Governance</h2>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">
+          Review institutional backgrounds, proof of identity, and proposed syllabi before authorizing publishing credentials.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-3 py-1 rounded-full bg-accent-ambient-subtle text-primary font-label-sm text-label-sm font-semibold">
+          14 Applications Queue
+        </span>
+</div>
+</div>
+<!-- Data Table 2 -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-secondary text-text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-space-md">Instructor Candidate</th>
+<th class="py-3.5 px-space-md">Domain / Expertise</th>
+<th class="py-3.5 px-space-md">Submitted Credentials</th>
+<th class="py-3.5 px-space-md">Proposed Curriculum</th>
+<th class="py-3.5 px-space-md">Application Date</th>
+<th class="py-3.5 px-space-md">Status</th>
+<th class="py-3.5 px-space-md text-right">Audit Decision</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle font-body-sm text-body-sm">
+<!-- Candidate 1 -->
+<tr class="hover:bg-surface-hover transition-colors group">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Portrait photo of Dr. Aris Thorne, senior machine learning researcher with spectacles and minimalist dark academic apparel against a charcoal gradient background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjyAzMZKSXn1GwmUCN3Azq6gJ_PGYvW_raX6oiL8qAUyCd7jfNUsXbnfYgv2GGWAYx5ln76CgF9gUW4Gp1_-DiEmiYUUFvlNf0nRhkxHUtCCDuo4pATj3pwFZbbsFtBfytWRlJ7OimhCGF5-6nnYsHFOGlEhTRraHd7f5Xqh6cqByNUZYEJ92j67t8jTkqeG_sVDeEvo95j1dm7w84uRURaVKvGXjlfxBfqi8wuz-eozoJ6iUeaea8"/>
+<div>
+<div class="font-title-sm text-title-sm text-text-contrast">Dr. Aris Thorne</div>
+<div class="text-text-muted font-body-sm text-body-sm">a.thorne@oxford-research.ac.uk</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="text-text-primary font-medium">Neural Compilers &amp; LLVM</span>
+<div class="text-text-muted text-xs">Ex-Senior Research Scientist, DeepMind</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-elevated text-text-secondary text-xs">
+<span class="material-symbols-outlined text-xs">verified</span> PhD Dipl.
+                </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-elevated text-text-secondary text-xs">
+<span class="material-symbols-outlined text-xs">badge</span> Passport ID
+                </span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="max-w-xs">
+<div class="font-medium text-text-contrast truncate">Advanced MLIR Optimization for AI Hardware</div>
+<div class="text-text-muted text-xs">12 Modules • 48 Code Labs</div>
+</div>
+</td>
+<td class="py-4 px-space-md text-text-secondary font-mono text-xs">2024-10-22</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-status-warning/15 text-status-warning font-label-sm text-label-sm font-semibold">
+                KYC In-Review
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive hover:bg-surface-elevated text-text-secondary text-label-sm font-label-sm transition-colors" onclick="confirmAction('Request identity update for Dr. Aris Thorne', 'neutral')">
+                  Request Info
+                </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive hover:bg-status-danger/20 text-status-danger text-label-sm font-label-sm transition-colors" onclick="confirmAction('Deny Dr. Thorne Application', 'danger')">
+                  Deny
+                </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container hover:bg-inverse-primary text-text-contrast text-label-sm font-label-sm font-semibold flex items-center gap-1 shadow-sm transition-all" onclick="confirmAction('Approve Dr. Aris Thorne as Verified Instructor', 'success')">
+<span class="material-symbols-outlined text-sm">verified_user</span> Approve
+                </button>
+</div>
+</td>
+</tr>
+<!-- Candidate 2 -->
+<tr class="hover:bg-surface-hover transition-colors group">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Close up cinematic portrait of Samantha Sterling, fintech security architect with confident expression and sleek modern tech workspace background with subtle crimson rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGd1r1C8qqJFqWST-f0STsezXd99GUkK2ZvytI76e11ix7ACcX0Jm8rPj34q1Z_DIvra2QiedIBnf4XFFDRtTdcj1ZoafP2XW_028ivqR6xNk1wa0jLHxspbLCiHeBvIMURlzL6cO1kuqO-baBs1_UQcQXwYVOu7bI6Q_yGcfnJGfQqF8nAy5v5okP2SSPbAyNAmWE0GdeUnH9MGm_Qdlnx-wckUsYb37CoFVCLNU6JaOEcJvA6Sr6"/>
+<div>
+<div class="font-title-sm text-title-sm text-text-contrast">Samantha Sterling</div>
+<div class="text-text-muted font-body-sm text-body-sm">s.sterling@apexsec.dev</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="text-text-primary font-medium">Smart Contract Fuzzing</span>
+<div class="text-text-muted text-xs">Lead Auditor, Trail of Bits Alum</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-elevated text-text-secondary text-xs">
+<span class="material-symbols-outlined text-xs">terminal</span> GitHub / CVE
+                </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-elevated text-text-secondary text-xs">
+<span class="material-symbols-outlined text-xs">badge</span> Gov ID
+                </span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="max-w-xs">
+<div class="font-medium text-text-contrast truncate">Zero-Knowledge Circuit Penetration Testing</div>
+<div class="text-text-muted text-xs">8 Modules • 18 Live Sandboxes</div>
+</div>
+</td>
+<td class="py-4 px-space-md text-text-secondary font-mono text-xs">2024-10-21</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-status-info/15 text-status-info font-label-sm text-label-sm font-semibold">
+                Syllabus Vetted
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive hover:bg-surface-elevated text-text-secondary text-label-sm font-label-sm transition-colors" onclick="confirmAction('Request identity update for Samantha Sterling', 'neutral')">
+                  Request Info
+                </button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-interactive hover:bg-status-danger/20 text-status-danger text-label-sm font-label-sm transition-colors" onclick="confirmAction('Deny Samantha Sterling Application', 'danger')">
+                  Deny
+                </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container hover:bg-inverse-primary text-text-contrast text-label-sm font-label-sm font-semibold flex items-center gap-1 shadow-sm transition-all" onclick="confirmAction('Approve Samantha Sterling as Verified Instructor', 'success')">
+<span class="material-symbols-outlined text-sm">verified_user</span> Approve
+                </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Navigation -->
+<div class="px-space-md py-3 bg-surface-card flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>Showing 2 of 14 instructor applications</span>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface-interactive text-text-secondary hover:text-text-contrast disabled:opacity-40" disabled="">Previous</button>
+<span class="px-2 text-text-primary">1 / 7</span>
+<button class="px-2.5 py-1 rounded bg-surface-interactive text-text-secondary hover:text-text-contrast">Next</button>
+</div>
+</div>
+</section>
+<!-- Destructive & Sensitive Security Control Section (Section 42 of DESIGN.md) -->
+<section class="flex flex-col bg-surface-card rounded-xl shadow-2xl overflow-hidden relative">
+<div class="bg-gradient-to-r from-accent-ambient-dark via-surface-card to-accent-ambient-subtle p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-status-danger/20 text-status-danger flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">warning</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-text-contrast">Elevated Master Danger Zone &amp; Governance Safeguards</h3>
+<span class="px-2 py-0.5 rounded bg-status-danger/20 text-status-danger font-label-sm text-label-sm uppercase font-bold tracking-wider">
+              2FA Required
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1 max-w-3xl">
+            Critical destructive interventions execute directly against the immutable ledger and ledger settlement accounts. Actions trigger instant audit logging, cryptographic receipt broadcast, and secondary supervisor push approval.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-label-sm text-label-sm text-text-muted">Auth Token:</span>
+<span class="font-mono text-xs text-primary bg-surface-secondary px-2.5 py-1 rounded">AUTH-SUPER-9884</span>
+</div>
+</div>
+<!-- Safeguard Actions Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md p-space-lg bg-surface-container-lowest">
+<!-- Safeguard 1: Instant Ledger Refund & Revocation -->
+<div class="flex flex-col justify-between bg-surface-card p-space-md rounded-xl shadow-md">
+<div>
+<div class="flex items-center gap-2 text-status-danger">
+<span class="material-symbols-outlined text-base">undo</span>
+<span class="font-title-sm text-title-sm">Forced Manual Refund</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-2">
+            Revoke course credentials immediately and issue reverse payment wire without instructor clawback mediation.
+          </p>
+</div>
+<div class="mt-6 flex flex-col gap-2">
+<input class="w-full bg-surface-interactive text-text-primary px-3 py-2 rounded text-body-sm font-body-sm placeholder:text-text-muted focus:outline-none" placeholder="Enter Order ID or User Hash..." type="text"/>
+<button class="w-full py-2 px-3 rounded-lg bg-status-danger/20 hover:bg-status-danger text-status-danger hover:text-text-contrast font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5" onclick="trigger2FA('Direct Reverse Payment Authorization')">
+<span class="material-symbols-outlined text-sm">key</span>
+            Authorize Refund (2-Step)
+          </button>
+</div>
+</div>
+<!-- Safeguard 2: User Account / Instructor Quarantine -->
+<div class="flex flex-col justify-between bg-surface-card p-space-md rounded-xl shadow-md">
+<div>
+<div class="flex items-center gap-2 text-status-warning">
+<span class="material-symbols-outlined text-base">gavel</span>
+<span class="font-title-sm text-title-sm">Global Account Suspension</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-2">
+            Freeze learner login sessions, invalidate instructor payouts, and lock pending curriculum submissions across all nodes.
+          </p>
+</div>
+<div class="mt-6 flex flex-col gap-2">
+<input class="w-full bg-surface-interactive text-text-primary px-3 py-2 rounded text-body-sm font-body-sm placeholder:text-text-muted focus:outline-none" placeholder="user@domain.com or UID" type="text"/>
+<button class="w-full py-2 px-3 rounded-lg bg-surface-interactive hover:bg-status-warning hover:text-surface-lowest text-text-primary font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5" onclick="trigger2FA('Global Entity Suspension Protocol')">
+<span class="material-symbols-outlined text-sm">lock_clock</span>
+            Initiate Quarantine Lock
+          </button>
+</div>
+</div>
+<!-- Safeguard 3: Tier Pricing & Royalty Matrix Modification -->
+<div class="flex flex-col justify-between bg-surface-card p-space-md rounded-xl shadow-md">
+<div>
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-base">price_change</span>
+<span class="font-title-sm text-title-sm">Plan Price / Split Override</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-2">
+            Mutate core subscription tiers ($29/mo -&gt; bespoke) or alter global platform take-rate (15% base fee).
+          </p>
+</div>
+<div class="mt-6 flex flex-col gap-2">
+<select class="w-full bg-surface-interactive text-text-primary px-3 py-2 rounded text-body-sm font-body-sm focus:outline-none">
+<option>Select Tier: Full-Stack Annual ($399)</option>
+<option>Select Tier: Executive Monthly ($49)</option>
+<option>Global Instructor Royalty: 85/15 Split</option>
+</select>
+<button class="w-full py-2 px-3 rounded-lg bg-surface-interactive hover:bg-primary-container hover:text-text-contrast text-text-primary font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5" onclick="trigger2FA('Monetization Schedule Reconfiguration')">
+<span class="material-symbols-outlined text-sm">security</span>
+            Deploy Price Migration
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Modal Safeguard for 2FA Actions (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-bg-canvas/80 backdrop-blur-md flex items-center justify-center hidden p-4" id="action-modal">
+<div class="bg-surface-card w-full max-w-md rounded-xl shadow-2xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-title-sm text-title-sm text-text-contrast">SuperAdmin Authentication</span>
+</div>
+<button class="text-text-muted hover:text-text-contrast" onclick="closeModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Target Operation</span>
+<div class="font-title-sm text-title-sm text-text-contrast font-mono" id="modal-action-title">Platform Intervention</div>
+</div>
+<div class="p-3 rounded-lg bg-accent-ambient-dark text-text-secondary font-body-sm text-body-sm">
+        Enter your 6-digit hardware YubiKey or TOTP security key code to execute this master governance operation.
+      </div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-text-secondary">Security Token Code</label>
+<input class="w-full text-center tracking-widest font-mono text-xl py-2 bg-surface-secondary text-text-contrast rounded-lg focus:outline-none" id="totp-input" maxlength="6" placeholder="000 000" type="text"/>
+</div>
+<div class="flex items-center justify-end gap-3 mt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-interactive text-text-secondary hover:text-text-contrast font-label-md text-label-md" onclick="closeModal()">
+          Cancel
+        </button>
+<button class="px-5 py-2 rounded-lg bg-primary-container text-text-contrast font-label-md text-label-md font-semibold hover:bg-inverse-primary shadow-md" onclick="submitAction()">
+          Confirm Execution
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function confirmAction(description, style) {
+    if (confirm(`ADMIN CONFIRMATION:\n\nProceed with action: "${description}"?`)) {
+      alert(`Action successfully submitted to the ledger: ${description}`);
+    }
+  }
+
+  function trigger2FA(operationName) {
+    const modal = document.getElementById('action-modal');
+    const title = document.getElementById('modal-action-title');
+    const input = document.getElementById('totp-input');
+    title.innerText = operationName;
+    input.value = '';
+    modal.classList.remove('hidden');
+    input.focus();
+  }
+
+  function closeModal() {
+    document.getElementById('action-modal').classList.add('hidden');
+  }
+
+  function submitAction() {
+    const input = document.getElementById('totp-input');
+    if (input.value.length >= 6) {
+      alert('2FA Cryptographic Authorization Verified. Action committed to audit log.');
+      closeModal();
+    } else {
+      alert('Please enter a valid 6-digit TOTP token.');
+    }
+  }
+
+  // Interactive tab switcher
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => {
+        b.classList.remove('bg-surface-card', 'text-text-contrast', 'font-semibold', 'shadow-sm');
+        b.classList.add('text-text-secondary');
+      });
+      btn.classList.add('bg-surface-card', 'text-text-contrast', 'font-semibold', 'shadow-sm');
+      btn.classList.remove('text-text-secondary');
+    });
+  });
+</script></main></div></body></html>

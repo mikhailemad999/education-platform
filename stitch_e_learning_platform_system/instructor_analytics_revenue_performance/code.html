@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#ffdad5","tertiary":"#ffb4ab","surface-container-low":"#1c1b1b","on-primary-fixed-variant":"#930007","surface-container-lowest":"#0e0e0e","error":"#ffb4ab","status-info":"#3B82F6","surface-card":"#0F0F0F","secondary-fixed":"#ffdad6","surface-bright":"#3a3939","bg-canvas":"#050505","inverse-on-surface":"#313030","status-danger":"#EF4444","border-subtle":"#202020","on-secondary":"#690005","on-tertiary-container":"#fff7f6","border-control":"#2A2A2A","on-error-container":"#ffdad6","on-surface-variant":"#e9bcb6","outline-variant":"#5e3f3b","surface-secondary":"#111111","border-standard":"#252525","on-primary-fixed":"#410001","primary-container":"#e50914","primary":"#ffb4aa","on-error":"#690005","border-card":"#232323","surface-interactive":"#151515","tertiary-fixed":"#ffdad6","surface-variant":"#353534","secondary-container":"#a4020e","surface-dim":"#131313","on-secondary-container":"#ffaea5","outline":"#af8782","tertiary-container":"#e40d1a","status-success":"#22C55E","background":"#131313","text-muted":"#737373","on-background":"#e5e2e1","error-container":"#93000a","text-secondary":"#A3A3A3","on-secondary-fixed-variant":"#93000a","surface-container-highest":"#353534","on-secondary-fixed":"#410002","inverse-primary":"#c0000c","tertiary-fixed-dim":"#ffb4ab","surface-container-high":"#2a2a2a","accent-ambient-subtle":"#3A0508","on-tertiary":"#690005","surface-tint":"#ffb4aa","status-warning":"#F59E0B","secondary":"#ffb4ab","secondary-fixed-dim":"#ffb4ab","accent-ambient-dark":"#240406","on-primary":"#690003","inverse-surface":"#e5e2e1","on-tertiary-fixed-variant":"#93000a","on-surface":"#e5e2e1","surface-container":"#201f1f","surface":"#131313","primary-fixed-dim":"#ffb4aa","border-soft":"#1B1B1B","text-contrast":"#FFFFFF","on-primary-container":"#fff7f6","surface-elevated":"#171717","on-tertiary-fixed":"#410002","text-primary":"#F5F5F5","surface-hover":"#161616"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","margin-mobile":"1rem",gutter:"1.5rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-tablet":"2rem","space-lg":"1.5rem","gutter-lg":"2rem",margin:"2.5rem","space-md":"1rem","space-xs":"0.25rem"},fontFamily:{"display-mobile":["Geist"],"title-md":["Geist"],"title-sm":["Geist"],"label-sm":["Geist"],"headline-lg-mobile":["Geist"],"headline-md":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-md":["Geist"],"headline-sm":["Geist"],display:["Geist"],"headline-lg":["Geist"],"body-lg":["Inter"]},fontSize:{"display-mobile":["40px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-sm":["24px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["64px",{lineHeight:"68px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-lg":["48px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}]}}}}</script></head><body class="bg-bg-canvas font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-border-standard z-50 flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-border-subtle"><img alt="Obsidian Education Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm text-text-contrast uppercase font-bold tracking-tight">Studio<span class="text-primary-container">.Console</span></span></div><div class="p-space-sm border-b border-border-subtle"><div class="flex items-center justify-between p-2 rounded bg-surface-card border border-border-standard"><span class="font-label-sm text-label-sm text-text-secondary">Workspace Mode</span><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-semibold">Instructor</span></div></div><nav class="flex-1 px-space-sm py-space-md space-y-1 overflow-y-auto" data-active-classes="bg-surface-interactive text-text-contrast border-l-2 border-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="instructor-studio" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>Studio Overview</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="course-editor" href="#"><span class="material-symbols-outlined text-lg">video_library</span>Curriculum Builder</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="admin-console" href="#"><span class="material-symbols-outlined text-lg">admin_panel_settings</span>Admin Console</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-lg">insights</span>Learner Metrics</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="payouts" href="#"><span class="material-symbols-outlined text-lg">payments</span>Revenue &amp; Royalties</a></nav><div class="p-space-sm border-t border-border-subtle"><a class="flex items-center gap-space-xs font-label-sm text-label-sm text-text-secondary hover:text-text-contrast" data-path="courses" href="#"><span class="material-symbols-outlined text-sm">arrow_back</span>Back to Student Portal</a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-standard z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md w-full max-w-sm"><div class="flex items-center w-full h-9 px-space-sm bg-surface-card rounded-lg border border-border-control focus-within:border-primary-container transition-colors"><span class="material-symbols-outlined text-text-muted text-base mr-space-xs">search</span><input class="w-full bg-transparent border-none text-text-primary placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" placeholder="Filter projects or curriculum..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded-lg text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-standard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkj3xSZQ5l9_5PidbG_OITvATwxFFi5drjxJW-P5b-v-CBjsct1mQ8T0GHfHRBD8S-nWESMnYTBpnKPRLxb44DjZ6IwMKiYi3-J63iyv2X-1M4MaadlYloTKmYYZArTNRJlCekMbJL575FvU8CEithLs7HPggi3M129LZCHldN8mmj5mka6fwsZb5l4_ZztBlwt3L5DXr7woj5ovMj8K_fvulc2qDu6BVmAL7J4SuCMxsF4irdfskc"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-status-success rounded-full ring-2 ring-surface-container-lowest"></span></div></div></header><main class="w-full pt-16 bg-bg-canvas min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full space-y-space-xl">
+<!-- Subtle Ambient Glow Overlay (parent contained) -->
+<div class="relative w-full">
+<div class="absolute -top-12 left-1/4 w-96 h-48 bg-primary-container/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-24 right-10 w-72 h-40 bg-accent-ambient-dark/60 rounded-full blur-2xl pointer-events-none -z-10"></div>
+<!-- Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs text-text-muted font-label-sm text-label-sm uppercase tracking-wider">
+<span class="inline-block w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+<span>Telemetry Node • Telemetry Engine v4.8</span>
+<span class="text-text-muted">/</span>
+<span class="text-text-secondary">Instructor Fleet Payouts</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-contrast tracking-tight">Course Performance &amp; Revenue Intelligence</h1>
+<p class="font-body-md text-body-md text-text-secondary">
+          Real-time telemetry on student cohorts, retention velocity, video drop-off curves, and payout distributions for instructor portfolio.
+        </p>
+</div>
+<!-- Quick Time Filter Ribbon -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-card p-1.5 rounded-xl shadow-lg shadow-black/40">
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors">
+          7 Days
+        </button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-text-contrast shadow-sm transition-all font-semibold">
+          30 Days
+        </button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors">
+          90 Days
+        </button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors">
+          12 Months
+        </button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors">
+          All Time
+        </button>
+<div class="w-px h-5 bg-border-standard my-auto mx-1"></div>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-interactive text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm text-primary">download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Top High-Impact Metric Cards (4-Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Gross Course Revenue -->
+<div class="relative bg-surface-card rounded-xl p-space-lg shadow-md flex flex-col justify-between overflow-hidden group hover:bg-surface-interactive transition-all">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Gross Course Revenue</span>
+<div class="font-headline-md text-headline-md text-text-contrast tracking-tight">$142,680.00</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-accent-ambient-dark flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-status-success/15 text-status-success font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">trending_up</span> +14.8%
+          </span>
+<span class="font-body-sm text-body-sm text-text-muted">+$18,420 vs last mo</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary-container/40 to-transparent"></div>
+</div>
+<!-- Card 2: Platform Net Payout -->
+<div class="relative bg-surface-card rounded-xl p-space-lg shadow-md flex flex-col justify-between overflow-hidden group hover:bg-surface-interactive transition-all">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Platform Net Payout</span>
+<div class="font-headline-md text-headline-md text-text-contrast tracking-tight">$114,144.00</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-elevated flex items-center justify-center text-text-contrast">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-text-secondary">
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-status-warning"></span>
+<span class="text-text-muted">Pending:</span>
+<span class="text-text-primary font-medium">$8,420.00</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Cycle: Nov 01</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-status-warning/40 to-transparent"></div>
+</div>
+<!-- Card 3: Total Active Enrollments -->
+<div class="relative bg-surface-card rounded-xl p-space-lg shadow-md flex flex-col justify-between overflow-hidden group hover:bg-surface-interactive transition-all">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Active Enrollments</span>
+<div class="font-headline-md text-headline-md text-text-contrast tracking-tight">18,450 <span class="font-title-sm text-title-sm text-text-muted font-normal">Engineers</span></div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-elevated flex items-center justify-center text-status-info">
+<span class="material-symbols-outlined text-xl">group_work</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-status-info/15 text-status-info font-semibold">
+          +1,240
+        </span>
+<span class="font-body-sm text-body-sm text-text-muted">new cohort joins this month</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-status-info/40 to-transparent"></div>
+</div>
+<!-- Card 4: Avg Completion Rate -->
+<div class="relative bg-surface-card rounded-xl p-space-lg shadow-md flex flex-col justify-between overflow-hidden group hover:bg-surface-interactive transition-all">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Avg Completion Rate</span>
+<div class="font-headline-md text-headline-md text-text-contrast tracking-tight">78.4%</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">military_tech</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-primary-container/20 text-primary font-semibold">
+            Top 2% Tier
+          </span>
+<span class="font-body-sm text-body-sm text-text-muted">Avg: 42.1%</span>
+</div>
+<span class="material-symbols-outlined text-status-success text-base">verified</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+</div>
+</div>
+<!-- Performance & Revenue Trajectory Visual Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Area Chart Pane (8 Columns) -->
+<div class="lg:col-span-8 bg-surface-card rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md text-text-contrast">Revenue Trajectory &amp; Real-time Yield</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-elevated font-label-sm text-label-sm text-text-secondary font-mono">12-Mo Rolling</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Direct correlation between Monthly Gross volume and Instructor Dispatched Net Payouts.</p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="w-3 h-3 rounded-sm bg-primary-container"></span> Gross Revenue
+          </div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-secondary">
+<span class="w-3 h-3 rounded-sm bg-surface-bright"></span> Net Dispatched
+          </div>
+</div>
+</div>
+<!-- Area Chart SVG -->
+<div class="relative w-full h-72 my-space-sm flex items-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 260">
+<defs>
+<lineargradient id="grossGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#e50914" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#e50914" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="payoutGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#737373" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#737373" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Reference lines -->
+<line stroke="#252525" stroke-dasharray="4,4" stroke-width="1" x1="0" x2="800" y1="30" y2="30"></line>
+<line stroke="#202020" stroke-dasharray="4,4" stroke-width="1" x1="0" x2="800" y1="95" y2="95"></line>
+<line stroke="#202020" stroke-dasharray="4,4" stroke-width="1" x1="0" x2="800" y1="160" y2="160"></line>
+<line stroke="#202020" stroke-width="1" x1="0" x2="800" y1="225" y2="225"></line>
+<!-- Area: Net Payout -->
+<polygon fill="url(#payoutGradient)" points="
+            0,210 70,195 140,185 210,170 280,165 350,140 420,135 490,120 560,110 630,90 700,75 800,55 800,225 0,225
+          "></polygon>
+<!-- Line: Net Payout -->
+<path d="M0,210 L70,195 L140,185 L210,170 L280,165 L350,140 L420,135 L490,120 L560,110 L630,90 L700,75 L800,55" fill="none" stroke="#737373" stroke-linecap="round" stroke-width="2"></path>
+<!-- Area: Gross Revenue -->
+<polygon fill="url(#grossGradient)" points="
+            0,190 70,170 140,150 210,140 280,130 350,105 420,95 490,75 560,65 630,45 700,35 800,15 800,225 0,225
+          "></polygon>
+<!-- Line: Gross Revenue -->
+<path d="M0,190 L70,170 L140,150 L210,140 L280,130 L350,105 L420,95 L490,75 L560,65 L630,45 L700,35 L800,15" fill="none" stroke="#e50914" stroke-linecap="round" stroke-width="3"></path>
+<!-- Data Points on Latest Peak -->
+<circle cx="800" cy="15" fill="#ffb4aa" r="5" stroke="#e50914" stroke-width="3"></circle>
+<circle cx="700" cy="35" fill="#e50914" r="4"></circle>
+<circle cx="630" cy="45" fill="#e50914" r="4"></circle>
+</svg>
+<!-- Floating Telemetry Tooltip pinned on peak -->
+<div class="absolute right-4 top-2 bg-surface-elevated/95 backdrop-blur-md p-3 rounded-lg shadow-xl shadow-black/60 pointer-events-none">
+<div class="flex items-center justify-between gap-4 font-label-sm text-label-sm text-text-muted mb-1">
+<span>October 2024</span>
+<span class="text-status-success font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">arrow_upward</span> Peak Mo
+            </span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-title-sm text-title-sm text-text-contrast">$142,680 Gross</span>
+<span class="font-body-sm text-body-sm text-primary font-mono font-medium">($114.1k Net)</span>
+</div>
+</div>
+</div>
+<!-- X-Axis Labels -->
+<div class="flex justify-between text-text-muted font-label-sm text-label-sm pt-2">
+<span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+<span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span class="text-text-contrast font-bold">Oct (Active)</span>
+</div>
+</div>
+<!-- Secondary Insight: Top Revenue Producing Tracks (4 Columns) -->
+<div class="lg:col-span-4 bg-surface-card rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-title-md text-title-md text-text-contrast">Top Revenue Tracks</h2>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim bg-accent-ambient-dark px-2 py-0.5 rounded">3 Active Tracks</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">Weighted yield distribution across current published curriculum catalogue.</p>
+<div class="space-y-space-md">
+<!-- Course Track 1 -->
+<div class="p-3 rounded-lg bg-surface-secondary hover:bg-surface-interactive transition-all">
+<div class="flex items-start justify-between gap-2 mb-2">
+<span class="font-label-md text-label-md text-text-primary line-clamp-2 leading-snug">
+                Distributed Systems &amp; Microservices with NestJS, Kafka &amp; Redis
+              </span>
+<span class="font-title-sm text-title-sm text-text-contrast whitespace-nowrap font-mono">$84,200</span>
+</div>
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-1.5">
+<span>59% of total royalties</span>
+<span class="text-status-success font-medium">+18.2% vs Q3</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 59%"></div>
+</div>
+</div>
+<!-- Course Track 2 -->
+<div class="p-3 rounded-lg bg-surface-secondary hover:bg-surface-interactive transition-all">
+<div class="flex items-start justify-between gap-2 mb-2">
+<span class="font-label-md text-label-md text-text-primary line-clamp-2 leading-snug">
+                Modern Full-Stack Rust &amp; WebAssembly Masterclass
+              </span>
+<span class="font-title-sm text-title-sm text-text-contrast whitespace-nowrap font-mono">$38,400</span>
+</div>
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-1.5">
+<span>27% of total royalties</span>
+<span class="text-status-success font-medium">+9.4% vs Q3</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 27%"></div>
+</div>
+</div>
+<!-- Course Track 3 -->
+<div class="p-3 rounded-lg bg-surface-secondary hover:bg-surface-interactive transition-all">
+<div class="flex items-start justify-between gap-2 mb-2">
+<span class="font-label-md text-label-md text-text-primary line-clamp-2 leading-snug">
+                Advanced Linux eBPF &amp; Kernel Observability
+              </span>
+<span class="font-title-sm text-title-sm text-text-contrast whitespace-nowrap font-mono">$20,080</span>
+</div>
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-1.5">
+<span>14% of total royalties</span>
+<span class="text-text-muted font-medium">Stable</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-surface-bright rounded-full" style="width: 14%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-accent-ambient-dark/40 p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">monetization_on</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Effective Avg. Learner LTV</span>
+</div>
+<span class="font-title-sm text-title-sm text-text-contrast font-mono">$184.20</span>
+</div>
+</div>
+</div>
+<!-- Deep Learning Telemetry & Retention Breakdown (2-Column Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Lecture Engagement & Drop-off (7 cols) -->
+<div class="lg:col-span-7 bg-surface-card rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="space-y-0.5">
+<h2 class="font-title-md text-title-md text-text-contrast flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">query_stats</span>
+              Lecture Engagement &amp; Watch-Time Drop-off
+            </h2>
+<p class="font-body-sm text-body-sm text-text-secondary">
+              Cohort progression funnel through Distributed Systems core syllabus (18,450 total active).
+            </p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-status-success/10 text-status-success font-label-sm text-label-sm font-semibold">
+            Health: High Retention
+          </span>
+</div>
+<!-- Modules Drop-off Flow -->
+<div class="space-y-space-md mt-space-md">
+<!-- Module 1 -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-text-primary font-mono">01</span>
+<span class="font-label-md text-label-md text-text-primary">Foundations of Distributed State &amp; Consensus</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-body-sm text-body-sm text-text-muted">4,820 hrs watch-time</span>
+<span class="font-title-sm text-title-sm text-status-success font-mono font-bold">96%</span>
+</div>
+</div>
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-status-success rounded-full" style="width: 96%"></div>
+</div>
+</div>
+<!-- Module 2 -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-text-primary font-mono">02</span>
+<span class="font-label-md text-label-md text-text-primary">Kafka Event Clustering &amp; Broker Topologies</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-body-sm text-body-sm text-text-muted">6,410 hrs watch-time</span>
+<span class="font-title-sm text-title-sm text-status-success font-mono font-bold">88%</span>
+</div>
+</div>
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-status-success/90 rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<!-- Module 3 -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-text-primary font-mono">03</span>
+<span class="font-label-md text-label-md text-text-primary">Sagas &amp; Distributed Transactions (Two-Phase Commit)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-body-sm text-body-sm text-text-muted">5,120 hrs watch-time</span>
+<span class="font-title-sm text-title-sm text-status-warning font-mono font-bold">82%</span>
+</div>
+</div>
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-status-warning rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Module 4 -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-text-primary font-mono">04</span>
+<span class="font-label-md text-label-md text-text-primary">Production Deployment &amp; Chaos Engineering Runbooks</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-body-sm text-body-sm text-text-muted">3,950 hrs watch-time</span>
+<span class="font-title-sm text-title-sm text-text-primary font-mono font-bold">74%</span>
+</div>
+</div>
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container rounded-full" style="width: 74%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Optimization Callout Tip -->
+<div class="mt-space-lg p-space-md rounded-xl bg-accent-ambient-dark flex items-start gap-space-sm shadow-inner">
+<div class="p-2 rounded-lg bg-primary-container text-text-contrast flex-shrink-0">
+<span class="material-symbols-outlined text-lg">auto_fix_high</span>
+</div>
+<div class="space-y-1">
+<div class="font-label-md text-label-md text-text-contrast font-semibold">Algorithmic Optimization Recommendation</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Optimization recommendation: Break Lecture 3.4 (42 mins) into 2 micro-modules to boost completion by ~6%. Students currently exhibit higher pause frequencies at minute marker 24:18.
+          </p>
+</div>
+</div>
+</div>
+<!-- Right Column: Student Demographics & Enterprise Reach (5 cols) -->
+<div class="lg:col-span-5 bg-surface-card rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-title-md text-title-md text-text-contrast flex items-center gap-2">
+<span class="material-symbols-outlined text-status-info text-xl">pie_chart</span>
+            Student Demographics &amp; Seniority
+          </h2>
+<span class="font-label-sm text-label-sm text-text-muted">Verified Badging</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">Real-time profile enrichment telemetry based on student corporate authentication.</p>
+<!-- Donut & Bar Seniority Breakdown -->
+<div class="space-y-space-md">
+<div class="space-y-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-text-primary">Senior Backend Developers</span>
+<span class="text-text-contrast font-mono font-semibold">48%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 48%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-text-primary">Staff / Principal Engineers</span>
+<span class="text-text-contrast font-mono font-semibold">34%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-status-info rounded-full" style="width: 34%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-text-primary">Tech Leads &amp; Systems Architects</span>
+<span class="text-text-contrast font-mono font-semibold">18%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-status-warning rounded-full" style="width: 18%"></div>
+</div>
+</div>
+</div>
+<!-- Top Companies Enrolled -->
+<div class="mt-space-lg">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider block mb-space-sm">
+            Top Companies Represented in Active Cohort
+          </span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-interactive text-text-primary font-label-md text-label-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Stripe
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-interactive text-text-primary font-label-md text-label-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-info"></span> Datadog
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-interactive text-text-primary font-label-md text-label-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span> AWS
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-interactive text-text-primary font-label-md text-label-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></span> Cloudflare
+            </span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-interactive text-text-primary font-label-md text-label-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Uber
+            </span>
+</div>
+</div>
+</div>
+<!-- Cohort Global Reach Snapshot -->
+<div class="mt-space-md p-3 rounded-lg bg-surface-secondary flex items-center justify-between text-text-muted font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-text-secondary">public</span>
+          Learners across 84 countries
+        </span>
+<span class="text-text-primary font-medium">62% North America / 24% EMEA</span>
+</div>
+</div>
+</div>
+<!-- Recent Payout & Settlement Ledger Table -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-md space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md text-text-contrast">Settlement &amp; Royalty Ledger</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-semibold">
+            Automated Stripe ACH
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">Itemized ledger of batch course royalties and platform revenue splits.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-interactive text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-base">filter_list</span>
+<span>Filter Ledger</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-interactive text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+<span>Statements</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-secondary text-text-muted font-label-sm text-label-sm uppercase tracking-wider rounded-lg">
+<th class="py-3 px-4 rounded-l-lg">Transaction ID</th>
+<th class="py-3 px-4">Course / Origin</th>
+<th class="py-3 px-4">Date</th>
+<th class="py-3 px-4 text-right">Gross Amount</th>
+<th class="py-3 px-4 text-right">Platform Fee (15%)</th>
+<th class="py-3 px-4 text-right">Net Earnings</th>
+<th class="py-3 px-4 text-center">Settlement Status</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-interactive transition-colors group">
+<td class="py-3.5 px-4 font-mono font-medium text-text-primary">
+<span class="text-text-muted">#</span>TX-984210
+            </td>
+<td class="py-3.5 px-4 font-label-md text-label-md text-text-contrast">
+              Distributed Systems with NestJS, Kafka
+              <span class="block text-text-muted font-body-sm text-body-sm">Cohort #14 • Corporate Enterprise Bulk</span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary whitespace-nowrap">Oct 24, 2024</td>
+<td class="py-3.5 px-4 text-right font-mono font-semibold text-text-contrast">$18,400.00</td>
+<td class="py-3.5 px-4 text-right font-mono text-status-danger">-$2,760.00</td>
+<td class="py-3.5 px-4 text-right font-mono font-bold text-status-success">$15,640.00</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-status-success/15 text-status-success font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Dispatched
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-secondary text-text-secondary hover:text-text-contrast hover:bg-surface-elevated font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Receipt
+              </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-interactive transition-colors group">
+<td class="py-3.5 px-4 font-mono font-medium text-text-primary">
+<span class="text-text-muted">#</span>TX-983941
+            </td>
+<td class="py-3.5 px-4 font-label-md text-label-md text-text-contrast">
+              Modern Full-Stack Rust &amp; WebAssembly
+              <span class="block text-text-muted font-body-sm text-body-sm">Cohort #09 • Individual Professional Access</span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary whitespace-nowrap">Oct 21, 2024</td>
+<td class="py-3.5 px-4 text-right font-mono font-semibold text-text-contrast">$9,850.00</td>
+<td class="py-3.5 px-4 text-right font-mono text-status-danger">-$1,477.50</td>
+<td class="py-3.5 px-4 text-right font-mono font-bold text-status-success">$8,372.50</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-status-success/15 text-status-success font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Dispatched
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-secondary text-text-secondary hover:text-text-contrast hover:bg-surface-elevated font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Receipt
+              </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-interactive transition-colors group">
+<td class="py-3.5 px-4 font-mono font-medium text-text-primary">
+<span class="text-text-muted">#</span>TX-983102
+            </td>
+<td class="py-3.5 px-4 font-label-md text-label-md text-text-contrast">
+              Advanced Linux eBPF &amp; Kernel Observability
+              <span class="block text-text-muted font-body-sm text-body-sm">Team License Tier • Datadog Enterprise Seats</span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary whitespace-nowrap">Oct 18, 2024</td>
+<td class="py-3.5 px-4 text-right font-mono font-semibold text-text-contrast">$12,400.00</td>
+<td class="py-3.5 px-4 text-right font-mono text-status-danger">-$1,860.00</td>
+<td class="py-3.5 px-4 text-right font-mono font-bold text-status-warning">$10,540.00</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-status-warning/15 text-status-warning font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning animate-pulse"></span> Processing
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-secondary text-text-secondary hover:text-text-contrast hover:bg-surface-elevated font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Receipt
+              </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-interactive transition-colors group">
+<td class="py-3.5 px-4 font-mono font-medium text-text-primary">
+<span class="text-text-muted">#</span>TX-982855
+            </td>
+<td class="py-3.5 px-4 font-label-md text-label-md text-text-contrast">
+              Distributed Systems with NestJS, Kafka
+              <span class="block text-text-muted font-body-sm text-body-sm">Cohort #13 Mid-term • Direct Checkout</span>
+</td>
+<td class="py-3.5 px-4 text-text-secondary whitespace-nowrap">Oct 14, 2024</td>
+<td class="py-3.5 px-4 text-right font-mono font-semibold text-text-contrast">$14,200.00</td>
+<td class="py-3.5 px-4 text-right font-mono text-status-danger">-$2,130.00</td>
+<td class="py-3.5 px-4 text-right font-mono font-bold text-status-success">$12,070.00</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-status-success/15 text-status-success font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Dispatched
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-secondary text-text-secondary hover:text-text-contrast hover:bg-surface-elevated font-label-sm text-label-sm transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Receipt
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-sm text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span>Showing 4 of 128 transactions</span>
+<span class="w-1 h-1 rounded-full bg-border-standard"></span>
+<span class="text-text-muted">Direct Deposit into Chase Corporate (****8492)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 rounded bg-surface-secondary text-text-secondary hover:text-text-contrast disabled:opacity-50 text-label-md" disabled="">
+          Previous
+        </button>
+<button class="px-3 py-1 rounded bg-surface-interactive text-text-contrast hover:bg-surface-hover text-label-md">
+          Next Page
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

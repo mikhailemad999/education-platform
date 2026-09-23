@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#ffdad5","tertiary":"#ffb4ab","surface-container-low":"#1c1b1b","on-primary-fixed-variant":"#930007","surface-container-lowest":"#0e0e0e","error":"#ffb4ab","status-info":"#3B82F6","surface-card":"#0F0F0F","secondary-fixed":"#ffdad6","surface-bright":"#3a3939","bg-canvas":"#050505","inverse-on-surface":"#313030","status-danger":"#EF4444","border-subtle":"#202020","on-secondary":"#690005","on-tertiary-container":"#fff7f6","border-control":"#2A2A2A","on-error-container":"#ffdad6","on-surface-variant":"#e9bcb6","outline-variant":"#5e3f3b","surface-secondary":"#111111","border-standard":"#252525","on-primary-fixed":"#410001","primary-container":"#e50914","primary":"#ffb4aa","on-error":"#690005","border-card":"#232323","surface-interactive":"#151515","tertiary-fixed":"#ffdad6","surface-variant":"#353534","secondary-container":"#a4020e","surface-dim":"#131313","on-secondary-container":"#ffaea5","outline":"#af8782","tertiary-container":"#e40d1a","status-success":"#22C55E","background":"#131313","text-muted":"#737373","on-background":"#e5e2e1","error-container":"#93000a","text-secondary":"#A3A3A3","on-secondary-fixed-variant":"#93000a","surface-container-highest":"#353534","on-secondary-fixed":"#410002","inverse-primary":"#c0000c","tertiary-fixed-dim":"#ffb4ab","surface-container-high":"#2a2a2a","accent-ambient-subtle":"#3A0508","on-tertiary":"#690005","surface-tint":"#ffb4aa","status-warning":"#F59E0B","secondary":"#ffb4ab","secondary-fixed-dim":"#ffb4ab","accent-ambient-dark":"#240406","on-primary":"#690003","inverse-surface":"#e5e2e1","on-tertiary-fixed-variant":"#93000a","on-surface":"#e5e2e1","surface-container":"#201f1f","surface":"#131313","primary-fixed-dim":"#ffb4aa","border-soft":"#1B1B1B","text-contrast":"#FFFFFF","on-primary-container":"#fff7f6","surface-elevated":"#171717","on-tertiary-fixed":"#410002","text-primary":"#F5F5F5","surface-hover":"#161616"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","margin-mobile":"1rem",gutter:"1.5rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-tablet":"2rem","space-lg":"1.5rem","gutter-lg":"2rem",margin:"2.5rem","space-md":"1rem","space-xs":"0.25rem"},fontFamily:{"display-mobile":["Geist"],"title-md":["Geist"],"title-sm":["Geist"],"label-sm":["Geist"],"headline-lg-mobile":["Geist"],"headline-md":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-md":["Geist"],"headline-sm":["Geist"],display:["Geist"],"headline-lg":["Geist"],"body-lg":["Inter"]},fontSize:{"display-mobile":["40px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-sm":["24px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["64px",{lineHeight:"68px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-lg":["48px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}]}}}}</script></head><body class="bg-bg-canvas font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-border-standard z-50 flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-border-subtle"><img alt="Obsidian Education Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm text-text-contrast uppercase font-bold tracking-tight">Studio<span class="text-primary-container">.Console</span></span></div><div class="p-space-sm border-b border-border-subtle"><div class="flex items-center justify-between p-2 rounded bg-surface-card border border-border-standard"><span class="font-label-sm text-label-sm text-text-secondary">Workspace Mode</span><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-semibold">Instructor</span></div></div><nav class="flex-1 px-space-sm py-space-md space-y-1 overflow-y-auto" data-active-classes="bg-surface-interactive text-text-contrast border-l-2 border-primary-container font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 rounded transition-colors bg-surface-interactive text-text-contrast border-l-2 border-primary-container font-semibold" data-path="instructor-studio" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>Studio Overview</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="course-editor" href="#"><span class="material-symbols-outlined text-lg">video_library</span>Curriculum Builder</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="admin-console" href="#"><span class="material-symbols-outlined text-lg">admin_panel_settings</span>Admin Console</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-lg">insights</span>Learner Metrics</a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors" data-path="payouts" href="#"><span class="material-symbols-outlined text-lg">payments</span>Revenue &amp; Royalties</a></nav><div class="p-space-sm border-t border-border-subtle"><a class="flex items-center gap-space-xs font-label-sm text-label-sm text-text-secondary hover:text-text-contrast" data-path="courses" href="#"><span class="material-symbols-outlined text-sm">arrow_back</span>Back to Student Portal</a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-standard z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md w-full max-w-sm"><div class="flex items-center w-full h-9 px-space-sm bg-surface-card rounded-lg border border-border-control focus-within:border-primary-container transition-colors"><span class="material-symbols-outlined text-text-muted text-base mr-space-xs">search</span><input class="w-full bg-transparent border-none text-text-primary placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" placeholder="Filter projects or curriculum..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 rounded-lg text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-standard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkj3xSZQ5l9_5PidbG_OITvATwxFFi5drjxJW-P5b-v-CBjsct1mQ8T0GHfHRBD8S-nWESMnYTBpnKPRLxb44DjZ6IwMKiYi3-J63iyv2X-1M4MaadlYloTKmYYZArTNRJlCekMbJL575FvU8CEithLs7HPggi3M129LZCHldN8mmj5mka6fwsZb5l4_ZztBlwt3L5DXr7woj5ovMj8K_fvulc2qDu6BVmAL7J4SuCMxsF4irdfskc"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-status-success rounded-full ring-2 ring-surface-container-lowest"></span></div></div></header><main class="w-full pt-16 bg-bg-canvas min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full space-y-gutter-lg pb-space-xl">
+<!-- Top Operational Banner & Workspace Status -->
+<div class="relative overflow-hidden rounded-xl bg-surface-card p-space-lg shadow-xl">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-accent-ambient-subtle/40 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            Production Node Active
+          </span>
+<span class="text-text-muted text-xs">•</span>
+<span class="text-text-secondary font-label-sm text-label-sm">Host: studio-node-09.internal</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-text-contrast tracking-tight">Instructor Control Station</h1>
+<p class="font-body-md text-body-md text-text-secondary max-w-2xl">
+          Real-time metrics orchestration, platform payout balances, and active streaming curriculum deployment.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="h-11 px-space-md rounded-lg bg-surface-interactive text-text-primary hover:bg-surface-hover hover:text-text-contrast font-label-md text-label-md transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span>
+          Export Ledger
+        </button>
+<button class="h-11 px-space-md rounded-lg bg-surface-interactive text-text-primary hover:bg-surface-hover hover:text-text-contrast font-label-md text-label-md transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">videocam</span>
+          Go Live
+        </button>
+<button class="h-11 px-space-md rounded-lg bg-primary-container text-text-contrast hover:opacity-95 font-label-md text-label-md font-semibold transition-all shadow-lg shadow-primary-container/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+          Create New Course
+        </button>
+</div>
+</div>
+</div>
+<!-- KPI Metric Cards Grid (Section 18) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-md">
+<!-- Total Students -->
+<div class="group rounded-xl bg-surface-card p-space-md hover:bg-surface-interactive transition-all duration-200">
+<div class="flex items-center justify-between text-text-muted mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Total Students</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-text-secondary group-hover:text-text-contrast">
+<span class="material-symbols-outlined text-lg">group</span>
+</span>
+</div>
+<div class="font-display text-3xl font-bold text-text-contrast tracking-tight mb-1">18,450</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-status-success">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12.4%</span>
+<span class="text-text-muted font-normal">this month</span>
+</div>
+</div>
+<!-- Total Gross Revenue -->
+<div class="group rounded-xl bg-surface-card p-space-md hover:bg-surface-interactive transition-all duration-200">
+<div class="flex items-center justify-between text-text-muted mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Total Gross Revenue</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-text-secondary group-hover:text-text-contrast">
+<span class="material-symbols-outlined text-lg">account_balance</span>
+</span>
+</div>
+<div class="font-display text-3xl font-bold text-text-contrast tracking-tight mb-1">$142,680.00</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-status-success">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+8.2%</span>
+<span class="text-text-muted font-normal">vs last month</span>
+</div>
+</div>
+<!-- Net Earnings -->
+<div class="group rounded-xl bg-surface-card p-space-md hover:bg-surface-interactive transition-all duration-200 relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 w-1 bg-primary-container"></div>
+<div class="flex items-center justify-between text-text-muted mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Net Earnings</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-lg">paid</span>
+</span>
+</div>
+<div class="font-display text-3xl font-bold text-text-contrast tracking-tight mb-1">$114,144.00</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-primary font-medium">Payout ready:</span>
+<span class="text-text-contrast font-semibold">$8,420.00</span>
+</div>
+</div>
+<!-- Active Courses -->
+<div class="group rounded-xl bg-surface-card p-space-md hover:bg-surface-interactive transition-all duration-200">
+<div class="flex items-center justify-between text-text-muted mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Course Status</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-text-secondary group-hover:text-text-contrast">
+<span class="material-symbols-outlined text-lg">school</span>
+</span>
+</div>
+<div class="font-display text-3xl font-bold text-text-contrast tracking-tight mb-1">7 Total</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-text-secondary truncate">
+<span class="text-status-success font-medium">5 Pub</span>
+<span class="text-text-muted">•</span>
+<span class="text-status-warning font-medium">1 In Review</span>
+<span class="text-text-muted">•</span>
+<span class="text-text-muted">1 Draft</span>
+</div>
+</div>
+<!-- Average Course Rating -->
+<div class="group rounded-xl bg-surface-card p-space-md hover:bg-surface-interactive transition-all duration-200">
+<div class="flex items-center justify-between text-text-muted mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Learner Rating</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-status-warning group-hover:text-status-warning">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-display text-3xl font-bold text-text-contrast tracking-tight">4.92</span>
+<div class="flex text-status-warning text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-text-muted">
+        Across 4,110 verified reviews
+      </div>
+</div>
+</div>
+<!-- Revenue & Enrollment Analytics Chart (Section 19) -->
+<div class="rounded-xl bg-surface-card p-space-lg shadow-xl space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-title-md text-title-md text-text-contrast">Revenue &amp; Enrollment Trajectory</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-text-secondary">USD ($) &amp; Seats</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">Synchronized volume mapping between streaming registrations and net earnings</p>
+</div>
+<!-- Time Filter Selector -->
+<div class="flex items-center p-1 rounded-lg bg-surface-container-lowest self-start sm:self-auto">
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm text-text-secondary hover:text-text-contrast transition-colors">7D</button>
+<button class="px-3 py-1.5 rounded-md bg-surface-interactive font-label-sm text-label-sm text-text-contrast font-semibold shadow">30D</button>
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm text-text-secondary hover:text-text-contrast transition-colors">90D</button>
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm text-text-secondary hover:text-text-contrast transition-colors">12M</button>
+<button class="px-3 py-1.5 rounded-md font-label-sm text-label-sm text-text-secondary hover:text-text-contrast transition-colors">All Time</button>
+</div>
+</div>
+<!-- Chart Legend & High Watermark -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary-container shadow-sm shadow-primary-container"></span>
+<span class="font-label-sm text-label-sm text-text-secondary">Gross Revenue Curve</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-sm bg-surface-bright"></span>
+<span class="font-label-sm text-label-sm text-text-secondary">New Student Enrollments</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg text-right">
+<div>
+<span class="block font-label-sm text-label-sm text-text-muted">Peak Velocity (Oct 18)</span>
+<span class="font-title-sm text-title-sm text-text-contrast font-semibold">$7,480.00 / 218 Seats</span>
+</div>
+</div>
+</div>
+<!-- High-Fidelity SVG Dual Chart -->
+<div class="w-full h-72 relative pt-space-sm">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 900 240">
+<defs>
+<lineargradient id="crimsonGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#e50914" stop-opacity="0.38"></stop>
+<stop offset="100%" stop-color="#e50914" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Reference Gridlines -->
+<line stroke="#1c1b1b" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="900" y1="20" y2="20"></line>
+<line stroke="#1c1b1b" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="900" y1="80" y2="80"></line>
+<line stroke="#1c1b1b" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="900" y1="140" y2="140"></line>
+<line stroke="#1c1b1b" stroke-width="1" x1="0" x2="900" y1="200" y2="200"></line>
+<!-- Enrollment Volume Bars (Secondary Metric) -->
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="50" rx="3" width="16" x="35" y="150"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="70" rx="3" width="16" x="95" y="130"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="40" rx="3" width="16" x="155" y="160"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="90" rx="3" width="16" x="215" y="110"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="105" rx="3" width="16" x="275" y="95"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="75" rx="3" width="16" x="335" y="125"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="115" rx="3" width="16" x="395" y="85"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="130" rx="3" width="16" x="455" y="70"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="100" rx="3" width="16" x="515" y="100"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="140" rx="3" width="16" x="575" y="60"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="155" rx="3" width="16" x="635" y="45"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="125" rx="3" width="16" x="695" y="75"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#2a2a2a" height="145" rx="3" width="16" x="755" y="55"></rect>
+<rect class="hover:fill-surface-bright transition-colors" fill="#353534" height="165" rx="3" width="16" x="815" y="35"></rect>
+<!-- Revenue Smooth Gradient Area Under Curve -->
+<path d="M 43 145 Q 160 120 280 80 T 520 70 T 700 45 T 823 25 L 823 200 L 43 200 Z" fill="url(#crimsonGradient)"></path>
+<!-- Crimson Primary Revenue Path -->
+<path d="M 43 145 Q 160 120 280 80 T 520 70 T 700 45 T 823 25" fill="none" stroke="#e50914" stroke-linecap="round" stroke-width="3"></path>
+<!-- Data Node Markers on Key Points -->
+<circle cx="280" cy="80" fill="#0e0e0e" r="4" stroke="#e50914" stroke-width="2.5"></circle>
+<circle cx="520" cy="70" fill="#0e0e0e" r="4" stroke="#e50914" stroke-width="2.5"></circle>
+<circle cx="700" cy="45" fill="#0e0e0e" r="4" stroke="#e50914" stroke-width="2.5"></circle>
+<circle cx="823" cy="25" fill="#e50914" r="5" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<!-- Horizontal Axis Label Coordinates -->
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm pt-2 px-6">
+<span>Day 01</span>
+<span>Day 06</span>
+<span>Day 12</span>
+<span>Day 18 (Spike)</span>
+<span>Day 24</span>
+<span class="text-text-contrast font-medium">Day 30 (Today)</span>
+</div>
+</div>
+</div>
+<!-- Course Management & Curriculum Builder Section (Section 20 & 21) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left 8 Columns: Active Curriculum Sequence Builder -->
+<div class="lg:col-span-8 space-y-space-md">
+<!-- Course Tabs & Context Header -->
+<div class="rounded-xl bg-surface-card p-space-md shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm overflow-x-auto min-w-0">
+<div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-interactive text-text-contrast font-title-sm text-title-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">hub</span>
+<span class="truncate max-w-xs md:max-w-md">Distributed Systems &amp; Microservices with NestJS</span>
+<span class="px-2 py-0.5 rounded-full bg-status-info/20 text-status-info font-label-sm text-label-sm font-normal">Active Editor</span>
+</div>
+<button class="px-3 py-2 rounded-lg text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md shrink-0 transition-colors">
+            Kubernetes for Go Engineers
+          </button>
+</div>
+<div class="flex items-center gap-2 self-end md:self-auto shrink-0">
+<button class="p-2 rounded-lg bg-surface-container-high text-text-secondary hover:text-text-contrast transition-colors" title="Course Settings">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-high text-text-secondary hover:text-text-contrast transition-colors" title="Preview Student Experience">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+</div>
+</div>
+<!-- Action Toolbar -->
+<div class="flex items-center justify-between gap-space-sm px-1">
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-3.5 rounded-lg bg-surface-interactive text-text-contrast hover:bg-surface-hover font-label-md text-label-md font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">create_new_folder</span>
+            Add Section (+)
+          </button>
+<button class="h-9 px-3.5 rounded-lg bg-surface-interactive text-text-contrast hover:bg-surface-hover font-label-md text-label-md font-medium transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">post_add</span>
+            Add Lecture (+)
+          </button>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-3.5 rounded-lg text-text-secondary hover:text-text-contrast hover:bg-surface-hover font-label-md text-label-md transition-colors">
+            Save Draft
+          </button>
+<button class="h-9 px-4 rounded-lg bg-primary-container text-text-contrast hover:opacity-90 font-label-md text-label-md font-semibold transition-all shadow-md">
+            Publish Changes
+          </button>
+</div>
+</div>
+<!-- Drag & Drop Curriculum Outline -->
+<div class="space-y-space-sm">
+<!-- Section 01: Core Architecture -->
+<div class="rounded-xl bg-surface-card p-space-md transition-all">
+<div class="flex items-center justify-between gap-space-sm pb-space-sm border-b border-border-subtle">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-text-muted cursor-grab hover:text-text-contrast">drag_indicator</span>
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-text-muted">Section 01:</span>
+<span class="font-title-sm text-title-sm text-text-contrast font-semibold truncate">Core Architecture</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-text-secondary">3 lectures • 54 min</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-text-muted">
+<button class="p-1 hover:text-text-contrast transition-colors"><span class="material-symbols-outlined text-base">expand_less</span></button>
+<button class="p-1 hover:text-text-contrast transition-colors"><span class="material-symbols-outlined text-base">more_vert</span></button>
+</div>
+</div>
+<!-- Compact List for Section 1 -->
+<div class="pt-2 space-y-1">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-text-secondary hover:bg-surface-interactive transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-sm cursor-grab">drag_handle</span>
+<span class="material-symbols-outlined text-status-success text-base">play_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">01: Introduction to Distributed Hexagonal Paradigms</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">14:20</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-text-secondary hover:bg-surface-interactive transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-sm cursor-grab">drag_handle</span>
+<span class="material-symbols-outlined text-status-success text-base">play_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">02: Domain Entities &amp; Inversion of Control in NestJS</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">22:05</span>
+</div>
+</div>
+</div>
+<!-- Section 02: Event Streaming with Kafka -->
+<div class="rounded-xl bg-surface-card p-space-md transition-all space-y-space-sm ring-1 ring-primary-container/20">
+<div class="flex items-center justify-between gap-space-sm pb-space-sm border-b border-border-subtle">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary cursor-grab">drag_indicator</span>
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-primary">Section 02:</span>
+<span class="font-title-sm text-title-sm text-text-contrast font-semibold truncate">Event Streaming with Kafka</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/10 font-label-sm text-label-sm text-primary font-medium">5 lectures • 1 hr 45 min</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-text-muted">
+<button class="p-1 hover:text-text-contrast transition-colors"><span class="material-symbols-outlined text-base">expand_more</span></button>
+<button class="p-1 hover:text-text-contrast transition-colors"><span class="material-symbols-outlined text-base">more_vert</span></button>
+</div>
+</div>
+<!-- Section 2 Lectures (Interactive Rows) -->
+<div class="space-y-2">
+<!-- Row 1: Lecture 01 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg bg-surface-interactive hover:bg-surface-hover gap-space-sm transition-all group">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-text-muted group-hover:text-text-contrast cursor-grab text-base">drag_handle</span>
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-lg">smart_display</span>
+</div>
+<div class="min-w-0">
+<div class="font-body-md text-body-md text-text-contrast font-medium truncate">
+                    Lecture 01: Architecture Overview
+                  </div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-muted">
+<span>Video • 18 min</span>
+<span>•</span>
+<span class="text-status-info">HLS 1080p60 Multi-bitrate</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end sm:self-auto shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-status-success/15 text-status-success font-label-sm text-label-sm font-semibold">
+                  Ready 1080p
+                </span>
+<button class="p-1.5 rounded-md hover:bg-surface-container-high text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</div>
+<!-- Row 2: Lecture 02 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-lg bg-surface-interactive hover:bg-surface-hover gap-space-sm transition-all group">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-text-muted group-hover:text-text-contrast cursor-grab text-base">drag_handle</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-text-primary shrink-0">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+</div>
+<div class="min-w-0">
+<div class="font-body-md text-body-md text-text-contrast font-medium truncate">
+                    Lecture 02: Architectural Blueprint &amp; Partition Strategies
+                  </div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-text-muted">
+<span>PDF Document • 14 pages</span>
+<span>•</span>
+<span>2.4 MB</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end sm:self-auto shrink-0">
+<span class="px-2 py-0.5 rounded-full bg-status-info/15 text-status-info font-label-sm text-label-sm font-semibold">
+                  Published
+                </span>
+<button class="p-1.5 rounded-md hover:bg-surface-container-high text-text-secondary hover:text-text-contrast">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+</div>
+</div>
+<!-- Row 3: Drag Insertion Target Placeholder -->
+<div class="p-3 rounded-lg bg-surface-container-lowest/60 text-center font-label-sm text-label-sm text-text-muted transition-colors hover:text-text-secondary">
+              + Drag and reorder lectures within Section 02
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 4 Columns: Upload Dropzone & Transcoding Status (Section 20 & 21) -->
+<div class="lg:col-span-4 space-y-space-md">
+<!-- Media Ingestion Dropzone -->
+<div class="rounded-xl bg-surface-card p-space-md shadow-xl space-y-space-md">
+<div class="space-y-1">
+<h3 class="font-title-sm text-title-sm text-text-contrast font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">cloud_upload</span>
+            Lecture Asset Ingestion
+          </h3>
+<p class="font-body-sm text-body-sm text-text-muted">Drop raw lecture video (ProRes, MP4) or vector PDF companion slides.</p>
+</div>
+<!-- Interactive Drag-and-Drop Area -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-space-lg text-center cursor-pointer hover:bg-surface-interactive transition-all">
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full h-full z-10" type="file"/>
+<div class="flex flex-col items-center justify-center space-y-2">
+<div class="w-12 h-12 rounded-full bg-surface-container-high group-hover:scale-110 flex items-center justify-center text-primary transition-transform">
+<span class="material-symbols-outlined text-2xl">upload_file</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-md text-label-md text-text-contrast font-semibold block">Drop new video or PDF lecture here</span>
+<span class="font-body-sm text-body-sm text-text-muted block">or click to browse filesystem</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted px-2 py-0.5 rounded bg-surface-card">Up to 4K 60fps • Max 5 GB / asset</span>
+</div>
+</div>
+<!-- Upload Status Live Preview Card -->
+<div class="rounded-xl bg-surface-container-low p-space-md space-y-space-sm shadow-inner">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-xl">video_file</span>
+</div>
+<div class="min-w-0">
+<div class="font-body-sm text-body-sm text-text-contrast font-semibold truncate">
+                  nestjs-saga-pattern.mp4
+                </div>
+<div class="font-label-sm text-label-sm text-text-muted">
+                  482 MB / 60 min limit
+                </div>
+</div>
+</div>
+<button class="text-text-muted hover:text-status-danger transition-colors p-1" title="Cancel upload">
+<span class="material-symbols-outlined text-base">cancel</span>
+</button>
+</div>
+<!-- Progress Bar & Indicator -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-primary font-medium flex items-center gap-1.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+                Transcoding to Adaptive HLS
+              </span>
+<span class="text-text-contrast font-bold font-display">74%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-primary-container transition-all duration-300 shadow-sm shadow-primary-container" style="width: 74%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-text-muted pt-0.5">
+<span>Speed: 38.4 MB/s</span>
+<span>ETA: 12 seconds</span>
+</div>
+</div>
+</div>
+<!-- Transcoding Capabilities Badge Box -->
+<div class="p-3 rounded-lg bg-surface-card space-y-2">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-semibold">Automated Pipeline</div>
+<div class="grid grid-cols-2 gap-2 text-text-secondary font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+<span>1080p, 720p, 480p</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+<span>Auto Captions (AI)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+<span>DRM Encryption</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+<span>Interactive Notes</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Storage & Quota Tile -->
+<div class="rounded-xl bg-surface-card p-space-md space-y-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-text-secondary font-medium">Instructor CDN Tier</span>
+<span class="text-text-contrast font-semibold">Pro Unlimited</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-status-success" style="width: 32%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>64.8 GB of 200 GB Storage used</span>
+<span class="text-text-secondary font-medium">32%</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

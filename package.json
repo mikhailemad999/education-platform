@@ -1,0 +1,15 @@
+{
+  "name": "obsidian-education-platform",
+  "version": "1.0.0",
+  "description": "Obsidian Education SaaS E-Learning Platform",
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "dev:backend": "npm run start:dev --prefix backend",
+    "build:frontend": "npm run build --prefix frontend",
+    "build:backend": "npm run build --prefix backend",
+    "build": "npm run build:frontend && npm run build:backend"
+  },
+  "keywords": ["education", "e-learning", "nestjs", "react", "tailwind"],
+  "author": "Antigravity",
+  "license": "MIT"
+}

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#ffdad5","tertiary":"#ffb4ab","surface-container-low":"#1c1b1b","on-primary-fixed-variant":"#930007","surface-container-lowest":"#0e0e0e","error":"#ffb4ab","status-info":"#3B82F6","surface-card":"#0F0F0F","secondary-fixed":"#ffdad6","surface-bright":"#3a3939","bg-canvas":"#050505","inverse-on-surface":"#313030","status-danger":"#EF4444","border-subtle":"#202020","on-secondary":"#690005","on-tertiary-container":"#fff7f6","border-control":"#2A2A2A","on-error-container":"#ffdad6","on-surface-variant":"#e9bcb6","outline-variant":"#5e3f3b","surface-secondary":"#111111","border-standard":"#252525","on-primary-fixed":"#410001","primary-container":"#e50914","primary":"#ffb4aa","on-error":"#690005","border-card":"#232323","surface-interactive":"#151515","tertiary-fixed":"#ffdad6","surface-variant":"#353534","secondary-container":"#a4020e","surface-dim":"#131313","on-secondary-container":"#ffaea5","outline":"#af8782","tertiary-container":"#e40d1a","status-success":"#22C55E","background":"#131313","text-muted":"#737373","on-background":"#e5e2e1","error-container":"#93000a","text-secondary":"#A3A3A3","on-secondary-fixed-variant":"#93000a","surface-container-highest":"#353534","on-secondary-fixed":"#410002","inverse-primary":"#c0000c","tertiary-fixed-dim":"#ffb4ab","surface-container-high":"#2a2a2a","accent-ambient-subtle":"#3A0508","on-tertiary":"#690005","surface-tint":"#ffb4aa","status-warning":"#F59E0B","secondary":"#ffb4ab","secondary-fixed-dim":"#ffb4ab","accent-ambient-dark":"#240406","on-primary":"#690003","inverse-surface":"#e5e2e1","on-tertiary-fixed-variant":"#93000a","on-surface":"#e5e2e1","surface-container":"#201f1f","surface":"#131313","primary-fixed-dim":"#ffb4aa","border-soft":"#1B1B1B","text-contrast":"#FFFFFF","on-primary-container":"#fff7f6","surface-elevated":"#171717","on-tertiary-fixed":"#410002","text-primary":"#F5F5F5","surface-hover":"#161616"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","margin-mobile":"1rem",gutter:"1.5rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-tablet":"2rem","space-lg":"1.5rem","gutter-lg":"2rem",margin:"2.5rem","space-md":"1rem","space-xs":"0.25rem"},fontFamily:{"display-mobile":["Geist"],"title-md":["Geist"],"title-sm":["Geist"],"label-sm":["Geist"],"headline-lg-mobile":["Geist"],"headline-md":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-md":["Geist"],"headline-sm":["Geist"],display:["Geist"],"headline-lg":["Geist"],"body-lg":["Inter"]},fontSize:{"display-mobile":["40px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-sm":["24px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["64px",{lineHeight:"68px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-lg":["48px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}]}}}}</script></head><body class="bg-bg-canvas font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-standard"><div class="h-16 max-w-7xl mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Obsidian Education Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm tracking-tight text-text-contrast uppercase font-bold">Obsidian<span class="text-primary-container">.edu</span></span></div><nav class="hidden xl:flex items-center gap-space-lg h-full" data-active-classes="text-text-contrast border-b-2 border-primary-container font-semibold"><a aria-current="page" class="h-full flex items-center transition-colors text-text-contrast border-b-2 border-primary-container font-semibold" data-path="courses" href="#">Courses</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="categories" href="#">Categories</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="pricing" href="#">Pricing</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="enterprise" href="#">Enterprise</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="teaching" href="#">Teaching</a></nav><div class="flex items-center gap-space-md flex-1 max-w-md justify-end"><div class="hidden md:flex items-center w-full max-w-xs h-10 px-space-sm bg-surface-card rounded-lg border border-border-control focus-within:border-primary-container transition-colors"><span class="material-symbols-outlined text-text-muted text-base mr-space-xs">search</span><input class="w-full bg-transparent border-none text-text-primary placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" placeholder="Search courses, stacks... [Cmd+K]" type="text"/><kbd class="hidden lg:inline-block px-1.5 py-0.5 text-label-sm font-label-sm text-text-muted bg-surface-container-high rounded border border-border-standard">⌘K</kbd></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="relative p-2 rounded-lg text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><a class="hidden sm:inline-flex items-center font-label-md text-label-md text-text-secondary hover:text-text-contrast px-space-sm py-1.5 rounded-lg hover:bg-surface-interactive transition-colors" data-path="my-learning" href="#">My Learning</a><div class="relative flex items-center ml-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-standard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkj3xSZQ5l9_5PidbG_OITvATwxFFi5drjxJW-P5b-v-CBjsct1mQ8T0GHfHRBD8S-nWESMnYTBpnKPRLxb44DjZ6IwMKiYi3-J63iyv2X-1M4MaadlYloTKmYYZArTNRJlCekMbJL575FvU8CEithLs7HPggi3M129LZCHldN8mmj5mka6fwsZb5l4_ZztBlwt3L5DXr7woj5ovMj8K_fvulc2qDu6BVmAL7J4SuCMxsF4irdfskc"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-status-success rounded-full ring-2 ring-surface-container-lowest"></span></div></div></div></div><div class="w-full bg-surface-container-lowest/95 border-t border-border-subtle"><div class="max-w-7xl mx-auto px-margin h-11 flex items-center justify-between"><div class="flex items-center gap-space-xs" data-active-classes="bg-surface-container text-text-contrast font-semibold"><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="courses" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Student Portal</a><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="instructor-studio" href="#">Instructor Studio</a><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="admin-console" href="#">Admin Console</a></div><div class="hidden md:flex items-center gap-space-sm"><span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-text-muted"><span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>Engine: Operational</span></div></div></div></header><main class="w-full pt-[108px] bg-bg-canvas min-h-screen"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden bg-surface-container-lowest">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-10 w-80 h-80 bg-accent-ambient-subtle/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin pt-space-md pb-space-lg">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-text-muted mb-space-md">
+<a class="hover:text-text-primary transition-colors" href="#">Courses</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a class="hover:text-text-primary transition-colors" href="#">Backend &amp; Systems</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-text-contrast truncate max-w-xs sm:max-w-md">Distributed Systems &amp; Microservices with NestJS</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container/15 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">local_fire_department</span>
+              SYSTEMS MASTERCLASS
+            </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">update</span>
+              Updated March 2025
+            </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">subtitles</span>
+              English [CC]
+            </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-status-success/10 text-status-success font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Hands-on Lab Included
+            </span>
+</div>
+<div class="space-y-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-text-contrast tracking-tight">
+              Distributed Systems &amp; Microservices with NestJS, Kafka &amp; Redis
+            </h1>
+<p class="font-body-lg text-body-lg text-text-secondary leading-relaxed max-w-3xl">
+              Architect fault-tolerant event-driven microservices. Deep dive into outbox patterns, distributed tracing with OpenTelemetry, Kafka partitions, NestJS CQRS, and high-throughput Redis caching.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md p-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-status-warning font-bold">4.95</span>
+<div class="flex items-center text-status-warning">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">(3,420 ratings)</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest hidden sm:block"></div>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-base text-text-muted">group</span>
+<span><strong class="text-text-contrast font-semibold">12,850</strong> students enrolled</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest hidden sm:block"></div>
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-text-secondary">
+<span class="material-symbols-outlined text-base text-text-muted">schedule</span>
+<span>11.5 hours on-demand video</span>
+</div>
+</div>
+<div class="rounded-xl bg-surface-card p-space-md shadow-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted mb-space-xs block">Instructor of Record</span>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md">
+<div class="relative">
+<img alt="Alex Vance" class="w-20 h-20 rounded-xl object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkj3xSZQ5l9_5PidbG_OITvATwxFFi5drjxJW-P5b-v-CBjsct1mQ8T0GHfHRBD8S-nWESMnYTBpnKPRLxb44DjZ6IwMKiYi3-J63iyv2X-1M4MaadlYloTKmYYZArTNRJlCekMbJL575FvU8CEithLs7HPggi3M129LZCHldN8mmj5mka6fwsZb5l4_ZztBlwt3L5DXr7woj5ovMj8K_fvulc2qDu6BVmAL7J4SuCMxsF4irdfskc"/>
+<span class="absolute -bottom-1 -right-1 p-1 bg-surface-container-lowest rounded-full text-status-success">
+<span class="material-symbols-outlined text-sm block">verified</span>
+</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-title-md text-title-md text-text-contrast">Alex Vance</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Staff Architect</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+                  Principal Systems Architect, Ex-Staff Engineer at hyperscale streaming platforms.
+                </p>
+<div class="flex items-center gap-space-md pt-1 font-label-sm text-label-sm text-text-muted">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-status-warning">star</span>4.96 Instructor Rating</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">school</span>42,000+ Students</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">video_library</span>6 Masterclasses</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-space-md">
+<h2 class="font-headline-sm text-headline-sm text-text-contrast">What You Will Master</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm hover:bg-surface-interactive transition-colors">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container mb-space-sm">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-text-contrast mb-1">Event Sourcing &amp; CQRS in NestJS</h4>
+<p class="font-body-sm text-body-sm text-text-muted leading-relaxed">
+                  Decouple read and write models with NestJS microservices package, domain command buses, event stores, and projection re-indexing.
+                </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm hover:bg-surface-interactive transition-colors">
+<div class="w-10 h-10 rounded-lg bg-status-info/10 flex items-center justify-center text-status-info mb-space-sm">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-text-contrast mb-1">High-Throughput Apache Kafka</h4>
+<p class="font-body-sm text-body-sm text-text-muted leading-relaxed">
+                  Configure consumer groups, partitioning keys, dead letter queues (DLQ), and idempotent message producers under peak load.
+                </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm hover:bg-surface-interactive transition-colors">
+<div class="w-10 h-10 rounded-lg bg-status-warning/10 flex items-center justify-center text-status-warning mb-space-sm">
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-text-contrast mb-1">Sagas &amp; Transactional Outbox</h4>
+<p class="font-body-sm text-body-sm text-text-muted leading-relaxed">
+                  Eliminate dual-write hazards using Debezium CDC change capture, orchestrated multi-step compensating sagas, and ACID reliability.
+                </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm hover:bg-surface-interactive transition-colors">
+<div class="w-10 h-10 rounded-lg bg-status-success/10 flex items-center justify-center text-status-success mb-space-sm">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-text-contrast mb-1">OpenTelemetry, Grafana &amp; Redis</h4>
+<p class="font-body-sm text-body-sm text-text-muted leading-relaxed">
+                  Inject W3C trace context across asynchronous network boundaries, configure Redis Cluster token buckets, and monitor latency p99s.
+                </p>
+</div>
+</div>
+</div>
+<div class="space-y-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-text-contrast">Curriculum Overview</h2>
+<p class="font-body-sm text-body-sm text-text-muted">4 Comprehensive Modules • 22 Lectures • 11h 55m total run-time</p>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-text-contrast transition-colors" id="toggle-all-curriculum">
+                Expand All Modules
+              </button>
+</div>
+<div class="space-y-space-xs" id="curriculum-accordion">
+<div class="rounded-xl bg-surface-card overflow-hidden shadow-sm">
+<button aria-expanded="true" class="w-full flex items-center justify-between p-space-md text-left hover:bg-surface-interactive transition-colors accordion-trigger">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-text-muted transition-transform rotate-180 accordion-icon">expand_more</span>
+<div>
+<h4 class="font-title-sm text-title-sm text-text-contrast">Section 1: Foundation &amp; Domain Driven Design in NestJS</h4>
+<p class="font-body-sm text-body-sm text-text-muted">4 lectures • 1 hr 45 min</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container text-text-secondary hidden sm:inline-block">Architecture</span>
+</button>
+<div class="accordion-content px-space-md pb-space-md space-y-2 bg-surface-secondary">
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">play_circle</span>
+<span class="text-text-primary">1.1 Clean Architecture with NestJS Modular Boundaries</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">24:10</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">play_circle</span>
+<span class="text-text-primary">1.2 CQRS Infrastructure: Commands, Queries, and Bus Routing</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">31:18</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">play_circle</span>
+<span class="text-text-primary">1.3 Aggregates and Entity Lifecycle State Machines</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">28:45</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-status-info">description</span>
+<span class="text-text-primary">1.4 Architecture Blueprint: CQRS Monorepo Layout (Nest CLI)</span>
+</div>
+<span class="text-status-info font-label-sm text-label-sm">PDF Download</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-card overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-space-md text-left hover:bg-surface-interactive transition-colors accordion-trigger">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-text-muted transition-transform accordion-icon">expand_more</span>
+<div>
+<h4 class="font-title-sm text-title-sm text-text-contrast">Section 2: Kafka Clustering, Partitions &amp; Consumer Groups</h4>
+<p class="font-body-sm text-body-sm text-text-muted">6 lectures • 3 hrs 20 min • 1 Free Preview</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-primary-container/20 text-primary">Preview Available</span>
+</button>
+<div class="accordion-content hidden px-space-md pb-space-md space-y-2 bg-surface-secondary">
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-primary">play_circle</span>
+<span class="text-text-primary">2.1 Kafka Broker Topologies &amp; KRaft Consensus</span>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm">Preview</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">38:12</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">2.2 Designing Deterministic Partition Keys</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">29:40</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">2.3 Concurrency &amp; Rebalancing in NestJS Microservice Clients</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">35:10</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">2.4 Resilient Error Handling &amp; Dead Letter Queue Strategies</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">33:05</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">2.5 End-to-End Testing Kafka Transports with Testcontainers</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">41:15</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-status-info">code</span>
+<span class="text-text-primary">2.6 Lab: Multi-Partition High Volume Ingestion Benchmark</span>
+</div>
+<span class="text-status-info font-label-sm text-label-sm">Code Lab</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-card overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-space-md text-left hover:bg-surface-interactive transition-colors accordion-trigger">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-text-muted transition-transform accordion-icon">expand_more</span>
+<div>
+<h4 class="font-title-sm text-title-sm text-text-contrast">Section 3: Distributed Caching &amp; Rate Limiting with Redis</h4>
+<p class="font-body-sm text-body-sm text-text-muted">5 lectures • 2 hrs 40 min • 1 PDF Blueprint</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container text-text-secondary hidden sm:inline-block">Performance</span>
+</button>
+<div class="accordion-content hidden px-space-md pb-space-md space-y-2 bg-surface-secondary">
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">3.1 Cache-Aside, Write-Through &amp; Cache-Stampede Safeguards</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">34:20</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">3.2 Distributed Lock Implementation with Redlock Algorithm</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">29:10</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">3.3 Distributed Sliding Window Rate Limiting using Redis Lua</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">36:45</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">3.4 Redis Pub/Sub vs Redis Streams for Lightweight Events</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">30:15</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-status-info">description</span>
+<span class="text-text-primary">3.5 System Architecture Guide: In-Memory Distributed Fabrics</span>
+</div>
+<span class="text-status-info font-label-sm text-label-sm">PDF Guide</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-card overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-space-md text-left hover:bg-surface-interactive transition-colors accordion-trigger">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-text-muted transition-transform accordion-icon">expand_more</span>
+<div>
+<h4 class="font-title-sm text-title-sm text-text-contrast">Section 4: Production Deployment &amp; Resiliency Testing</h4>
+<p class="font-body-sm text-body-sm text-text-muted">7 lectures • 4 hrs 10 min</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container text-text-secondary hidden sm:inline-block">Operations</span>
+</button>
+<div class="accordion-content hidden px-space-md pb-space-md space-y-2 bg-surface-secondary">
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">4.1 OpenTelemetry Span Propagation across gRPC &amp; HTTP</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">38:00</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">4.2 Prometheus Metrics Exporters &amp; Jaeger Trace Graphs</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">32:45</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">4.3 Chaos Engineering: Simulating Network Splits and Broker Loss</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">44:30</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">4.4 Containerization: Multi-stage Docker Builds for Microservices</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">26:10</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">4.5 Kubernetes Deployment Manifests &amp; Autoscaling (HPA)</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">40:20</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-text-muted">lock</span>
+<span class="text-text-primary">4.6 Zero-Downtime Canary Rollouts with Istio Mesh</span>
+</div>
+<span class="text-text-muted font-label-sm text-label-sm">35:15</span>
+</div>
+<div class="flex items-center justify-between py-2 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-base text-status-success">verified</span>
+<span class="text-text-primary">4.7 Capstone Project Assessment &amp; Code Review</span>
+</div>
+<span class="text-status-success font-label-sm text-label-sm">Certification</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-space-md">
+<h2 class="font-headline-sm text-headline-sm text-text-contrast">Prerequisites &amp; Target Engineers</h2>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm space-y-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-status-success text-base mt-1">check_circle</span>
+<p class="font-body-md text-body-md text-text-secondary">
+                  Solid grasp of TypeScript, Node.js runtime, asynchronous primitives (Promises, Async/Await), and basic NestJS module structure.
+                </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-status-success text-base mt-1">check_circle</span>
+<p class="font-body-md text-body-md text-text-secondary">
+                  Familiarity with SQL relational schemas (PostgreSQL) and basic key-value data models.
+                </p>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-status-success text-base mt-1">check_circle</span>
+<p class="font-body-md text-body-md text-text-secondary">
+                  Docker and Docker Compose installed on your local development workstation (Mac, Linux, or WSL2).
+                </p>
+</div>
+</div>
+</div>
+<div class="space-y-space-md">
+<h2 class="font-headline-sm text-headline-sm text-text-contrast">Ratings &amp; Systems Feedback</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center p-space-lg rounded-xl bg-surface-card shadow-sm">
+<div class="md:col-span-4 flex flex-col items-center justify-center text-center p-space-sm bg-surface-secondary rounded-lg">
+<div class="font-display text-display text-text-contrast leading-none font-extrabold mb-1">4.95</div>
+<div class="flex items-center text-status-warning mb-2">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">3,420 total verified reviews</span>
+</div>
+<div class="md:col-span-8 flex flex-col gap-2">
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-text-secondary">
+<span class="w-12 text-right">5 stars</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 92%;"></div>
+</div>
+<span class="w-8 text-text-muted">92%</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-text-secondary">
+<span class="w-12 text-right">4 stars</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container/80 rounded-full" style="width: 6%;"></div>
+</div>
+<span class="w-8 text-text-muted">6%</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-text-secondary">
+<span class="w-12 text-right">3 stars</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container/60 rounded-full" style="width: 1.5%;"></div>
+</div>
+<span class="w-8 text-text-muted">1.5%</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-text-secondary">
+<span class="w-12 text-right">2 stars</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container/40 rounded-full" style="width: 0.3%;"></div>
+</div>
+<span class="w-8 text-text-muted">0.3%</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-text-secondary">
+<span class="w-12 text-right">1 star</span>
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container/20 rounded-full" style="width: 0.2%;"></div>
+</div>
+<span class="w-8 text-text-muted">0.2%</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-text-contrast text-label-md">
+                      ML
+                    </div>
+<div>
+<h4 class="font-title-sm text-title-sm text-text-contrast">Marcus Lindqvist</h4>
+<span class="font-label-sm text-label-sm text-text-muted">Lead Backend Engineer at FinTech OS</span>
+</div>
+</div>
+<div class="flex text-status-warning text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                  "The saga and transactional outbox module alone solved an architectural headache that was holding up our payment service refactor for 3 months. No fluff, straight to industrial-grade code."
+                </p>
+<span class="font-label-sm text-label-sm text-text-muted">Reviewed 3 days ago</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-text-contrast text-label-md">
+                      TK
+                    </div>
+<div>
+<h4 class="font-title-sm text-title-sm text-text-contrast">Tara Kowalski</h4>
+<span class="font-label-sm text-label-sm text-text-muted">Cloud Solutions Architect</span>
+</div>
+</div>
+<div class="flex text-status-warning text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                  "Most NestJS courses just skim microservices with TCP. Alex goes deep into KRaft partitions, rebalancing mitigation, and distributed tracing. Absolutely required curriculum for senior dev teams."
+                </p>
+<span class="font-label-sm text-label-sm text-text-muted">Reviewed 1 week ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 sticky top-20">
+<div class="rounded-xl bg-surface-card shadow-xl overflow-hidden">
+<div class="relative w-full aspect-video bg-surface-container-high group cursor-pointer overflow-hidden" id="video-preview-trigger">
+<div class="absolute inset-0 bg-gradient-to-t from-bg-canvas/90 via-transparent to-transparent z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Digital high-tech telemetry dashboard showing real-time distributed microservices architecture diagrams, node clusters, Kafka event bus streams in neon red and deep slate background, cinematic developer UI lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0BMQCiiApz0Ssk-8H1GIbrxMqepuAgxPpAk_yq2MXzsYdnLXPO81xGNVmzTufw8zch4P6W9BNDv8DZ61uHaJxhNTp5X9pKI-Vyola82ueLv1PgRrdnSh9FmgvZokcRT4K4M2dKsW2gNenwWYSfVshjYqRJyfOrS3atAqFfC05PP4iDfArp7YMGp7MbdFDnQ6sDJ-c66yEmUQuqs3u_KpT_Qfwll4hCsuLawio-3LA3Pp5G5Cmiufj')">
+</div>
+<div class="absolute inset-0 z-20 flex flex-col items-center justify-center gap-2">
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="font-label-md text-label-md text-text-contrast uppercase tracking-wider font-semibold drop-shadow">Preview this course</span>
+</div>
+<div class="absolute bottom-3 left-3 z-20 flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/80 text-text-primary font-label-sm text-label-sm backdrop-blur-sm">
+                  1080p 60fps • 4 Sample Clips
+                </span>
+</div>
+</div>
+<div class="p-space-lg space-y-space-md">
+<div class="space-y-1">
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-md text-headline-md text-text-contrast font-bold">$89.99</span>
+<span class="font-title-sm text-title-sm text-text-muted line-through">$149.99</span>
+<span class="font-label-md text-label-md px-2 py-0.5 rounded bg-primary-container/20 text-primary font-semibold">40% OFF</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>Special release pricing expires in <strong>2 days</strong></span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<button class="w-full h-11 rounded-lg bg-primary-container hover:bg-secondary-container active:scale-[0.98] transition-all text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-base">bolt</span>
+                  Enroll Now - Instant Access
+                </button>
+<button class="w-full h-11 rounded-lg bg-surface-interactive hover:bg-surface-container-high transition-colors text-text-primary font-label-md text-label-md font-medium flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base">shopping_cart</span>
+                  Add to Cart
+                </button>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider font-semibold">Team &amp; Pro Access</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Recommended</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-contrast font-medium">
+                  Included with Obsidian Pro Subscription
+                </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-text-muted">$29/month • Cancel anytime</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">View Pro →</a>
+</div>
+</div>
+<div class="space-y-space-xs pt-space-xs font-body-sm text-body-sm text-text-secondary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted block mb-2">This Masterclass Includes:</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-status-success">ondemand_video</span>
+<span>11.5 hours of high-density technical screencasts</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-status-success">download</span>
+<span>12 downloadable production architecture blueprints</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-status-success">terminal</span>
+<span>Full Git repository access with commit milestones</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-status-success">all_inclusive</span>
+<span>Full lifetime access across web &amp; mobile</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-status-success">workspace_premium</span>
+<span>Cryptographically verified certificate of completion</span>
+</div>
+</div>
+<div class="pt-space-sm space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-text-muted">
+<span>Supported payment options:</span>
+<span class="text-text-primary">Stripe Secure</span>
+</div>
+<div class="flex items-center justify-between gap-1 p-2 rounded bg-surface-secondary">
+<div class="flex items-center gap-1.5 text-text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-text-muted">credit_card</span>
+<span>Visa / MC / Amex</span>
+</div>
+<span class="text-text-muted text-xs">•</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-xs">receipt_long</span>
+                    Corporate Invoice / PO
+                  </a>
+</div>
+<p class="font-label-sm text-label-sm text-center text-text-muted pt-1 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-xs text-status-success">verified_user</span>
+                  30-day no-questions-asked refund policy
+                </p>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-center justify-between">
+<div>
+<h5 class="font-title-sm text-title-sm text-text-contrast">Training 5+ Engineers?</h5>
+<p class="font-body-sm text-body-sm text-text-muted">Bulk licenses, centralized billing &amp; SSO.</p>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-card hover:bg-surface-interactive text-text-primary font-label-md text-label-md transition-colors">
+              Enterprise Quote
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-bg-canvas/80 backdrop-blur-md p-space-md" id="video-modal">
+<div class="relative w-full max-w-4xl bg-surface-card rounded-2xl overflow-hidden shadow-2xl">
+<div class="flex items-center justify-between p-space-md bg-surface-secondary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">play_circle</span>
+<h4 class="font-title-sm text-title-sm text-text-contrast">Course Preview: KRaft Broker Architecture &amp; Topologies</h4>
+</div>
+<button class="text-text-muted hover:text-text-contrast p-1 rounded-lg hover:bg-surface-interactive transition-colors" id="close-video-modal">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="relative aspect-video bg-surface-container-lowest flex items-center justify-center">
+<div class="w-full h-full bg-cover bg-center flex items-center justify-center" data-alt="Technical code editor interface playing an embedded developer instructional screencast with terminal windows displaying streaming event logs, Kafka broker metrics, and NestJS console traces in crisp 4K dark UI." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyQd5ZBcctyl2c87G0Kbk_w9EtLr9vlMfHn8bBOkofK77eMmobA85UwX-NyreN4EBIWXmD0ZnpdfxApXNf1VmybcGUgAU6YjLu5_9vViBcyW1nwsWGoBFCt75EmhJRFCqMsbegvjMBYLdD7hNMIqr3cSNh2z-TSoEElhWiDN2YthHDC5JVFRNpJXTvGvsIORnDSDgeJ0jcECi3-vNnOO91WIOkRDX0rHgkfFUnMzcfLj8hZeV4LRA0')">
+<div class="p-4 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md flex flex-col items-center gap-2 shadow-lg">
+<span class="material-symbols-outlined text-4xl text-primary animate-pulse">smart_display</span>
+<span class="font-body-sm text-body-sm text-text-contrast">Streaming high-definition course preview clip (04:15)</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-card flex items-center justify-between">
+<p class="font-body-sm text-body-sm text-text-muted">Section 2, Lecture 1 • Alex Vance</p>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold">
+          Unlock Full 11.5 Hours
+        </button>
+</div>
+</div>
+</div>
+<script>
+    (function initCoursePage() {
+      const triggers = document.querySelectorAll('.accordion-trigger');
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const content = trigger.nextElementSibling;
+          const icon = trigger.querySelector('.accordion-icon');
+          const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+          if (isExpanded) {
+            content.classList.add('hidden');
+            trigger.setAttribute('aria-expanded', 'false');
+            if (icon) icon.classList.remove('rotate-180');
+          } else {
+            content.classList.remove('hidden');
+            trigger.setAttribute('aria-expanded', 'true');
+            if (icon) icon.classList.add('rotate-180');
+          }
+        });
+      });
+
+      const toggleAllBtn = document.getElementById('toggle-all-curriculum');
+      let allExpanded = false;
+      if (toggleAllBtn) {
+        toggleAllBtn.addEventListener('click', () => {
+          allExpanded = !allExpanded;
+          triggers.forEach(trigger => {
+            const content = trigger.nextElementSibling;
+            const icon = trigger.querySelector('.accordion-icon');
+            if (allExpanded) {
+              content.classList.remove('hidden');
+              trigger.setAttribute('aria-expanded', 'true');
+              if (icon) icon.classList.add('rotate-180');
+            } else {
+              content.classList.add('hidden');
+              trigger.setAttribute('aria-expanded', 'false');
+              if (icon) icon.classList.remove('rotate-180');
+            }
+          });
+          toggleAllBtn.textContent = allExpanded ? 'Collapse All Modules' : 'Expand All Modules';
+        });
+      }
+
+      const previewTrigger = document.getElementById('video-preview-trigger');
+      const videoModal = document.getElementById('video-modal');
+      const closeVideoModal = document.getElementById('close-video-modal');
+
+      if (previewTrigger && videoModal && closeVideoModal) {
+        previewTrigger.addEventListener('click', () => {
+          videoModal.classList.remove('hidden');
+          videoModal.classList.add('flex');
+        });
+
+        const closeModal = () => {
+          videoModal.classList.add('hidden');
+          videoModal.classList.remove('flex');
+        };
+
+        closeVideoModal.addEventListener('click', closeModal);
+        videoModal.addEventListener('click', (e) => {
+          if (e.target === videoModal) closeModal();
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-border-standard mt-space-xl"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="grid grid-cols-2 md:grid-cols-5 gap-gutter mb-space-xl"><div class="col-span-2"><div class="flex items-center gap-space-md mb-space-sm"><img alt="Obsidian Education Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm text-text-contrast uppercase font-bold">Obsidian.edu</span></div><p class="font-body-sm text-body-sm text-text-muted max-w-sm mb-space-md">Engineered technical curriculum for systems developers, infrastructure architects, and applied AI practitioners.</p><div class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-text-muted px-2.5 py-1 rounded-full bg-surface-card border border-border-standard"><span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>Platform Status: All Clusters Healthy</div></div><div><h4 class="font-label-md text-label-md text-text-contrast font-semibold uppercase tracking-wider mb-space-md">Curriculum</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-secondary"><li><a class="hover:text-text-contrast transition-colors" data-path="courses" href="#">Core Systems</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="categories" href="#">Distributed Tech</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="categories" href="#">Kernel &amp; Compilers</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="categories" href="#">ML Engineering</a></li></ul></div><div><h4 class="font-label-md text-label-md text-text-contrast font-semibold uppercase tracking-wider mb-space-md">Platform</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-secondary"><li><a class="hover:text-text-contrast transition-colors" data-path="pricing" href="#">Pro Membership</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="enterprise" href="#">Enterprise Teams</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="teaching" href="#">Teaching Lab</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">System SLA</a></li></ul></div><div><h4 class="font-label-md text-label-md text-text-contrast font-semibold uppercase tracking-wider mb-space-md">Governance</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-secondary"><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Privacy Policy</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Terms of License</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Security Protocols</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Telemetry Controls</a></li></ul></div></div><div class="pt-space-md border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-text-muted"><div>© 2025 Obsidian Systems, Inc. Precision Technical Education.</div><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-text-muted">v2.8.4-prod</span></div></div></div></footer></body></html>

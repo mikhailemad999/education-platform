@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#ffdad5","tertiary":"#ffb4ab","surface-container-low":"#1c1b1b","on-primary-fixed-variant":"#930007","surface-container-lowest":"#0e0e0e","error":"#ffb4ab","status-info":"#3B82F6","surface-card":"#0F0F0F","secondary-fixed":"#ffdad6","surface-bright":"#3a3939","bg-canvas":"#050505","inverse-on-surface":"#313030","status-danger":"#EF4444","border-subtle":"#202020","on-secondary":"#690005","on-tertiary-container":"#fff7f6","border-control":"#2A2A2A","on-error-container":"#ffdad6","on-surface-variant":"#e9bcb6","outline-variant":"#5e3f3b","surface-secondary":"#111111","border-standard":"#252525","on-primary-fixed":"#410001","primary-container":"#e50914","primary":"#ffb4aa","on-error":"#690005","border-card":"#232323","surface-interactive":"#151515","tertiary-fixed":"#ffdad6","surface-variant":"#353534","secondary-container":"#a4020e","surface-dim":"#131313","on-secondary-container":"#ffaea5","outline":"#af8782","tertiary-container":"#e40d1a","status-success":"#22C55E","background":"#131313","text-muted":"#737373","on-background":"#e5e2e1","error-container":"#93000a","text-secondary":"#A3A3A3","on-secondary-fixed-variant":"#93000a","surface-container-highest":"#353534","on-secondary-fixed":"#410002","inverse-primary":"#c0000c","tertiary-fixed-dim":"#ffb4ab","surface-container-high":"#2a2a2a","accent-ambient-subtle":"#3A0508","on-tertiary":"#690005","surface-tint":"#ffb4aa","status-warning":"#F59E0B","secondary":"#ffb4ab","secondary-fixed-dim":"#ffb4ab","accent-ambient-dark":"#240406","on-primary":"#690003","inverse-surface":"#e5e2e1","on-tertiary-fixed-variant":"#93000a","on-surface":"#e5e2e1","surface-container":"#201f1f","surface":"#131313","primary-fixed-dim":"#ffb4aa","border-soft":"#1B1B1B","text-contrast":"#FFFFFF","on-primary-container":"#fff7f6","surface-elevated":"#171717","on-tertiary-fixed":"#410002","text-primary":"#F5F5F5","surface-hover":"#161616"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","margin-mobile":"1rem",gutter:"1.5rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-tablet":"2rem","space-lg":"1.5rem","gutter-lg":"2rem",margin:"2.5rem","space-md":"1rem","space-xs":"0.25rem"},fontFamily:{"display-mobile":["Geist"],"title-md":["Geist"],"title-sm":["Geist"],"label-sm":["Geist"],"headline-lg-mobile":["Geist"],"headline-md":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-md":["Geist"],"headline-sm":["Geist"],display:["Geist"],"headline-lg":["Geist"],"body-lg":["Inter"]},fontSize:{"display-mobile":["40px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-sm":["24px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["64px",{lineHeight:"68px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-lg":["48px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}]}}}}</script></head><body class="bg-bg-canvas font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-standard"><div class="h-16 max-w-7xl mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Obsidian Education Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm tracking-tight text-text-contrast uppercase font-bold">Obsidian<span class="text-primary-container">.edu</span></span></div><nav class="hidden xl:flex items-center gap-space-lg h-full" data-active-classes="text-text-contrast border-b-2 border-primary-container font-semibold"><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="courses" href="#">Courses</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="categories" href="#">Categories</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="pricing" href="#">Pricing</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="enterprise" href="#">Enterprise</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="teaching" href="#">Teaching</a></nav><div class="flex items-center gap-space-md flex-1 max-w-md justify-end"><div class="hidden md:flex items-center w-full max-w-xs h-10 px-space-sm bg-surface-card rounded-lg border border-border-control focus-within:border-primary-container transition-colors"><span class="material-symbols-outlined text-text-muted text-base mr-space-xs">search</span><input class="w-full bg-transparent border-none text-text-primary placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" placeholder="Search courses, stacks... [Cmd+K]" type="text"/><kbd class="hidden lg:inline-block px-1.5 py-0.5 text-label-sm font-label-sm text-text-muted bg-surface-container-high rounded border border-border-standard">⌘K</kbd></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="relative p-2 rounded-lg text-text-secondary hover:text-text-contrast hover:bg-surface-interactive transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary-container rounded-full ring-2 ring-surface-container-lowest"></span></button><a class="hidden sm:inline-flex items-center font-label-md text-label-md text-text-secondary hover:text-text-contrast px-space-sm py-1.5 rounded-lg hover:bg-surface-interactive transition-colors" data-path="my-learning" href="#">My Learning</a><div class="relative flex items-center ml-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-border-standard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkj3xSZQ5l9_5PidbG_OITvATwxFFi5drjxJW-P5b-v-CBjsct1mQ8T0GHfHRBD8S-nWESMnYTBpnKPRLxb44DjZ6IwMKiYi3-J63iyv2X-1M4MaadlYloTKmYYZArTNRJlCekMbJL575FvU8CEithLs7HPggi3M129LZCHldN8mmj5mka6fwsZb5l4_ZztBlwt3L5DXr7woj5ovMj8K_fvulc2qDu6BVmAL7J4SuCMxsF4irdfskc"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-status-success rounded-full ring-2 ring-surface-container-lowest"></span></div></div></div></div><div class="w-full bg-surface-container-lowest/95 border-t border-border-subtle"><div class="max-w-7xl mx-auto px-margin h-11 flex items-center justify-between"><div class="flex items-center gap-space-xs" data-active-classes="bg-surface-container text-text-contrast font-semibold"><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="courses" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Student Portal</a><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="instructor-studio" href="#">Instructor Studio</a><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="admin-console" href="#">Admin Console</a></div><div class="hidden md:flex items-center gap-space-sm"><span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-text-muted"><span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>Engine: Operational</span></div></div></div></header><main class="w-full pt-[108px] bg-bg-canvas min-h-screen"><div class="flex flex-col w-full">
+<!-- Minimal Ambient Backlight Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-[600px] h-[350px] bg-primary-container/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<div class="absolute -top-20 right-1/4 w-[450px] h-[300px] bg-secondary-container/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<!-- Top Focus Bar / Player Header -->
+<div class="w-full bg-surface-container-lowest px-4 sm:px-6 lg:px-8 py-3.5 shadow-md">
+<div class="max-w-[1720px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+<!-- Left: Course Context & Nav -->
+<div class="flex items-center gap-3.5 min-w-0">
+<a class="flex items-center justify-center w-9 h-9 rounded-lg bg-surface-interactive hover:bg-surface-elevated text-text-secondary hover:text-text-contrast transition-all flex-shrink-0" data-path="dashboard" href="#" title="Return to Dashboard">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</a>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-muted">Curriculum Path</span>
+<span class="text-text-muted text-xs">•</span>
+<span class="font-label-sm text-label-sm text-primary font-medium tracking-wide truncate">Distributed Systems with NestJS</span>
+</div>
+<h1 class="font-title-sm text-title-sm text-text-contrast truncate">
+              Lecture 03: Event-Driven Architecture with Kafka &amp; NestJS CQRS
+            </h1>
+</div>
+</div>
+<!-- Center: Progress Track -->
+<div class="hidden xl:flex items-center gap-3.5 px-4 py-1.5 rounded-lg bg-surface-container-low min-w-[280px]">
+<div class="flex flex-col flex-1 gap-1">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-text-muted">Total Completion</span>
+<span class="text-text-contrast font-semibold">38%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" style="width: 38%;"></div>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
+</div>
+<!-- Right: Action Buttons -->
+<div class="flex items-center gap-2.5 flex-shrink-0 self-end md:self-auto">
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-interactive hover:bg-surface-elevated text-text-secondary hover:text-text-contrast text-label-md font-label-md transition-colors" id="prevBtn">
+<span class="material-symbols-outlined text-[18px]">skip_previous</span>
+<span class="hidden sm:inline">Previous Lesson</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-container hover:brightness-110 active:scale-95 text-text-contrast text-label-md font-label-md transition-all shadow-md" id="nextBtn">
+<span>Mark as Completed &amp; Next</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Workspace: Split Player & Curriculum Drawer -->
+<div class="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 py-5">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left / Center Column: Video Stage + Lecture Workspace (Cols 8 or 9) -->
+<div class="lg:col-span-8 xl:col-span-8 flex flex-col gap-6">
+<!-- 16:9 Video Player Container -->
+<div class="relative group w-full bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl aspect-video flex flex-col justify-between" id="videoContainer">
+<!-- Simulated Video Canvas / Visual Frame -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="High resolution software architecture visualization inside dark IDE code editor. Shows an animated event-driven pipeline diagram illustrating Kafka message brokers communicating with NestJS CQRS microservice controller handlers, neon red and graphite data stream accents on black surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7m13PXAj3wsJrq-K92oKI55nQ_dD9COE5l1xg67sqldeqmY-cpOhMJqrxRi4YnrwWRajkvXgjR_-9zW4TH5mKPffbVyfqZc6-3_-t8bM8nDDimpsKfkQcUUgHqFUjpGYB6UDwu8PMdLgbDlHa1hZ4rm-w2efwG8cM3wjCB-iMtBf2q8n3zz_DffvhoLLfmGumDGdXJHmixXJUBP94l162URnq4UNqGCW-vIDjnH1FOtCxLVB9uHOD"/>
+<!-- Dark cinema scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-bg-canvas via-bg-canvas/30 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-bg-canvas/80 via-transparent to-transparent"></div>
+</div>
+<!-- Top Overlay Info Bar -->
+<div class="relative z-10 p-4 sm:p-5 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-label-sm font-label-sm text-status-success font-medium">
+<span class="w-2 h-2 rounded-full bg-status-success animate-ping"></span>
+                  STREAMING 1080p 60FPS
+                </span>
+<span class="hidden sm:inline text-label-sm font-label-sm text-text-secondary bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-0.5 rounded-full">
+                  Topic: order-events-cqrs
+                </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-text-secondary hover:text-text-contrast transition-colors" title="Bookmark Timestamp">
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-text-secondary hover:text-text-contrast transition-colors" title="Audio Track (English Stereo)">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</button>
+</div>
+</div>
+<!-- Center Clickable Play/Pause Trigger Zone -->
+<div class="relative z-10 flex-1 flex items-center justify-center cursor-pointer" onclick="togglePlayState()">
+<button class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary-container/90 backdrop-blur-md hover:bg-primary-container text-text-contrast flex items-center justify-center shadow-xl transform group-hover:scale-105 active:scale-95 transition-all" id="centerPlayBtn">
+<span class="material-symbols-outlined text-[36px] sm:text-[44px] ml-1" id="centerPlayIcon">play_arrow</span>
+</button>
+</div>
+<!-- Bottom Custom Video Controls Tier -->
+<div class="relative z-10 p-3 sm:p-5 flex flex-col gap-2.5 bg-gradient-to-t from-surface-container-lowest/95 via-surface-container-lowest/85 to-transparent backdrop-blur-sm">
+<!-- Scrub Progress Bar with Tooltip Scrubbing -->
+<div class="group/scrub relative w-full h-2 bg-surface-container-high rounded-full cursor-pointer flex items-center" id="scrubBar">
+<!-- Buffer Bar -->
+<div class="absolute left-0 top-0 h-full bg-surface-bright rounded-full w-2/3 pointer-events-none"></div>
+<!-- Playback Fill (Linear Crimson) -->
+<div class="absolute left-0 top-0 h-full bg-primary-container rounded-full pointer-events-none" id="playbackFill" style="width: 37.8%;"></div>
+<!-- Draggable Thumb Head -->
+<div class="absolute w-3.5 h-3.5 rounded-full bg-text-contrast shadow-md ring-2 ring-primary-container -translate-x-1/2 opacity-0 group-hover/scrub:opacity-100 transition-opacity pointer-events-none" id="playbackThumb" style="left: 37.8%;"></div>
+</div>
+<!-- Control Ribbon Actions -->
+<div class="flex items-center justify-between gap-2">
+<!-- Play/Pause, Volume, Timers -->
+<div class="flex items-center gap-2 sm:gap-4">
+<button class="text-text-contrast hover:text-primary transition-colors flex items-center justify-center" onclick="togglePlayState()">
+<span class="material-symbols-outlined text-[24px]" id="bottomPlayIcon">play_arrow</span>
+</button>
+<button class="text-text-secondary hover:text-text-contrast transition-colors flex items-center justify-center" title="Skip Backward 10s">
+<span class="material-symbols-outlined text-[20px]">replay_10</span>
+</button>
+<button class="text-text-secondary hover:text-text-contrast transition-colors flex items-center justify-center" title="Skip Forward 10s">
+<span class="material-symbols-outlined text-[20px]">forward_10</span>
+</button>
+<!-- Volume Slider Group -->
+<div class="flex items-center gap-2 group/volume">
+<button class="text-text-secondary hover:text-text-contrast transition-colors" id="volBtn">
+<span class="material-symbols-outlined text-[22px]">volume_up</span>
+</button>
+<div class="w-14 sm:w-20 h-1 bg-surface-container-high rounded-full relative overflow-hidden hidden sm:block">
+<div class="h-full bg-text-contrast w-3/4"></div>
+</div>
+</div>
+<!-- Time Counters -->
+<div class="font-label-md text-label-md text-text-secondary select-none tracking-tight">
+<span class="text-text-contrast font-medium" id="timeCurrent">14:25</span>
+<span class="text-text-muted mx-1">/</span>
+<span id="timeDuration">38:10</span>
+</div>
+</div>
+<!-- Right Side Tools: Speed, Captions, Quality, Fullscreen -->
+<div class="flex items-center gap-2 sm:gap-3">
+<!-- Playback Speed -->
+<div class="relative inline-block text-left">
+<button class="px-2 py-1 rounded bg-surface-card hover:bg-surface-interactive text-label-sm font-label-sm text-text-secondary hover:text-text-contrast font-mono transition-colors" id="speedMenuBtn">
+                      1.25x
+                    </button>
+</div>
+<!-- CC Captions Toggle -->
+<button class="p-1 rounded text-primary-container hover:text-primary transition-colors" title="Closed Captions Active">
+<span class="material-symbols-outlined text-[20px]">closed_caption</span>
+</button>
+<!-- Resolution Pill -->
+<button class="hidden sm:inline-flex items-center px-2 py-0.5 rounded bg-surface-interactive hover:bg-surface-elevated text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors">
+                    1080p
+                  </button>
+<!-- Picture in Picture -->
+<button class="p-1 text-text-secondary hover:text-text-contrast transition-colors hidden sm:block" title="Picture in Picture">
+<span class="material-symbols-outlined text-[20px]">picture_in_picture_alt</span>
+</button>
+<!-- Fullscreen Trigger -->
+<button class="p-1 text-text-secondary hover:text-text-contrast transition-colors" title="Fullscreen Mode">
+<span class="material-symbols-outlined text-[22px]">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Tabbed Lecture Studio Workspace -->
+<div class="w-full bg-surface-card rounded-xl p-5 sm:p-6 shadow-md flex flex-col gap-6">
+<!-- Tab Navigation Header -->
+<div class="flex items-center gap-2 sm:gap-6 overflow-x-auto pb-2 scrollbar-none border-b border-border-subtle" id="workspaceTabs">
+<button class="tab-btn pb-3 px-1 text-label-md font-label-md text-text-contrast border-b-2 border-primary-container font-semibold transition-all flex items-center gap-2" id="tab-overview" onclick="switchTab('overview')">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+                Overview &amp; Notes
+              </button>
+<button class="tab-btn pb-3 px-1 text-label-md font-label-md text-text-secondary hover:text-text-contrast border-b-2 border-transparent transition-all flex items-center gap-2" id="tab-resources" onclick="switchTab('resources')">
+<span class="material-symbols-outlined text-[18px]">folder_zip</span>
+                Resources &amp; Downloads
+                <span class="px-1.5 py-0.5 rounded-full bg-surface-container text-label-sm font-label-sm text-text-muted">2</span>
+</button>
+<button class="tab-btn pb-3 px-1 text-label-md font-label-md text-text-secondary hover:text-text-contrast border-b-2 border-transparent transition-all flex items-center gap-2" id="tab-qa" onclick="switchTab('qa')">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+                Q&amp;A Discussion
+                <span class="px-1.5 py-0.5 rounded-full bg-primary-container/20 text-primary text-label-sm font-label-sm">18</span>
+</button>
+<button class="tab-btn pb-3 px-1 text-label-md font-label-md text-text-secondary hover:text-text-contrast border-b-2 border-transparent transition-all flex items-center gap-2" id="tab-notes" onclick="switchTab('notes')">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+                Personal Notes
+              </button>
+</div>
+<!-- Tab Content 1: Overview & Notes -->
+<div class="tab-pane flex flex-col gap-6" id="content-overview">
+<!-- Key Takeaways & Architecture Synopsis -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-text-contrast">Key Learning Objectives</h3>
+<a class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-interactive hover:bg-surface-elevated text-text-contrast font-label-md text-label-md transition-colors" href="https://github.com/obsidian-systems/nestjs-kafka-cqrs" target="_blank">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>View GitHub Repo</span>
+<span class="material-symbols-outlined text-[14px] text-text-muted">open_in_new</span>
+</a>
+</div>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                  In this module, Alex Vance demonstrates decomposing monolithic write-paths using the Command Query Responsibility Segregation (CQRS) paradigm coupled with an event stream backplane powered by Apache Kafka.
+                </p>
+<!-- Bullet Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-[20px] mt-0.5">schema</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-text-contrast">Command vs Query Separation</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Handling side effects via strict Kafka topic partitioning with deterministic keys.</span>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-status-success text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-text-contrast">NestJS CQRS EventBus</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Synchronizing local in-memory event handlers with distributed Kafka producers.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Code Snippet Block -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-4 py-2.5 rounded-t-lg bg-surface-container-lowest">
+<div class="flex items-center gap-2 font-mono text-label-sm font-label-sm text-text-muted">
+<span class="w-2.5 h-2.5 rounded-full bg-status-danger/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-status-warning/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-status-success/70"></span>
+<span class="ml-2 text-text-secondary">order-created.handler.ts</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-interactive hover:bg-surface-elevated text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" onclick="copySnippetCode(this)">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy Code</span>
+</button>
+</div>
+<div class="p-4 rounded-b-lg bg-surface-container-lowest overflow-x-auto font-mono text-body-sm leading-relaxed text-text-contrast">
+<pre class="m-0"><code><span class="text-primary font-semibold">@EventsHandler</span>(OrderCreatedEvent)
+<span class="text-text-contrast font-bold">export class</span> <span class="text-status-warning">OrderCreatedHandler</span> <span class="text-text-contrast font-bold">implements</span> <span class="text-status-info">IEventHandler</span>&lt;OrderCreatedEvent&gt; {
+  <span class="text-text-muted font-normal">constructor</span>(
+    <span class="text-primary font-semibold">@Inject</span>(<span class="text-status-success">'KAFKA_PRODUCER'</span>) <span class="text-text-contrast font-medium">private readonly</span> kafka: <span class="text-status-info">Producer</span>,
+  ) {}
+
+  <span class="text-text-contrast font-bold">async</span> <span class="text-primary">handle</span>(event: OrderCreatedEvent) {
+    <span class="text-text-contrast font-bold">await</span> <span class="text-text-contrast">this</span>.kafka.send({
+      topic: <span class="text-status-success">'orders.lifecycle.v1'</span>,
+      messages: [{
+        key: event.orderId,
+        value: <span class="text-status-info">JSON</span>.stringify(event.payload),
+        headers: { correlationId: event.correlationId },
+      }],
+    });
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<!-- Tab Content 2: Resources & Downloads -->
+<div class="tab-pane hidden flex-col gap-4" id="content-resources">
+<h3 class="font-headline-sm text-headline-sm text-text-contrast">Supplementary Engineering Artifacts</h3>
+<p class="font-body-md text-body-md text-text-secondary">Direct downloads for blueprints, compose infrastructure files, and architectural diagrams.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+<!-- PDF Resource -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-interactive transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-text-contrast truncate">System-Architecture-v2.pdf</span>
+<span class="font-label-sm text-label-sm text-text-muted">PDF Document • 14.2 MB</span>
+</div>
+</div>
+<a class="p-2 rounded-lg bg-surface-elevated hover:bg-primary-container text-text-secondary hover:text-text-contrast transition-colors flex-shrink-0" download="" href="#" title="Download Document">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</a>
+</div>
+<!-- Zip Resource -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-interactive transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-11 h-11 rounded-lg bg-status-info/10 flex items-center justify-center text-status-info flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">archive</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-text-contrast truncate">starter-boilerplate-nestjs.zip</span>
+<span class="font-label-sm text-label-sm text-text-muted">Archive (TypeScript) • 1.8 MB</span>
+</div>
+</div>
+<a class="p-2 rounded-lg bg-surface-elevated hover:bg-primary-container text-text-secondary hover:text-text-contrast transition-colors flex-shrink-0" download="" href="#" title="Download Boilerplate">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Tab Content 3: Q&A Discussion -->
+<div class="tab-pane hidden flex-col gap-6" id="content-qa">
+<!-- Q&A Action Header -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-text-muted text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low text-text-contrast placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" placeholder="Search discussion or questions..." type="text"/>
+</div>
+<button class="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary-container hover:brightness-110 text-text-contrast font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Ask a Question</span>
+</button>
+</div>
+<!-- Question Thread Item 1 (With Instructor Verified Badge) -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-3.5">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Portrait avatar of a senior male software engineer with glasses, soft rim light on dark charcoal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiBisnlCxtOIkNsL2eChbMTeIG3mhkFkQc4L6z2q1sxof5HLBi2tzj1oTWr8O8PIIAqir2Ep1n2H2vZoO3dbtDlD2_zfqR4eugat2XRC2F0RlShI0UwJovuV3AxcG7rZhzNxFnSoShqQWB4CF861GopN7qAI_P9E2pTqHbyWPX7FOJL5M_tDRr_rpYuv3zRpYfwy8pfVVo9WkHNYj50r5jctwLJoq2LyCk7KDhcq6TH1vmmPk9aZ2B"/>
+<div>
+<div class="font-title-sm text-title-sm text-text-contrast">Marcus Aurel</div>
+<div class="font-label-sm text-label-sm text-text-muted">Posted 3 hours ago • Lecture timestamp 16:42</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-text-muted hover:text-text-contrast cursor-pointer text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+<span>14</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-secondary">
+                  If Kafka partition rebalancing triggers mid-transaction inside the NestJS consumer, how does the idempotency key prevent duplicate aggregate projection writes in PostgreSQL?
+                </p>
+<!-- Instructor Reply Nested -->
+<div class="mt-2 p-3.5 rounded-lg bg-surface-container-lowest flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Close up avatar photo of instructor Alex Vance, technical architect, confident demeanor with subtle dark studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa-YNbEAeia-LWoLPjoEW8TuTDjLVpDGtzdDU0zeo_TtuMfTbYWpq_obBo6XUhUTeGGQutAzpzPwNVNrzyZatVa4QcmHNTAvaGqkOS_Sb_xQh6l1E6-yRNPTUjezNqie4akrsC03hAU7T_lWTrxTn5PxmsXCCrpBOrbkfxkxuQV1So-0c9ZboAajI65JLJF2B1PjVnjWpdJdikV5isA-TTG9qqz1ioy1VLu5NoZp8vjqD4U-v-dG76"/>
+<span class="font-title-sm text-title-sm text-text-contrast">Alex Vance</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary-container font-label-sm text-label-sm font-bold">INSTRUCTOR</span>
+<span class="text-text-muted font-label-sm text-label-sm ml-auto">1 hour ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                    Great edge case Marcus! The Kafka consumer group coordinator coordinates heartbeats, but our projection layer implements an <code class="font-mono text-primary bg-surface-card px-1.5 py-0.5 rounded">ON CONFLICT (idempotency_key) DO NOTHING</code> lock pattern combined with transactional outbox offset commits. Check out 24:10 in this video where we trace this failure mode explicitly!
+                  </p>
+</div>
+</div>
+</div>
+<!-- Tab Content 4: Course Personal Notes -->
+<div class="tab-pane hidden flex-col gap-4" id="content-notes">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-contrast">Interactive Scratchpad</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Timestamped notes synced to your Obsidian account.</p>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-interactive hover:bg-surface-elevated text-text-contrast text-label-sm font-label-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Auto-saved</span>
+</button>
+</div>
+<!-- Note Rich Text Area -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden">
+<div class="flex items-center gap-1 px-3 py-2 bg-surface-container text-text-secondary text-sm">
+<button class="p-1 hover:text-text-contrast rounded hover:bg-surface-interactive"><span class="material-symbols-outlined text-[18px]">format_bold</span></button>
+<button class="p-1 hover:text-text-contrast rounded hover:bg-surface-interactive"><span class="material-symbols-outlined text-[18px]">format_italic</span></button>
+<button class="p-1 hover:text-text-contrast rounded hover:bg-surface-interactive"><span class="material-symbols-outlined text-[18px]">code</span></button>
+<button class="p-1 hover:text-text-contrast rounded hover:bg-surface-interactive"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span></button>
+<div class="w-px h-4 bg-border-control mx-1"></div>
+<button class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-card hover:bg-surface-interactive text-label-sm font-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>Insert Timestamp [14:25]</span>
+</button>
+</div>
+<textarea class="w-full p-4 bg-surface-container-low text-text-contrast font-body-md text-body-md placeholder:text-text-muted focus:outline-none resize-none" placeholder="Write down your technical observations, questions, or code derivations here..." rows="6"></textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side Column: Interactive Curriculum Drawer (Cols 4) -->
+<div class="lg:col-span-4 xl:col-span-4 flex flex-col gap-4">
+<div class="w-full bg-surface-card rounded-xl p-4 sm:p-5 shadow-lg flex flex-col gap-4">
+<!-- Drawer Header & Search -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-text-contrast">Course Content</h2>
+<span class="font-label-sm text-label-sm text-text-muted">22 / 58 items completed (38%)</span>
+</div>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-text-secondary hover:text-text-contrast transition-colors" title="Filter Modules">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- Quick Lesson Filter Input -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-text-muted text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container-low text-text-contrast placeholder:text-text-muted font-body-sm text-body-sm focus:outline-none" id="lessonSearch" onkeyup="filterLectures()" placeholder="Search modules &amp; topics..." type="text"/>
+</div>
+</div>
+<!-- Curriculum Accordion Stack -->
+<div class="flex flex-col gap-2.5 overflow-y-auto max-h-[720px] pr-1">
+<!-- Section 1: Completed Accordion -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden">
+<button class="w-full p-3.5 flex items-center justify-between text-left hover:bg-surface-interactive transition-colors" onclick="toggleAccordion('sec1-body', 'sec1-icon')">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-6 h-6 rounded-full bg-status-success/20 text-status-success flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-text-contrast truncate">1. Microservices Architecture</span>
+<span class="font-label-sm text-label-sm text-status-success">4 / 4 completed • 1h 14m</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform" id="sec1-icon">expand_more</span>
+</button>
+<div class="hidden flex-col bg-surface-container-lowest divide-y divide-border-subtle" id="sec1-body">
+<div class="p-3 flex items-center justify-between text-text-secondary text-body-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-status-success text-[16px]">check_circle</span>
+<span class="truncate">01. Monolith Decomposition</span>
+</div>
+<span class="text-label-sm font-label-sm text-text-muted">14m</span>
+</div>
+<div class="p-3 flex items-center justify-between text-text-secondary text-body-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-status-success text-[16px]">check_circle</span>
+<span class="truncate">02. Domain Boundary Mapping</span>
+</div>
+<span class="text-label-sm font-label-sm text-text-muted">21m</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Active / Current Module (Apache Kafka Deep Dive) -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden shadow-sm">
+<button class="w-full p-3.5 flex items-center justify-between text-left bg-surface-container-high transition-colors" onclick="toggleAccordion('sec2-body', 'sec2-icon')">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-6 h-6 rounded-full bg-primary-container text-text-contrast font-label-sm text-label-sm font-bold flex items-center justify-center flex-shrink-0">
+                      2
+                    </span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-text-contrast truncate">2. Apache Kafka Deep Dive</span>
+<span class="font-label-sm text-label-sm text-primary">Active Section • 2 / 5 completed</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-contrast text-[20px] transition-transform rotate-180" id="sec2-icon">expand_more</span>
+</button>
+<!-- Expanded Lecture Items List -->
+<div class="flex flex-col bg-surface-container-lowest" id="sec2-body">
+<!-- Lecture 01 -->
+<div class="lecture-item p-3.5 flex items-center justify-between text-body-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-status-success text-[18px] flex-shrink-0">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="text-text-contrast font-medium truncate">Lecture 01: Kafka Broker Architecture</span>
+<span class="text-label-sm font-label-sm text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">play_circle</span> Video • 18m
+                        </span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[16px]">done</span>
+</div>
+<!-- Lecture 02 -->
+<div class="lecture-item p-3.5 flex items-center justify-between text-body-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-status-success text-[18px] flex-shrink-0">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="text-text-contrast font-medium truncate">Lecture 02: Producer Idempotence</span>
+<span class="text-label-sm font-label-sm text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">play_circle</span> Video • 22m
+                        </span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[16px]">done</span>
+</div>
+<!-- Lecture 03: CURRENT ACTIVE -->
+<div class="lecture-item relative p-3.5 flex items-center justify-between bg-surface-container-high transition-colors cursor-pointer">
+<!-- Left Accent Red Highlight Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<div class="flex items-center gap-2.5 min-w-0 pl-1">
+<span class="material-symbols-outlined text-primary-container text-[20px] flex-shrink-0 animate-pulse">play_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="text-text-contrast font-bold truncate">Lecture 03: Event-Driven NestJS CQRS</span>
+<span class="text-label-sm font-label-sm text-primary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Playing Now • 38m
+                        </span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-primary-container/20 text-primary-container font-semibold">Active</span>
+</div>
+<!-- Lecture 04: Next Up -->
+<div class="lecture-item p-3.5 flex items-center justify-between text-body-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-text-muted text-[18px] flex-shrink-0">description</span>
+<div class="flex flex-col min-w-0">
+<span class="text-text-secondary truncate">Lecture 04: Message Schema Validation with Avro</span>
+<span class="text-label-sm font-label-sm text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">menu_book</span> PDF Guide • 12 pages
+                        </span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-text-muted">Next</span>
+</div>
+<!-- Lecture 05: Quiz -->
+<div class="lecture-item p-3.5 flex items-center justify-between text-body-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-text-muted text-[18px] flex-shrink-0">quiz</span>
+<div class="flex flex-col min-w-0">
+<span class="text-text-secondary truncate">Lecture 05: Quiz: Kafka Fault Tolerance</span>
+<span class="text-label-sm font-label-sm text-text-muted">10 questions • 15 min</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[16px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Locked Accordion -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden opacity-75">
+<div class="w-full p-3.5 flex items-center justify-between text-left">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-text-muted flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-text-secondary truncate">3. Redis Distributed Caching</span>
+<span class="font-label-sm text-label-sm text-text-muted">6 lectures • 2h 05m</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[18px]">lock</span>
+</div>
+</div>
+<!-- Section 4: Locked Accordion -->
+<div class="rounded-xl bg-surface-container-low overflow-hidden opacity-75">
+<div class="w-full p-3.5 flex items-center justify-between text-left">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-text-muted flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-text-secondary truncate">4. Resiliency with Polly &amp; Resilience4j</span>
+<span class="font-label-sm text-label-sm text-text-muted">5 lectures • 1h 45m</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[18px]">lock</span>
+</div>
+</div>
+</div>
+<!-- Instructor Profile Card at Bottom of Drawer -->
+<div class="mt-2 p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photo of Alex Vance, Distinguished Systems Architect with dark backdrop, focused gaze, professional engineer apparel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdM8u3KyLIm-71vig2gbaWwLIUo3OF6dnto2n2cdP4XgbtN2dR2Cz7EvfZKsK1e63bPQIerfBsz5J3OuTqkI9Nul9a04u7WumZNfUA8_7IYgL8CHOKghi6KPik_zr2Nd6_SNK_d_DpS4mhhvoRULs3wTPK3fjZs3wyNZVltl_lfUpR_cKtNcjZWIxmiq0EOksFrqkUXsz9M8RxlY5JUJWMvoXOow1QpA-gqpUIrqY5HCjmh2HMn5I6"/>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-text-contrast">Alex Vance</span>
+<span class="font-label-sm text-label-sm text-text-muted">Distinguished Systems Architect</span>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-interactive hover:bg-surface-elevated text-label-sm font-label-sm text-text-contrast transition-colors" title="Message Instructor">
+                Follow
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let isPlaying = false;
+
+  function togglePlayState() {
+    isPlaying = !isPlaying;
+    const centerIcon = document.getElementById('centerPlayIcon');
+    const bottomIcon = document.getElementById('bottomPlayIcon');
+    
+    if (isPlaying) {
+      centerIcon.innerText = 'pause';
+      bottomIcon.innerText = 'pause';
+    } else {
+      centerIcon.innerText = 'play_arrow';
+      bottomIcon.innerText = 'play_arrow';
+    }
+  }
+
+  function switchTab(tabKey) {
+    // Hide all contents
+    const panes = document.querySelectorAll('.tab-pane');
+    panes.forEach(pane => {
+      pane.classList.add('hidden');
+      pane.classList.remove('flex');
+    });
+
+    // Reset all tab button styles
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('text-text-contrast', 'border-primary-container', 'font-semibold');
+      btn.classList.add('text-text-secondary', 'border-transparent');
+    });
+
+    // Show target content
+    const targetPane = document.getElementById('content-' + tabKey);
+    if (targetPane) {
+      targetPane.classList.remove('hidden');
+      targetPane.classList.add('flex');
+    }
+
+    // Set active button styles
+    const targetBtn = document.getElementById('tab-' + tabKey);
+    if (targetBtn) {
+      targetBtn.classList.remove('text-text-secondary', 'border-transparent');
+      targetBtn.classList.add('text-text-contrast', 'border-primary-container', 'font-semibold');
+    }
+  }
+
+  function toggleAccordion(bodyId, iconId) {
+    const body = document.getElementById(bodyId);
+    const icon = document.getElementById(iconId);
+    if (body.classList.contains('hidden')) {
+      body.classList.remove('hidden');
+      body.classList.add('flex');
+      icon.classList.add('rotate-180');
+    } else {
+      body.classList.add('hidden');
+      body.classList.remove('flex');
+      icon.classList.remove('rotate-180');
+    }
+  }
+
+  function filterLectures() {
+    const query = document.getElementById('lessonSearch').value.toLowerCase();
+    const items = document.querySelectorAll('.lecture-item');
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(query) ? 'flex' : 'none';
+    });
+  }
+
+  function copySnippetCode(btn) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[14px]">done</span><span>Copied!</span>';
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+    }, 2000);
+  }
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-border-standard mt-space-xl"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="grid grid-cols-2 md:grid-cols-5 gap-gutter mb-space-xl"><div class="col-span-2"><div class="flex items-center gap-space-md mb-space-sm"><img alt="Obsidian Education Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm text-text-contrast uppercase font-bold">Obsidian.edu</span></div><p class="font-body-sm text-body-sm text-text-muted max-w-sm mb-space-md">Engineered technical curriculum for systems developers, infrastructure architects, and applied AI practitioners.</p><div class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-text-muted px-2.5 py-1 rounded-full bg-surface-card border border-border-standard"><span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>Platform Status: All Clusters Healthy</div></div><div><h4 class="font-label-md text-label-md text-text-contrast font-semibold uppercase tracking-wider mb-space-md">Curriculum</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-secondary"><li><a class="hover:text-text-contrast transition-colors" data-path="courses" href="#">Core Systems</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="categories" href="#">Distributed Tech</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="categories" href="#">Kernel &amp; Compilers</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="categories" href="#">ML Engineering</a></li></ul></div><div><h4 class="font-label-md text-label-md text-text-contrast font-semibold uppercase tracking-wider mb-space-md">Platform</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-secondary"><li><a class="hover:text-text-contrast transition-colors" data-path="pricing" href="#">Pro Membership</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="enterprise" href="#">Enterprise Teams</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="teaching" href="#">Teaching Lab</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">System SLA</a></li></ul></div><div><h4 class="font-label-md text-label-md text-text-contrast font-semibold uppercase tracking-wider mb-space-md">Governance</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-secondary"><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Privacy Policy</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Terms of License</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Security Protocols</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Telemetry Controls</a></li></ul></div></div><div class="pt-space-md border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-text-muted"><div>© 2025 Obsidian Systems, Inc. Precision Technical Education.</div><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-text-muted">v2.8.4-prod</span></div></div></div></footer></body></html>

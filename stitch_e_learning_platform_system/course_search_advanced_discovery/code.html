@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#ffdad5","tertiary":"#ffb4ab","surface-container-low":"#1c1b1b","on-primary-fixed-variant":"#930007","surface-container-lowest":"#0e0e0e","error":"#ffb4ab","status-info":"#3B82F6","surface-card":"#0F0F0F","secondary-fixed":"#ffdad6","surface-bright":"#3a3939","bg-canvas":"#050505","inverse-on-surface":"#313030","status-danger":"#EF4444","border-subtle":"#202020","on-secondary":"#690005","on-tertiary-container":"#fff7f6","border-control":"#2A2A2A","on-error-container":"#ffdad6","on-surface-variant":"#e9bcb6","outline-variant":"#5e3f3b","surface-secondary":"#111111","border-standard":"#252525","on-primary-fixed":"#410001","primary-container":"#e50914","primary":"#ffb4aa","on-error":"#690005","border-card":"#232323","surface-interactive":"#151515","tertiary-fixed":"#ffdad6","surface-variant":"#353534","secondary-container":"#a4020e","surface-dim":"#131313","on-secondary-container":"#ffaea5","outline":"#af8782","tertiary-container":"#e40d1a","status-success":"#22C55E","background":"#131313","text-muted":"#737373","on-background":"#e5e2e1","error-container":"#93000a","text-secondary":"#A3A3A3","on-secondary-fixed-variant":"#93000a","surface-container-highest":"#353534","on-secondary-fixed":"#410002","inverse-primary":"#c0000c","tertiary-fixed-dim":"#ffb4ab","surface-container-high":"#2a2a2a","accent-ambient-subtle":"#3A0508","on-tertiary":"#690005","surface-tint":"#ffb4aa","status-warning":"#F59E0B","secondary":"#ffb4ab","secondary-fixed-dim":"#ffb4ab","accent-ambient-dark":"#240406","on-primary":"#690003","inverse-surface":"#e5e2e1","on-tertiary-fixed-variant":"#93000a","on-surface":"#e5e2e1","surface-container":"#201f1f","surface":"#131313","primary-fixed-dim":"#ffb4aa","border-soft":"#1B1B1B","text-contrast":"#FFFFFF","on-primary-container":"#fff7f6","surface-elevated":"#171717","on-tertiary-fixed":"#410002","text-primary":"#F5F5F5","surface-hover":"#161616"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","margin-mobile":"1rem",gutter:"1.5rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-tablet":"2rem","space-lg":"1.5rem","gutter-lg":"2rem",margin:"2.5rem","space-md":"1rem","space-xs":"0.25rem"},fontFamily:{"display-mobile":["Geist"],"title-md":["Geist"],"title-sm":["Geist"],"label-sm":["Geist"],"headline-lg-mobile":["Geist"],"headline-md":["Geist"],"body-sm":["Inter"],"body-md":["Inter"],"label-md":["Geist"],"headline-sm":["Geist"],display:["Geist"],"headline-lg":["Geist"],"body-lg":["Inter"]},fontSize:{"display-mobile":["40px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-sm":["16px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-sm":["24px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["64px",{lineHeight:"68px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-lg":["48px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}]}}}}</script></head><body class="bg-bg-canvas font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-standard"><div class="h-16 max-w-7xl mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Obsidian Education Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm tracking-tight text-text-contrast uppercase font-bold">Obsidian<span class="text-primary-container">.edu</span></span></div><nav class="hidden xl:flex items-center gap-space-lg h-full" data-active-classes="text-text-contrast border-b-2 border-primary-container font-semibold"><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="courses" href="#">Courses</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="search" href="#">Search</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="categories" href="#">Categories</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="pricing" href="#">Pricing</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="enterprise" href="#">Enterprise</a><a class="h-full flex items-center text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors" data-path="teaching" href="#">Teaching</a></nav><div class="flex items-center gap-space-md flex-1 max-w-md justify-end"><a class="hidden md:flex items-center w-full max-w-xs h-10 px-space-sm bg-surface-card rounded-lg border border-border-control hover:border-border-standard focus-within:border-primary-container transition-colors group cursor-text" data-path="search" href="#"><span class="material-symbols-outlined text-text-muted group-hover:text-text-secondary text-base mr-space-xs transition-colors">search</span><span class="w-full bg-transparent border-none text-text-muted font-body-sm text-body-sm select-none">Search courses, stacks... [Cmd+K]</span><kbd class="hidden lg:inline-block px-1.5 py-0.5 text-label-sm font-label-sm text-text-muted bg-surface-container-high rounded border border-border-standard">⌘K</kbd></a><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center font-label-md text-label-md text-text-secondary hover:text-text-contrast px-space-sm py-1.5 rounded-lg hover:bg-surface-interactive transition-colors" data-path="login" href="#">Sign In</a><a class="inline-flex items-center font-label-md text-label-md text-text-contrast bg-primary-container hover:bg-tertiary-container px-space-md py-1.5 rounded-lg transition-colors font-semibold" data-path="login" href="#">Get Started</a></div></div></div><div class="w-full bg-surface-container-lowest/95 border-t border-border-subtle"><div class="max-w-7xl mx-auto px-margin h-11 flex items-center justify-between"><div class="flex items-center gap-space-xs" data-active-classes="bg-surface-container text-text-contrast font-semibold"><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="courses" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Student Portal</a><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="search" href="#">Course Discovery</a><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="instructor-studio" href="#">Instructor Studio</a><a class="flex items-center gap-1.5 px-space-sm py-1 rounded text-label-sm font-label-sm text-text-secondary hover:text-text-contrast transition-colors" data-path="admin-console" href="#">Admin Console</a></div><div class="hidden md:flex items-center gap-space-sm"><span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-text-muted"><span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>Engine: Operational</span></div></div></div></header><main class="w-full pt-[108px] bg-bg-canvas min-h-screen"><div class="flex flex-col w-full">
+<!-- Discovery Sub-header & Real-time Command Query Area -->
+<section class="w-full bg-surface-container-lowest py-space-lg">
+<div class="max-w-7xl mx-auto px-margin">
+<!-- Search Input Container -->
+<div class="relative w-full rounded-xl bg-surface-card p-space-sm shadow-xl flex flex-col md:flex-row items-center gap-space-sm">
+<div class="flex items-center gap-space-sm flex-1 w-full px-space-sm">
+<span class="material-symbols-outlined text-primary-container text-2xl">terminal</span>
+<div class="flex flex-col flex-1">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Semantic Query Engine</span>
+<input class="w-full bg-transparent text-text-contrast font-body-md text-body-md placeholder:text-text-muted focus:outline-none" placeholder="Search by topic, kernel primitive, cloud runtime, or architecture pattern..." type="text" value="Distributed Architecture, Kafka, Rust, eBPF, High-Throughput"/>
+</div>
+<button class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-text-secondary hover:text-text-contrast transition-colors">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>Filters</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto justify-end">
+<button class="w-full md:w-auto px-space-lg py-2.5 bg-primary-container hover:bg-tertiary-container text-text-contrast font-label-md text-label-md font-semibold rounded-lg transition-all flex items-center justify-center gap-space-xs shadow-md">
+<span class="material-symbols-outlined text-lg">search</span>
+<span>Execute Search</span>
+</button>
+</div>
+</div>
+<!-- Active Filters Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mt-space-md pt-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-widest mr-1">Active Facets:</span>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-interactive text-text-contrast font-label-sm text-label-sm">
+<span>Domain: Backend &amp; Cloud</span>
+<button class="hover:text-primary-container transition-colors"><span class="material-symbols-outlined text-xs">close</span></button>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-interactive text-text-contrast font-label-sm text-label-sm">
+<span>Level: Advanced</span>
+<button class="hover:text-primary-container transition-colors"><span class="material-symbols-outlined text-xs">close</span></button>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-interactive text-text-contrast font-label-sm text-label-sm">
+<span>Price: $50–$100</span>
+<button class="hover:text-primary-container transition-colors"><span class="material-symbols-outlined text-xs">close</span></button>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-interactive text-text-contrast font-label-sm text-label-sm">
+<span>Obsidian Pro Included</span>
+<button class="hover:text-primary-container transition-colors"><span class="material-symbols-outlined text-xs">close</span></button>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-text-contrast ml-2 transition-colors underline underline-offset-4">
+            Reset all filters
+          </button>
+</div>
+<div class="flex items-center gap-space-xs text-text-muted font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+<span>Index synced: 68 Curated Blueprints</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Exploration Workspace: Faceted Sidebar + Results Viewport -->
+<section class="w-full bg-bg-canvas py-space-lg">
+<div class="max-w-7xl mx-auto px-margin">
+<!-- Search Metrics & Control Toolbar -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md mb-space-lg bg-surface-card p-space-md rounded-xl">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-title-sm text-title-sm text-text-contrast font-bold">Showing 24</span>
+<span class="font-body-sm text-body-sm text-text-muted">of 68 specialized engineering courses for</span>
+<span class="font-label-md text-label-md text-primary-container font-semibold">“Distributed Architecture”</span>
+</div>
+<div class="flex items-center gap-space-md w-full sm:w-auto justify-between sm:justify-end">
+<!-- Sort Selector -->
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Sort by:</span>
+<div class="relative">
+<select class="bg-surface-interactive text-text-contrast font-label-md text-label-md py-1.5 pl-3 pr-8 rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-elevated">
+<option selected="">Most Relevant (Neural)</option>
+<option>Highest Rated (4.8+)</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Releases</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-text-muted pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<!-- View Switcher -->
+<div class="flex items-center bg-surface-container rounded-lg p-0.5">
+<button class="p-1.5 rounded bg-surface-elevated text-text-contrast" title="Grid Layout">
+<span class="material-symbols-outlined text-base">grid_view</span>
+</button>
+<button class="p-1.5 rounded text-text-muted hover:text-text-contrast transition-colors" title="Detailed Matrix Layout">
+<span class="material-symbols-outlined text-base">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Discovery Layout: Left Sidebar + Right Catalog Grid -->
+<div class="flex flex-col lg:flex-row gap-gutter items-start">
+<!-- Left Filter Panel (Desktop 280px fixed width rail) -->
+<aside class="w-full lg:w-[280px] shrink-0 bg-surface-card rounded-xl p-space-md space-y-space-lg shadow-lg">
+<!-- Domain Categories -->
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-text-contrast font-bold uppercase tracking-wider">Curriculum Domain</span>
+<span class="font-label-sm text-label-sm text-text-muted">Clear</span>
+</div>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-interactive cursor-pointer group transition-colors">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="w-4 h-4 rounded bg-surface-container accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-contrast group-hover:text-text-primary">Backend Architecture</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-text-secondary">42</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-interactive cursor-pointer group transition-colors">
+<div class="flex items-center gap-space-xs">
+<input class="w-4 h-4 rounded bg-surface-container accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-secondary group-hover:text-text-contrast">Systems &amp; Kernel</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-text-muted">18</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-interactive cursor-pointer group transition-colors">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="w-4 h-4 rounded bg-surface-container accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-contrast group-hover:text-text-primary">Applied AI &amp; LLMs</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-text-secondary">24</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-interactive cursor-pointer group transition-colors">
+<div class="flex items-center gap-space-xs">
+<input class="w-4 h-4 rounded bg-surface-container accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-secondary group-hover:text-text-contrast">Cloud &amp; DevOps</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-text-muted">31</span>
+</label>
+<label class="flex items-center justify-between p-1.5 rounded hover:bg-surface-interactive cursor-pointer group transition-colors">
+<div class="flex items-center gap-space-xs">
+<input class="w-4 h-4 rounded bg-surface-container accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-secondary group-hover:text-text-contrast">Smart Contracts &amp; Cryptography</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-text-muted">9</span>
+</label>
+</div>
+</div>
+<!-- Technical Skill Level -->
+<div class="pt-space-md bg-surface-card">
+<span class="font-label-md text-label-md text-text-contrast font-bold uppercase tracking-wider block mb-space-sm">Skill Level</span>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="px-2.5 py-1.5 rounded bg-surface-container text-text-secondary hover:text-text-contrast font-label-sm text-label-sm text-left transition-colors">
+                Foundational
+              </button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container text-text-secondary hover:text-text-contrast font-label-sm text-label-sm text-left transition-colors">
+                Mid-Level
+              </button>
+<button class="px-2.5 py-1.5 rounded bg-primary-container text-text-contrast font-label-sm text-label-sm font-semibold text-left">
+                Advanced (Active)
+              </button>
+<button class="px-2.5 py-1.5 rounded bg-surface-container text-text-secondary hover:text-text-contrast font-label-sm text-label-sm text-left transition-colors">
+                Principal / Staff
+              </button>
+</div>
+</div>
+<!-- Content Delivery Type -->
+<div class="pt-space-md">
+<span class="font-label-md text-label-md text-text-contrast font-bold uppercase tracking-wider block mb-space-sm">Interactive Format</span>
+<div class="space-y-2">
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded bg-surface-container accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-contrast group-hover:text-text-primary">Video Masterclasses + Labs</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded bg-surface-container accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-contrast group-hover:text-text-primary">Rust / WASM Sandboxes</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded bg-surface-container accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-contrast group-hover:text-text-primary">Vector Blueprint Architecture PDFs</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer group">
+<input class="w-4 h-4 rounded bg-surface-container accent-primary-container cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-secondary group-hover:text-text-contrast">Capstone Implementation</span>
+</label>
+</div>
+</div>
+<!-- Video Duration -->
+<div class="pt-space-md">
+<span class="font-label-md text-label-md text-text-contrast font-bold uppercase tracking-wider block mb-space-sm">Video Duration</span>
+<div class="space-y-1.5">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input class="w-3.5 h-3.5 accent-primary-container cursor-pointer" name="duration" type="radio"/>
+<span class="font-body-sm text-body-sm text-text-secondary">Under 5 hours</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input class="w-3.5 h-3.5 accent-primary-container cursor-pointer" name="duration" type="radio"/>
+<span class="font-body-sm text-body-sm text-text-secondary">5–15 hours</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="w-3.5 h-3.5 accent-primary-container cursor-pointer" name="duration" type="radio"/>
+<span class="font-body-sm text-body-sm text-text-contrast font-medium">15–30 hours (Selected)</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<input class="w-3.5 h-3.5 accent-primary-container cursor-pointer" name="duration" type="radio"/>
+<span class="font-body-sm text-body-sm text-text-secondary">30+ hours (Deep immersion)</span>
+</label>
+</div>
+</div>
+<!-- Pricing Model -->
+<div class="pt-space-md">
+<span class="font-label-md text-label-md text-text-contrast font-bold uppercase tracking-wider block mb-space-sm">Pricing Model</span>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-2 rounded bg-surface-container cursor-pointer">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="w-4 h-4 rounded bg-surface-interactive accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-contrast">Included in Pro ($29/mo)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</label>
+<label class="flex items-center justify-between p-2 rounded bg-surface-container cursor-pointer">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="w-4 h-4 rounded bg-surface-interactive accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-contrast">Individual License ($49-$149)</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">Buy</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded bg-surface-container cursor-pointer">
+<div class="flex items-center gap-space-xs">
+<input class="w-4 h-4 rounded bg-surface-interactive accent-primary-container" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-secondary">Free Architectural Previews</span>
+</div>
+<span class="font-label-sm text-label-sm text-status-success">Free</span>
+</label>
+</div>
+</div>
+<!-- Instructor Rating -->
+<div class="pt-space-md">
+<span class="font-label-md text-label-md text-text-contrast font-bold uppercase tracking-wider block mb-space-sm">Instructor Rating</span>
+<div class="space-y-1.5">
+<label class="flex items-center justify-between cursor-pointer py-1 px-1.5 rounded hover:bg-surface-interactive">
+<div class="flex items-center gap-1.5 text-status-warning">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-body-sm text-body-sm text-text-contrast ml-1">4.8 &amp; up</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">48</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer py-1 px-1.5 rounded hover:bg-surface-interactive">
+<div class="flex items-center gap-1.5 text-status-warning">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-text-muted">star</span>
+<span class="font-body-sm text-body-sm text-text-secondary ml-1">4.5 &amp; up</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">16</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer py-1 px-1.5 rounded hover:bg-surface-interactive">
+<div class="flex items-center gap-1.5 text-text-muted">
+<span class="material-symbols-outlined text-sm text-status-warning" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-status-warning" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-status-warning" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm text-status-warning" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="font-body-sm text-body-sm text-text-secondary ml-1">4.0 &amp; up</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted">4</span>
+</label>
+</div>
+</div>
+<!-- Subtitles & Languages -->
+<div class="pt-space-md">
+<span class="font-label-md text-label-md text-text-contrast font-bold uppercase tracking-wider block mb-space-sm">Subtitles &amp; Audio</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded bg-surface-elevated text-text-contrast font-label-sm text-label-sm cursor-pointer hover:bg-primary-container transition-colors">English [CC]</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-text-secondary font-label-sm text-label-sm cursor-pointer hover:text-text-contrast transition-colors">German [CC]</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-text-secondary font-label-sm text-label-sm cursor-pointer hover:text-text-contrast transition-colors">Japanese [CC]</span>
+</div>
+</div>
+</aside>
+<!-- Right Main Catalog Grid (3-column responsive) -->
+<div class="flex-1 w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<!-- Card 1: Distributed Systems & Microservices with NestJS, Kafka & Redis -->
+<article class="bg-surface-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col group hover:-translate-y-1">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Technical schematic interface representing high performance distributed systems, event streams with Kafka clusters and Redis cache topologies, illuminated in deep graphite blacks and sharp crimson neon vectors, architectural engineering view." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM9SB5w4j3CUY5htNpjCR9veoig4G6ao3OrgxD-FX31ZL3hY5c80PiHuVXi3qrqFmDshKVNXWvqw5EzX-RT54O0580b_ALtOd5Zx6CE5oMex_nU2lZRLZVPZLjvUoD9PIOons8Xad5lcO4IfWcZ9KVqvuVuG29EF6SDdQ4NgAqLWD6vSEEScf7YMEr38479XYlyqqk3VBm_1ZmamMnND4Hr9TrNvn4whmy6WY3OKzdvWBFifIb5OQ_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/40 to-transparent"></div>
+<!-- Status Badges -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-text-contrast font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                    Bestseller
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card/90 text-text-secondary font-label-sm text-label-sm backdrop-blur">
+                    Backend Arch
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-text-contrast">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-mono">18.5h Total</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container">article</span> 12 Arch PDFs
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-elevated flex items-center justify-center text-text-contrast text-xs font-bold">AV</div>
+<span class="font-label-sm text-label-sm text-text-secondary">Alex Vance <span class="text-text-muted">(Ex-Cloudflare)</span></span>
+</div>
+<h3 class="font-title-sm text-title-sm text-text-contrast font-bold leading-snug group-hover:text-primary transition-colors">
+                    Distributed Systems &amp; Microservices with NestJS, Kafka &amp; Redis
+                  </h3>
+<p class="font-body-sm text-body-sm text-text-muted mt-2 line-clamp-2">
+                    Architect zero-data-loss event streaming fabrics, idempotency engines, and consensus state machines for production throughput.
+                  </p>
+</div>
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-sm text-title-sm text-text-contrast font-bold">4.95</span>
+<span class="font-body-sm text-body-sm text-text-muted">(3,420 students)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-status-success font-semibold">Pro Available</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-card">
+<div>
+<span class="font-title-md text-title-md text-text-contrast font-bold">$89.99</span>
+<span class="font-body-sm text-body-sm text-text-muted block -mt-1 text-xs">or free with Pro</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary-container hover:bg-tertiary-container text-text-contrast font-label-md text-label-md font-semibold rounded-lg transition-colors flex items-center gap-1">
+<span>Enroll</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: Modern Full-Stack Rust & WebAssembly Masterclass -->
+<article class="bg-surface-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col group hover:-translate-y-1">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Digital illustration of Rust memory management structures, WebAssembly binary compilation flowcharts, and browser sandboxes rendered in deep minimal black with glowing rust-red circuit traces and clean typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9yBPEWSW0t2NB2jeVNFovGHBT_xx3x2mAWgNThsvtHovseR4q_wsjKhXSg7IJw7htqOlunDUMfIH_PayR7jE-Zzf7Ezz5y49nCz3UkQruj_v8pdQRGd-_QX0HZXhG1oLwGu5n28F5TDNShERfEI9_wtc1o-ED5MvqBAknGIRKBQyIUqTf680b5cC-IQdQJRxC4sNyRWUopt6h3WNEBr1Q5ttELxCjC-nMDslQ0OlAWz4xS7X21UjU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/40 to-transparent"></div>
+<!-- Status Badges -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-status-danger text-text-contrast font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                    Hot
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card/90 text-text-secondary font-label-sm text-label-sm backdrop-blur">
+                    Kernel &amp; Rust
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-text-contrast">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-mono">24.0h Total</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container">terminal</span> 18 Code Labs
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-elevated flex items-center justify-center text-text-contrast text-xs font-bold">ER</div>
+<span class="font-label-sm text-label-sm text-text-secondary">Elena Rostova <span class="text-text-muted">(Rust Core Contributor)</span></span>
+</div>
+<h3 class="font-title-sm text-title-sm text-text-contrast font-bold leading-snug group-hover:text-primary transition-colors">
+                    Modern Full-Stack Rust &amp; WebAssembly Masterclass
+                  </h3>
+<p class="font-body-sm text-body-sm text-text-muted mt-2 line-clamp-2">
+                    Build multi-threaded browser engines and ultra-fast microservices with Tokio, Axum, and client-side WASM compilation.
+                  </p>
+</div>
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-sm text-title-sm text-text-contrast font-bold">4.90</span>
+<span class="font-body-sm text-body-sm text-text-muted">(890 students)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-status-success font-semibold">Pro Available</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-card">
+<div>
+<span class="font-title-md text-title-md text-text-contrast font-bold">$94.99</span>
+<span class="font-body-sm text-body-sm text-text-muted block -mt-1 text-xs">or free with Pro</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary-container hover:bg-tertiary-container text-text-contrast font-label-md text-label-md font-semibold rounded-lg transition-colors flex items-center gap-1">
+<span>Enroll</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: Enterprise Kubernetes & Multi-Cloud Infrastructure with Cilium eBPF -->
+<article class="bg-surface-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col group hover:-translate-y-1">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Complex Kubernetes network topology and Linux kernel eBPF packet inspection visualizer, showing dark console monitoring screens with crimson ingress nodes and network packet graphs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUprbgmeUk_tKJ7MzVvW2MZHeU6oO1LJ1sGdbheEa8UuFjdXxDJgTCdq6CsQ1MF3FT_rSe9l5EskiTQTroPwqv6rYy-a-RAPxs26Y3ZOFAvFqsKGz5U2Xg55Rm2BuK7Cdq3VPu7-zzQJ2z9o82rdhJYyvW-h7Y3jxi_NM2_c_raRyjSbLb9GT5-Wtpo40AW8hlQSxKw7uz3J7AOkwGRaDPvCugJ7fDsvMMFvJWGqFtiHoKF-nCJOG9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/40 to-transparent"></div>
+<!-- Status Badges -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-status-info text-text-contrast font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                    Featured
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card/90 text-text-secondary font-label-sm text-label-sm backdrop-blur">
+                    Cloud &amp; Infra
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-text-contrast">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-mono">16.0h Total</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container">cloud_queue</span> Terraform Stacks
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-elevated flex items-center justify-center text-text-contrast text-xs font-bold">MC</div>
+<span class="font-label-sm text-label-sm text-text-secondary">Marcus Chen <span class="text-text-muted">(Staff Infra Architect)</span></span>
+</div>
+<h3 class="font-title-sm text-title-sm text-text-contrast font-bold leading-snug group-hover:text-primary transition-colors">
+                    Enterprise Kubernetes &amp; Multi-Cloud with Cilium eBPF
+                  </h3>
+<p class="font-body-sm text-body-sm text-text-muted mt-2 line-clamp-2">
+                    Kernel-level observability, high-performance CNI routing, and zero-trust service mesh across multi-region Kubernetes clusters.
+                  </p>
+</div>
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-sm text-title-sm text-text-contrast font-bold">4.88</span>
+<span class="font-body-sm text-body-sm text-text-muted">(1,850 students)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-status-success font-semibold">Pro Available</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-card">
+<div>
+<span class="font-title-md text-title-md text-text-contrast font-bold">$79.99</span>
+<span class="font-body-sm text-body-sm text-text-muted block -mt-1 text-xs">or free with Pro</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary-container hover:bg-tertiary-container text-text-contrast font-label-md text-label-md font-semibold rounded-lg transition-colors flex items-center gap-1">
+<span>Enroll</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4: Production LLMs: RAG Architectures & Vector DBs at Scale -->
+<article class="bg-surface-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col group hover:-translate-y-1">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Abstract 3D dimensional vector embedding space, neural network tensor diagrams, and high-dimensional semantic search indexing visualized in obsidian black and vivid ruby red lasers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQBh50fqjJuhrhCsdVndh_LKuBAzLwPvzLgZx-qj6J2FPNjikcqoo7-_TaDXW9QsJ4VSZxwyngSfKW079HWO-g0gonRXdvyDC94OwAQojdolHOJYJl3a1xI1sJi9hjvk-dLSu0-U3d79vx7vwzYCCegBi3m53bP1JoQC1AeJGy5rtPIO_ypWyAJAuxF9HRzGoWfqPah_1peBOnua5rtUpDtSezRpGKohb5KyKDq1sGKjoLduBHtjNt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/40 to-transparent"></div>
+<!-- Status Badges -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-text-contrast font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                    Bestseller
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card/90 text-text-secondary font-label-sm text-label-sm backdrop-blur">
+                    Applied AI
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-text-contrast">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-mono">21.0h Total</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container">hub</span> 14 Vector Pipelines
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-elevated flex items-center justify-center text-text-contrast text-xs font-bold">SL</div>
+<span class="font-label-sm text-label-sm text-text-secondary">Sarah Lin <span class="text-text-muted">(Principal ML Engineer)</span></span>
+</div>
+<h3 class="font-title-sm text-title-sm text-text-contrast font-bold leading-snug group-hover:text-primary transition-colors">
+                    Production LLMs: RAG Architectures &amp; Vector DBs at Scale
+                  </h3>
+<p class="font-body-sm text-body-sm text-text-muted mt-2 line-clamp-2">
+                    Implement hybrid sparse-dense retrieval, reranking fine-tuning, latency-optimized GPU quantization, and guardrails for million-query loads.
+                  </p>
+</div>
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-sm text-title-sm text-text-contrast font-bold">4.97</span>
+<span class="font-body-sm text-body-sm text-text-muted">(2,100 students)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-status-success font-semibold">Pro Available</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-card">
+<div>
+<span class="font-title-md text-title-md text-text-contrast font-bold">$99.99</span>
+<span class="font-body-sm text-body-sm text-text-muted block -mt-1 text-xs">or free with Pro</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary-container hover:bg-tertiary-container text-text-contrast font-label-md text-label-md font-semibold rounded-lg transition-colors flex items-center gap-1">
+<span>Enroll</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 5: High-Frequency Trading Engines in C++23 & Kernel Bypass -->
+<article class="bg-surface-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col group hover:-translate-y-1">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Microsecond latency order matching engine architecture, FPGA acceleration boards, DPDK network driver pipelines in high contrast dark monochromatic scheme with subtle red accent lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhs-kaGP964zOJROF_nqwrDiCjGx6PvnIWLbEbs0VqoZuu0Axj5LgXGaVhEHfo_nHfkqdSstLSxmuJCSci6c1xxZMD9zhT4oDFTjh0WsQEOZ0JygVhbo_SeZf_8cucs1-YH7ZHnBB9mhe1wybqSrYcKFTm4WqOdi61ya0y3htAGXwOO3L-wC4ffM1ytGBPnACXHRMM8g0jtadFoOQPLWO5V49_Gvf8vNGTE-bb4RtFItKWLEJwJpj9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/40 to-transparent"></div>
+<!-- Status Badges -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-status-warning text-text-contrast font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                    New
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card/90 text-text-secondary font-label-sm text-label-sm backdrop-blur">
+                    Systems &amp; HFT
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-text-contrast">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-mono">28.0h Total</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container">memory</span> FPGA / DPDK
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-elevated flex items-center justify-center text-text-contrast text-xs font-bold">VR</div>
+<span class="font-label-sm text-label-sm text-text-secondary">Viktor Reznov <span class="text-text-muted">(HFT Systems Architect)</span></span>
+</div>
+<h3 class="font-title-sm text-title-sm text-text-contrast font-bold leading-snug group-hover:text-primary transition-colors">
+                    High-Frequency Trading Engines in C++23 &amp; Kernel Bypass
+                  </h3>
+<p class="font-body-sm text-body-sm text-text-muted mt-2 line-clamp-2">
+                    Build sub-microsecond order books, lock-free ring buffers, cache-line alignment algorithms, and Solarflare OpenOnload bypass stacks.
+                  </p>
+</div>
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-sm text-title-sm text-text-contrast font-bold">4.98</span>
+<span class="font-body-sm text-body-sm text-text-muted">(612 students)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-status-success font-semibold">Pro Available</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-card">
+<div>
+<span class="font-title-md text-title-md text-text-contrast font-bold">$129.99</span>
+<span class="font-body-sm text-body-sm text-text-muted block -mt-1 text-xs">or free with Pro</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary-container hover:bg-tertiary-container text-text-contrast font-label-md text-label-md font-semibold rounded-lg transition-colors flex items-center gap-1">
+<span>Enroll</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 6: Zero-Knowledge Cryptography & zk-SNARK Protocol Engineering -->
+<article class="bg-surface-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200 flex flex-col group hover:-translate-y-1">
+<div class="relative w-full h-48 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cryptographic zero knowledge proof verification visual, arithmetic circuit gates, polynomial commitments represented in dark obsidian backdrop with crisp crimson mathematical geometric lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZGShgfSHtXRvoY84p7lbMusx7IR4bgho_bOzYzJ1AORlEAC7yu6YQJUPEYf3nal7To6Zx4rrc6NRCIxB9IikVL-0slLP78iu5aV8TOVQOdtEZwJo5kWepHZx_tUXKNXS2VhMNb70iKxUoXMI4jNPJpE3OssligEdEsfl3rxojwKSrFcJeJkCCt6iuWvOKX8EsJoJOUeFptB86m1N6hnXpV5mXQJ-PiH3ObVndLKvaHYUqPcUYWCSg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/40 to-transparent"></div>
+<!-- Status Badges -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-interactive text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider shadow">
+                    Staff Pick
+                  </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-card/90 text-text-secondary font-label-sm text-label-sm backdrop-blur">
+                    Applied Crypto
+                  </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-text-contrast">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-mono">14.5h Total</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container">lock_open</span> Halo2 Sandbox
+                  </span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between space-y-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1.5">
+<div class="w-5 h-5 rounded-full bg-surface-elevated flex items-center justify-center text-text-contrast text-xs font-bold">SS</div>
+<span class="font-label-sm text-label-sm text-text-secondary">Samantha Sterling <span class="text-text-muted">(Lead ZK Auditor)</span></span>
+</div>
+<h3 class="font-title-sm text-title-sm text-text-contrast font-bold leading-snug group-hover:text-primary transition-colors">
+                    Zero-Knowledge Cryptography &amp; zk-SNARK Protocol Engineering
+                  </h3>
+<p class="font-body-sm text-body-sm text-text-muted mt-2 line-clamp-2">
+                    Construct arithmetic circuits with Circom and Halo2, implement PLONK provers, and deploy verified on-chain verifier contracts.
+                  </p>
+</div>
+<div class="space-y-space-sm pt-2">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-1 text-status-warning">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-sm text-title-sm text-text-contrast font-bold">4.92</span>
+<span class="font-body-sm text-body-sm text-text-muted">(430 students)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-status-success font-semibold">Pro Available</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-card">
+<div>
+<span class="font-title-md text-title-md text-text-contrast font-bold">$119.99</span>
+<span class="font-body-sm text-body-sm text-text-muted block -mt-1 text-xs">or free with Pro</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary-container hover:bg-tertiary-container text-text-contrast font-label-md text-label-md font-semibold rounded-lg transition-colors flex items-center gap-1">
+<span>Enroll</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination Bar -->
+<div class="mt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-card p-space-md rounded-xl">
+<span class="font-body-sm text-body-sm text-text-muted">
+              Displaying <span class="text-text-contrast font-semibold">1 – 6</span> of 24 filtered results
+            </span>
+<div class="flex items-center gap-1">
+<button class="p-2 rounded bg-surface-container text-text-secondary hover:text-text-contrast transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary-container text-text-contrast font-label-md text-label-md font-bold">
+                1
+              </button>
+<button class="w-8 h-8 rounded bg-surface-container text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors">
+                2
+              </button>
+<button class="w-8 h-8 rounded bg-surface-container text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors">
+                3
+              </button>
+<button class="w-8 h-8 rounded bg-surface-container text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors">
+                4
+              </button>
+<span class="px-1 text-text-muted font-label-sm text-label-sm">...</span>
+<button class="w-8 h-8 rounded bg-surface-container text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors">
+                12
+              </button>
+<button class="p-2 rounded bg-surface-container text-text-secondary hover:text-text-contrast transition-colors">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Conversion Banner: Obsidian Pro Membership -->
+<section class="sticky bottom-4 z-40 max-w-7xl mx-auto w-full px-margin my-space-md">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-accent-ambient-dark via-surface-elevated to-surface-card p-space-md sm:p-space-lg shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Glow ambient backdrop -->
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center gap-space-md relative z-10">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container text-2xl">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm text-text-contrast font-bold">Obsidian Pro Membership</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-text-contrast font-label-sm text-label-sm font-semibold uppercase">Engineered Value</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">
+            Unlock all 68 engineering masterclasses, cloud dev sandboxes, and verification certificates for <span class="text-text-contrast font-bold">$29/mo</span>.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto relative z-10 shrink-0">
+<a class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-interactive text-text-secondary hover:text-text-contrast font-label-md text-label-md transition-colors text-center" data-path="pricing" href="#">
+          Compare Plans
+        </a>
+<a class="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-primary-container hover:bg-tertiary-container text-text-contrast font-label-md text-label-md font-bold transition-all shadow-lg flex items-center justify-center gap-1.5 hover:scale-[1.02] active:scale-[0.98]" data-path="pricing" href="#">
+<span>Get All-Access Pro</span>
+<span class="material-symbols-outlined text-base">bolt</span>
+</a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-border-standard mt-space-xl"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="grid grid-cols-2 md:grid-cols-5 gap-gutter mb-space-xl"><div class="col-span-2"><div class="flex items-center gap-space-md mb-space-sm"><img alt="Obsidian Education Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U_0obEkDF7K03cuiSoQZDksyLgt_KsrmDmcmSle5uhy2Hkvq7XnvI0oh08gllJnkDOp-Yv472irqJTV3CQq7nrVEfdDTruzJ1xoyEXLs2tqDMxQqzLouRhYBb2JpjX4-i8rIt0RjCkLatyCsFbK6Pr4R23eb3M11Nm4hwfIwoRv6hKHekufHEj1EYFZkLCeOxw2kOb4p6DZjHV4_zqgRgDYpbe6cVmwNxoJLyti3Ctkn3hDf03j68A-TA"/><span class="font-title-sm text-title-sm text-text-contrast uppercase font-bold">Obsidian.edu</span></div><p class="font-body-sm text-body-sm text-text-muted max-w-sm mb-space-md">Engineered technical curriculum for systems developers, infrastructure architects, and applied AI practitioners.</p><div class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-text-muted px-2.5 py-1 rounded-full bg-surface-card border border-border-standard"><span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>Platform Status: All Clusters Healthy</div></div><div><h4 class="font-label-md text-label-md text-text-contrast font-semibold uppercase tracking-wider mb-space-md">Curriculum</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-secondary"><li><a class="hover:text-text-contrast transition-colors" data-path="courses" href="#">Core Systems</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="search" href="#">Course Discovery</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="categories" href="#">Distributed Tech</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="categories" href="#">Kernel &amp; Compilers</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="categories" href="#">ML Engineering</a></li></ul></div><div><h4 class="font-label-md text-label-md text-text-contrast font-semibold uppercase tracking-wider mb-space-md">Platform</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-secondary"><li><a class="hover:text-text-contrast transition-colors" data-path="pricing" href="#">Pro Membership</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="enterprise" href="#">Enterprise Teams</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="teaching" href="#">Teaching Lab</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="login" href="#">Portal Login</a></li></ul></div><div><h4 class="font-label-md text-label-md text-text-contrast font-semibold uppercase tracking-wider mb-space-md">Governance</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-secondary"><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Privacy Policy</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Terms of License</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Security Protocols</a></li><li><a class="hover:text-text-contrast transition-colors" data-path="terms" href="#">Telemetry Controls</a></li></ul></div></div><div class="pt-space-md border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-text-muted"><div>© 2025 Obsidian Systems, Inc. Precision Technical Education.</div><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-text-muted">v2.8.4-prod</span></div></div></div></footer></body></html>
