@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Put, Body, Param, UseGuards } from '@nestjs/common';
+import { Controller, Post, Get, Put, Delete, Body, Param, UseGuards } from '@nestjs/common';
 import { PaymentsService } from './payments.service';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 import { RolesGuard } from '../../common/guards/roles.guard';
@@ -70,5 +70,38 @@ export class PaymentsController {
   @Put(':id/refund')
   async refundPayment(@Param('id') id: string) {
     return this.paymentsService.refundPayment(id);
+  }
+
+  @Post('coupons/validate')
+  async validateCoupon(@Body() body: { code: string; amount: number }) {
+    return this.paymentsService.validateCoupon(body.code, body.amount);
+  }
+
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin', 'superadmin')
+  @Get('coupons')
+  async getCoupons() {
+    return this.paymentsService.getCoupons();
+  }
+
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin', 'superadmin')
+  @Post('coupons')
+  async createCoupon(@Body() body: any) {
+    return this.paymentsService.createCoupon(body);
+  }
+
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin', 'superadmin')
+  @Put('coupons/:id')
+  async updateCoupon(@Param('id') id: string, @Body() body: any) {
+    return this.paymentsService.updateCoupon(id, body);
+  }
+
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin', 'superadmin')
+  @Delete('coupons/:id')
+  async deleteCoupon(@Param('id') id: string) {
+    return this.paymentsService.deleteCoupon(id);
   }
 }

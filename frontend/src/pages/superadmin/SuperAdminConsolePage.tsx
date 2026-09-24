@@ -1,25 +1,60 @@
 import React, { useState } from 'react';
 import { useCartStore } from '../../store';
 import { Modal } from '../../components/common/Modal';
+import { MOCK_ADMIN_STAFF } from '../../services/mockData';
+import { AdminStaff } from '../../types';
 
 export const SuperAdminConsolePage: React.FC = () => {
   const payments = useCartStore((state) => state.payments);
   const approveCheckPayment = useCartStore((state) => state.approveCheckPayment);
   const refundPayment = useCartStore((state) => state.refundPayment);
 
+  const [activeTab, setActiveTab] = useState<'ledger' | 'staff'>('ledger');
+  const [staffList, setStaffList] = useState<AdminStaff[]>(MOCK_ADMIN_STAFF);
+
+  // Invite Admin State
   const [showInviteModal, setShowInviteModal] = useState(false);
+  const [inviteName, setInviteName] = useState('');
   const [inviteEmail, setInviteEmail] = useState('');
-  const [adminRole, setAdminRole] = useState('Curriculum Moderator');
+  const [inviteDept, setInviteDept] = useState('Curriculum Operations');
+  const [inviteRoleTier, setInviteRoleTier] = useState<AdminStaff['roleTier']>('Curriculum Moderator');
+
   const [actionNotice, setActionNotice] = useState('');
   const [filterStatus, setFilterStatus] = useState<'all' | 'paid' | 'pending' | 'refunded'>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleDispatchInvitation = () => {
-    if (!inviteEmail) return;
-    setActionNotice(`Administrator provisioned for "${inviteEmail}" (${adminRole}). Credentials dispatched.`);
+    if (!inviteEmail || !inviteName) return;
+
+    const newAdmin: AdminStaff = {
+      id: `adm-${Date.now()}`,
+      name: inviteName.trim(),
+      email: inviteEmail.trim(),
+      department: inviteDept,
+      roleTier: inviteRoleTier,
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+      mfaEnabled: true,
+      status: 'active',
+      lastActive: 'Just now',
+      createdAt: new Date().toISOString().split('T')[0]
+    };
+
+    setStaffList([newAdmin, ...staffList]);
+    setActionNotice(`Administrator "${newAdmin.name}" (${newAdmin.roleTier}) provisioned successfully. Hardware MFA registration dispatched.`);
     setShowInviteModal(false);
+    setInviteName('');
     setInviteEmail('');
     setTimeout(() => setActionNotice(''), 4000);
+  };
+
+  const handleToggleAdminStatus = (id: string) => {
+    setStaffList((prev) =>
+      prev.map((a) =>
+        a.id === id ? { ...a, status: a.status === 'active' ? 'suspended' : 'active' } : a
+      )
+    );
+    setActionNotice('Administrator access status updated.');
+    setTimeout(() => setActionNotice(''), 3000);
   };
 
   const handleApprove = (id: string, orderNumber: string) => {
@@ -157,8 +192,42 @@ export const SuperAdminConsolePage: React.FC = () => {
         </div>
       </div>
 
+      {/* Section Switcher Tabs */}
+      <div className="flex items-center gap-2 border-b border-border-standard pb-2">
+        <button
+          onClick={() => setActiveTab('ledger')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
+            activeTab === 'ledger'
+              ? 'bg-primary-container text-white shadow-md'
+              : 'bg-surface-secondary text-text-muted hover:text-text-contrast hover:bg-surface-interactive'
+          }`}
+        >
+          <span className="material-symbols-outlined text-base">receipt_long</span>
+          <span>Financial Settlement Ledger</span>
+          <span className="px-1.5 py-0.2 rounded text-[10px] font-mono bg-black/20">
+            {payments.length}
+          </span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab('staff')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
+            activeTab === 'staff'
+              ? 'bg-primary-container text-white shadow-md'
+              : 'bg-surface-secondary text-text-muted hover:text-text-contrast hover:bg-surface-interactive'
+          }`}
+        >
+          <span className="material-symbols-outlined text-base">admin_panel_settings</span>
+          <span>Staff Governance & RBAC Directory</span>
+          <span className="px-1.5 py-0.2 rounded text-[10px] font-mono bg-black/20">
+            {staffList.length}
+          </span>
+        </button>
+      </div>
+
       {/* Global Financial Ledger */}
-      <div className="bg-surface-card border border-border-standard rounded-2xl p-6 space-y-5 shadow-xl">
+      {activeTab === 'ledger' && (
+      <div className="bg-surface-card border border-border-standard rounded-2xl p-6 space-y-5 shadow-xl animate-fade-in">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-3 border-b border-border-subtle">
           <div>
             <h3 className="text-sm font-semibold text-text-contrast uppercase tracking-wider font-mono">
@@ -287,49 +356,193 @@ export const SuperAdminConsolePage: React.FC = () => {
           </table>
         </div>
       </div>
+      )}
+
+      {/* Tab 2: Platform Administrators & Staff Governance */}
+      {activeTab === 'staff' && (
+        <div className="bg-surface-card border border-border-standard rounded-2xl p-6 space-y-5 shadow-xl animate-fade-in">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-3 border-b border-border-subtle">
+            <div>
+              <h3 className="text-sm font-semibold text-text-contrast uppercase tracking-wider font-mono">
+                Platform Administrators & Staff Governance (RBAC)
+              </h3>
+              <p className="text-xs text-text-muted">
+                Manage internal administrative privileges, provision operations personnel, and enforce multi-factor security.
+              </p>
+            </div>
+
+            <button
+              onClick={() => setShowInviteModal(true)}
+              className="px-3.5 py-1.5 rounded-lg bg-primary-container hover:brightness-110 active:scale-95 text-white text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5 self-start sm:self-auto"
+            >
+              <span className="material-symbols-outlined text-sm">person_add</span>
+              <span>Provision Administrator</span>
+            </button>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-surface-secondary text-text-muted uppercase text-[10px] font-mono tracking-wider border-b border-border-subtle">
+                <tr>
+                  <th className="py-3 px-4">Administrator</th>
+                  <th className="py-3 px-4">Department & Division</th>
+                  <th className="py-3 px-4">Role Tier</th>
+                  <th className="py-3 px-4">MFA Security</th>
+                  <th className="py-3 px-4">Last Active</th>
+                  <th className="py-3 px-4">Status</th>
+                  <th className="py-3 px-4 text-right">Access Controls</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border-subtle text-text-secondary">
+                {staffList.map((adm) => (
+                  <tr key={adm.id} className="hover:bg-surface-interactive/60 transition-colors">
+                    <td className="py-3 px-4">
+                      <div className="flex items-center gap-3">
+                        <img
+                          src={adm.avatar}
+                          alt={adm.name}
+                          className="w-8 h-8 rounded-full object-cover ring-1 ring-border-control"
+                        />
+                        <div>
+                          <div className="font-semibold text-text-contrast">{adm.name}</div>
+                          <div className="text-[11px] text-text-muted font-mono">{adm.email}</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td className="py-3 px-4 text-text-contrast font-medium">
+                      {adm.department}
+                    </td>
+
+                    <td className="py-3 px-4">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-primary-container/20 text-primary border border-primary-container/30">
+                        {adm.roleTier}
+                      </span>
+                    </td>
+
+                    <td className="py-3 px-4">
+                      {adm.mfaEnabled ? (
+                        <span className="inline-flex items-center gap-1 text-[11px] text-status-success font-mono font-semibold">
+                          <span className="material-symbols-outlined text-xs">key</span>
+                          <span>Hardware FIDO2</span>
+                        </span>
+                      ) : (
+                        <span className="text-status-warning text-[11px] font-mono">Pending Enrollment</span>
+                      )}
+                    </td>
+
+                    <td className="py-3 px-4 font-mono text-text-muted">
+                      {adm.lastActive}
+                    </td>
+
+                    <td className="py-3 px-4">
+                      <span
+                        className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase ${
+                          adm.status === 'active'
+                            ? 'bg-status-success/15 text-status-success'
+                            : 'bg-status-error/15 text-status-error'
+                        }`}
+                      >
+                        {adm.status}
+                      </span>
+                    </td>
+
+                    <td className="py-3 px-4 text-right">
+                      <button
+                        onClick={() => handleToggleAdminStatus(adm.id)}
+                        className={`px-2.5 py-1 rounded text-[11px] font-semibold transition-colors ${
+                          adm.status === 'active'
+                            ? 'bg-status-error/15 hover:bg-status-error/25 text-status-error'
+                            : 'bg-status-success/15 hover:bg-status-success/25 text-status-success'
+                        }`}
+                      >
+                        {adm.status === 'active' ? 'Suspend' : 'Reactivate'}
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {/* Invite Administrator Modal */}
       <Modal
         isOpen={showInviteModal}
         onClose={() => setShowInviteModal(false)}
-        title="Invite New Administrator"
-        footer={
-          <button
-            onClick={handleDispatchInvitation}
-            disabled={!inviteEmail}
-            className="px-4 py-2 rounded-lg bg-primary-container hover:brightness-110 active:scale-95 disabled:opacity-40 text-white text-xs font-semibold shadow-sm transition-all"
-          >
-            Provision Administrator Account
-          </button>
-        }
+        title="Provision Platform Administrator"
       >
         <div className="space-y-4 text-xs">
           <div className="space-y-1">
-            <label className="text-text-secondary font-medium">Administrator Email</label>
+            <label className="text-text-secondary font-medium">Administrator Full Name</label>
             <input
-              type="email"
-              value={inviteEmail}
-              onChange={(e) => setInviteEmail(e.target.value)}
-              placeholder="admin.colleague@obsidian.edu"
+              type="text"
+              required
+              value={inviteName}
+              onChange={(e) => setInviteName(e.target.value)}
+              placeholder="e.g. Dr. Maya Lin"
               className="w-full bg-surface-secondary border border-border-control rounded-lg p-2.5 text-text-primary focus:outline-none focus:border-primary-container"
             />
           </div>
 
           <div className="space-y-1">
-            <label className="text-text-secondary font-medium">Administrative Department</label>
+            <label className="text-text-secondary font-medium">Official Email Address</label>
+            <input
+              type="email"
+              required
+              value={inviteEmail}
+              onChange={(e) => setInviteEmail(e.target.value)}
+              placeholder="maya.lin@obsidian.edu"
+              className="w-full bg-surface-secondary border border-border-control rounded-lg p-2.5 text-text-primary focus:outline-none focus:border-primary-container"
+            />
+          </div>
+
+          <div className="space-y-1">
+            <label className="text-text-secondary font-medium">Department / Division</label>
+            <input
+              type="text"
+              value={inviteDept}
+              onChange={(e) => setInviteDept(e.target.value)}
+              placeholder="e.g. Curriculum Operations / Security QA"
+              className="w-full bg-surface-secondary border border-border-control rounded-lg p-2.5 text-text-primary focus:outline-none focus:border-primary-container"
+            />
+          </div>
+
+          <div className="space-y-1">
+            <label className="text-text-secondary font-medium">Role Tier & Security Clearance</label>
             <select
-              value={adminRole}
-              onChange={(e) => setAdminRole(e.target.value)}
+              value={inviteRoleTier}
+              onChange={(e) => setInviteRoleTier(e.target.value as AdminStaff['roleTier'])}
               className="w-full bg-surface-secondary border border-border-control rounded-lg p-2.5 text-text-primary focus:outline-none focus:border-primary-container"
             >
-              <option value="Curriculum Moderator">Curriculum Quality & Moderation</option>
-              <option value="Financial Auditor">Financial Ledger Auditor</option>
-              <option value="Security Operations">Security & IP Telemetry Operations</option>
+              <option value="Curriculum Moderator">Curriculum Moderator (Review & publish courses)</option>
+              <option value="Operations Director">Operations Director (Instructor verification & platform stats)</option>
+              <option value="Financial Settlement">Financial Settlement (Check & Wire clearing)</option>
+              <option value="Security Auditor">Security Auditor (IP Telemetry & audit logs)</option>
             </select>
           </div>
 
-          <div className="p-3 rounded-lg bg-surface-secondary border border-border-subtle text-text-muted text-[11px]">
-            New administrators will be issued a hardware-token registration email with required multi-factor authentication (MFA).
+          <div className="p-3 rounded-lg bg-surface-secondary border border-border-subtle text-text-muted text-[11px] leading-relaxed">
+            Upon creation, an encrypted hardware-token enrollment link and temporary passkey will be securely transmitted to the administrator's official mailbox.
+          </div>
+
+          <div className="flex justify-end gap-3 pt-3 border-t border-border-subtle">
+            <button
+              type="button"
+              onClick={() => setShowInviteModal(false)}
+              className="px-4 py-2 rounded-lg bg-surface-secondary text-text-muted hover:text-text-contrast"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleDispatchInvitation}
+              disabled={!inviteEmail || !inviteName}
+              className="px-4 py-2 rounded-lg bg-primary-container hover:brightness-110 active:scale-95 disabled:opacity-40 text-white text-xs font-semibold shadow-md transition-all flex items-center gap-1.5"
+            >
+              <span className="material-symbols-outlined text-sm">verified_user</span>
+              <span>Provision Administrator</span>
+            </button>
           </div>
         </div>
       </Modal>

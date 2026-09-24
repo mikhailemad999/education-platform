@@ -1,4 +1,18 @@
-import { Course, User, Category, Enrollment, Payment, SubscriptionPlan, UserSubscription, Review, AuditLog } from '../types';
+import {
+  Course,
+  User,
+  Category,
+  Enrollment,
+  Payment,
+  SubscriptionPlan,
+  UserSubscription,
+  Review,
+  AuditLog,
+  CourseQuestion,
+  StudentEnrollmentDetail,
+  AdminStaff,
+  Coupon
+} from '../types';
 
 export const MOCK_USERS: Record<string, User> = {
   student: {
@@ -547,3 +561,384 @@ export const MOCK_AUDIT_LOGS: AuditLog[] = [
     severity: 'high'
   }
 ];
+
+export const MOCK_QUESTIONS: CourseQuestion[] = [
+  {
+    id: 'q-1',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    lectureId: 'lec-1-1',
+    lectureTitle: 'Lec 01 — Modern Distributed System Invariants & Trade-offs',
+    userId: 'user-student-2',
+    userName: 'David Miller',
+    userAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    userTitle: 'Staff Architect @ Apex Fintech',
+    title: 'How does the Transactional Outbox handle high table partition churn?',
+    content: 'When event volume exceeds 10M rows daily, what is the best strategy to prevent performance degradation on the outbox table? Should we rely on pg_partman or Kafka Connect Debezium CDC?',
+    createdAt: '2 days ago',
+    upvotes: 18,
+    hasInstructorReplied: true,
+    status: 'resolved',
+    answers: [
+      {
+        id: 'ans-1',
+        questionId: 'q-1',
+        userId: 'user-instructor-1',
+        userName: 'Dr. Marcus Vance',
+        userAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+        userRole: 'instructor',
+        text: 'In production systems, we strongly advocate for Debezium CDC reading directly from Postgres WAL or MySQL Binlog. This eliminates polling `SELECT ... FOR UPDATE SKIP LOCKED` overhead completely and achieves sub-second delivery latency.',
+        createdAt: '1 day ago',
+        isInstructorAnswer: true
+      },
+      {
+        id: 'ans-2',
+        questionId: 'q-1',
+        userId: 'user-student-1',
+        userName: 'Alex Rivera',
+        userAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+        userRole: 'student',
+        text: 'We also use range partitioning by hour and drop expired partitions after CDC watermark commits. Works smoothly under heavy write spikes!',
+        createdAt: '18 hours ago'
+      }
+    ]
+  },
+  {
+    id: 'q-2',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    lectureId: 'lec-1-2',
+    lectureTitle: 'Lec 02 — NestJS Monorepo Structure & Clean Architecture',
+    userId: 'user-student-3',
+    userName: 'Samantha Wu',
+    userAvatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    userTitle: 'Tech Lead @ HyperMetrics',
+    title: 'NestJS CQRS EventBus vs Kafka consumer loop: when to use which?',
+    content: 'Is it recommended to publish domain events directly to Kafka, or should internal NestJS Command/Query handlers publish to the local EventBus first and let an event subscriber write to outbox?',
+    createdAt: '3 days ago',
+    upvotes: 12,
+    hasInstructorReplied: true,
+    status: 'resolved',
+    answers: [
+      {
+        id: 'ans-3',
+        questionId: 'q-2',
+        userId: 'user-instructor-1',
+        userName: 'Dr. Marcus Vance',
+        userAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+        userRole: 'instructor',
+        text: 'Always write to the local outbox table in the same DB transaction as your domain entity state changes! The local NestJS EventBus is purely in-memory; if the process crashes before Kafka confirms receipt, the event is permanently lost.',
+        createdAt: '2 days ago',
+        isInstructorAnswer: true
+      }
+    ]
+  },
+  {
+    id: 'q-3',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    lectureId: 'lec-2-1',
+    lectureTitle: 'Lec 03 — Deep-Dive: Transactional Outbox Pattern with Debezium',
+    userId: 'user-student-4',
+    userName: 'Lucas Tanaka',
+    userAvatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    userTitle: 'DevOps & SRE Specialist',
+    title: 'Redis Cluster failover and split-brain scenarios',
+    content: 'What happens to active locks in Redis Sentinel or Cluster during automatic failover? Does the replica replicate lock keys with TTL synchronously?',
+    createdAt: '5 days ago',
+    upvotes: 7,
+    hasInstructorReplied: false,
+    status: 'unresolved',
+    answers: [
+      {
+        id: 'ans-4',
+        questionId: 'q-3',
+        userId: 'user-student-1',
+        userName: 'Alex Rivera',
+        userAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+        userRole: 'student',
+        text: 'Redis replication is asynchronous! A master can acknowledge a lock and crash before the replica receives it. That is why Martin Kleppmann warns against assuming absolute mutual exclusion with standard Redis.',
+        createdAt: '4 days ago'
+      }
+    ]
+  },
+  {
+    id: 'q-4',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    lectureId: 'lec-2-2',
+    lectureTitle: 'Lec 04 — OpenTelemetry Distributed Tracing Setup',
+    userId: 'user-student-5',
+    userName: 'Priya Sharma',
+    userAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+    userTitle: 'Senior Backend Engineer @ PayGrid',
+    title: 'Handling trace baggage propagation across Kafka headers safely',
+    content: 'When propagating W3C tracecontext and custom baggage across Kafka message headers, what is the best practice to prevent leaking PII or internal cluster IDs to untrusted external consumers?',
+    createdAt: '1 day ago',
+    upvotes: 9,
+    hasInstructorReplied: false,
+    status: 'unresolved',
+    answers: []
+  },
+  {
+    id: 'q-5',
+    courseId: 'course-2',
+    courseTitle: 'Advanced Linux Kernel Observability & eBPF Telemetry',
+    lectureId: 'lec-2-1-1',
+    lectureTitle: 'Kernel Probe Attach Mechanics',
+    userId: 'user-student-6',
+    userName: 'Jean-Luc Moreau',
+    userAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
+    userTitle: 'Systems Engineer',
+    title: 'eBPF verifier rejection with unbounded loop bounded iteration',
+    content: 'On Linux kernel 5.15, the BPF verifier is rejecting my ring-buffer reader loop because it claims instruction count exceeded 1M limit. Is unrolling mandatory here?',
+    createdAt: '6 hours ago',
+    upvotes: 14,
+    hasInstructorReplied: false,
+    status: 'unresolved',
+    answers: []
+  }
+];
+
+export const MOCK_COUPONS: Coupon[] = [
+  {
+    id: 'coup-1',
+    code: 'ARCHITECT20',
+    description: 'Launch Promotion: 20% discount on all advanced engineering courses and plans.',
+    discountType: 'percentage',
+    discountValue: 20,
+    minPurchaseAmount: 49,
+    maxUses: 500,
+    timesUsed: 142,
+    expiresAt: '2026-12-31',
+    isActive: true,
+    applicableTo: 'all',
+    createdAt: '2025-01-01'
+  },
+  {
+    id: 'coup-2',
+    code: 'OBSIDIAN50',
+    description: 'VIP Founding Fellows 50% Half-Off Voucher for Enterprise Cohort Students.',
+    discountType: 'percentage',
+    discountValue: 50,
+    minPurchaseAmount: 80,
+    maxUses: 100,
+    timesUsed: 68,
+    expiresAt: '2026-11-30',
+    isActive: true,
+    applicableTo: 'courses',
+    createdAt: '2025-01-15'
+  },
+  {
+    id: 'coup-3',
+    code: 'KERNEL10',
+    description: 'Direct $10 instantaneous voucher for Linux Kernel & eBPF Telemetry courses.',
+    discountType: 'fixed',
+    discountValue: 10,
+    minPurchaseAmount: 50,
+    maxUses: 250,
+    timesUsed: 89,
+    expiresAt: '2026-10-15',
+    isActive: true,
+    applicableTo: 'courses',
+    createdAt: '2025-02-01'
+  },
+  {
+    id: 'coup-4',
+    code: 'STAFFDEV',
+    description: 'Exclusive 30% discount voucher for Staff/Principal engineering cohorts.',
+    discountType: 'percentage',
+    discountValue: 30,
+    minPurchaseAmount: 90,
+    maxUses: 50,
+    timesUsed: 12,
+    expiresAt: '2026-08-30',
+    isActive: true,
+    applicableTo: 'all',
+    createdAt: '2025-02-10'
+  },
+  {
+    id: 'coup-5',
+    code: 'EXPIRED2024',
+    description: 'Legacy 2024 Early Access Alpha discount token (Archived campaign).',
+    discountType: 'percentage',
+    discountValue: 25,
+    minPurchaseAmount: 40,
+    maxUses: 100,
+    timesUsed: 100,
+    expiresAt: '2024-12-31',
+    isActive: false,
+    applicableTo: 'all',
+    createdAt: '2024-06-01'
+  }
+];
+
+export const MOCK_STUDENT_ENROLLMENTS: StudentEnrollmentDetail[] = [
+  {
+    id: 'stud-enr-1',
+    studentId: 'user-student-1',
+    studentName: 'Alex Rivera',
+    studentEmail: 'alex.rivera@engineer.io',
+    studentAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    country: 'United States',
+    countryCode: 'US',
+    companyOrOrg: 'Starlight Cloud Systems',
+    seniority: 'Senior Backend',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    enrolledAt: '2025-01-15',
+    progressPercentage: 100,
+    lastLectureWatched: 'Lec 04 — OpenTelemetry Distributed Tracing Setup',
+    quizScore: 100,
+    certificateIssued: true,
+    certificateId: 'OBS-COURSE-1-849201',
+    status: 'completed'
+  },
+  {
+    id: 'stud-enr-2',
+    studentId: 'user-student-2',
+    studentName: 'David Miller',
+    studentEmail: 'david.m@apexfintech.com',
+    studentAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    country: 'United Kingdom',
+    countryCode: 'GB',
+    companyOrOrg: 'Apex Financial Technologies',
+    seniority: 'Staff / Principal',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    enrolledAt: '2025-01-20',
+    progressPercentage: 85,
+    lastLectureWatched: 'Lec 03 — Deep-Dive: Transactional Outbox Pattern with Debezium',
+    quizScore: 100,
+    certificateIssued: false,
+    status: 'active'
+  },
+  {
+    id: 'stud-enr-3',
+    studentId: 'user-student-3',
+    studentName: 'Samantha Wu',
+    studentEmail: 's.wu@hypermetrics.de',
+    studentAvatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    country: 'Germany',
+    countryCode: 'DE',
+    companyOrOrg: 'HyperMetrics Telemetry GmbH',
+    seniority: 'Tech Lead',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    enrolledAt: '2025-02-01',
+    progressPercentage: 72,
+    lastLectureWatched: 'Lec 02 — NestJS Monorepo Structure & Clean Architecture',
+    quizScore: 66,
+    certificateIssued: false,
+    status: 'active'
+  },
+  {
+    id: 'stud-enr-4',
+    studentId: 'user-student-4',
+    studentName: 'Lucas Tanaka',
+    studentEmail: 'lucas.tanaka@tokyocloud.jp',
+    studentAvatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    country: 'Japan',
+    countryCode: 'JP',
+    companyOrOrg: 'Tokyo Cloud Infrastructure',
+    seniority: 'DevOps / SRE',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    enrolledAt: '2025-02-08',
+    progressPercentage: 45,
+    lastLectureWatched: 'Lec 02 — NestJS Monorepo Structure & Clean Architecture',
+    quizScore: 100,
+    certificateIssued: false,
+    status: 'active'
+  },
+  {
+    id: 'stud-enr-5',
+    studentId: 'user-student-5',
+    studentName: 'Priya Sharma',
+    studentEmail: 'priya.sharma@paygrid.in',
+    studentAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+    country: 'India',
+    countryCode: 'IN',
+    companyOrOrg: 'PayGrid Payments Systems',
+    seniority: 'Senior Backend',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    enrolledAt: '2025-02-14',
+    progressPercentage: 92,
+    lastLectureWatched: 'Lec 04 — OpenTelemetry Distributed Tracing Setup',
+    quizScore: 100,
+    certificateIssued: false,
+    status: 'active'
+  },
+  {
+    id: 'stud-enr-6',
+    studentId: 'user-student-6',
+    studentName: 'Jean-Luc Moreau',
+    studentEmail: 'jeanluc@aerodev.fr',
+    studentAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
+    country: 'France',
+    countryCode: 'FR',
+    companyOrOrg: 'AeroData Systems',
+    seniority: 'Mid-Level',
+    courseId: 'course-1',
+    courseTitle: 'Distributed Systems & Microservices with NestJS, Kafka & Redis',
+    enrolledAt: '2025-01-05',
+    progressPercentage: 15,
+    lastLectureWatched: 'Lec 01 — Modern Distributed System Invariants & Trade-offs',
+    quizScore: 0,
+    certificateIssued: false,
+    status: 'at_risk'
+  }
+];
+
+export const MOCK_ADMIN_STAFF: AdminStaff[] = [
+  {
+    id: 'adm-1',
+    name: 'Elena Rostova',
+    email: 'elena.rostova@obsidian.edu',
+    department: 'Curriculum Operations',
+    roleTier: 'Operations Director',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+    mfaEnabled: true,
+    status: 'active',
+    lastActive: '10 mins ago',
+    createdAt: '2024-01-05'
+  },
+  {
+    id: 'adm-2',
+    name: 'Klaus Reinhardt',
+    email: 'klaus.r@obsidian.edu',
+    department: 'Quality Assurance & Accreditation',
+    roleTier: 'Curriculum Moderator',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    mfaEnabled: true,
+    status: 'active',
+    lastActive: '2 hours ago',
+    createdAt: '2024-04-12'
+  },
+  {
+    id: 'adm-3',
+    name: 'Sarah Jenkins',
+    email: 'sarah.j@obsidian.edu',
+    department: 'Financial Settlement & Clearing',
+    roleTier: 'Financial Settlement',
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+    mfaEnabled: true,
+    status: 'active',
+    lastActive: 'Yesterday',
+    createdAt: '2024-06-18'
+  },
+  {
+    id: 'adm-4',
+    name: 'Tariq Al-Mansoor',
+    email: 'tariq.m@obsidian.edu',
+    department: 'Information Security & Compliance',
+    roleTier: 'Security Auditor',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    mfaEnabled: true,
+    status: 'active',
+    lastActive: '4 hours ago',
+    createdAt: '2024-08-01'
+  }
+];
+

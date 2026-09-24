@@ -140,6 +140,21 @@ export interface AuditLogEntity {
   severity: string;
 }
 
+export interface CouponEntity {
+  id: string;
+  code: string;
+  description: string;
+  discount_type: 'percentage' | 'fixed';
+  discount_value: number;
+  min_purchase_amount?: number;
+  max_uses: number;
+  times_used: number;
+  expires_at: string;
+  is_active: boolean;
+  applicable_to?: string;
+  created_at: string;
+}
+
 @Injectable()
 export class DatabaseService implements OnModuleInit {
   public users: UserEntity[] = [];
@@ -151,6 +166,7 @@ export class DatabaseService implements OnModuleInit {
   public userSubscriptions: UserSubscriptionEntity[] = [];
   public reviews: ReviewEntity[] = [];
   public auditLogs: AuditLogEntity[] = [];
+  public coupons: CouponEntity[] = [];
 
   onModuleInit() {
     this.seed();
@@ -398,6 +414,51 @@ export class DatabaseService implements OnModuleInit {
         target: 'Dr. Marcus Vance (marcus.vance@obsidian.edu)',
         ip_address: '10.0.4.82',
         severity: 'low'
+      }
+    ];
+
+    this.coupons = [
+      {
+        id: 'coup-1',
+        code: 'ARCHITECT20',
+        description: 'Launch Promotion: 20% discount on all advanced engineering courses and plans.',
+        discount_type: 'percentage',
+        discount_value: 20,
+        min_purchase_amount: 49,
+        max_uses: 500,
+        times_used: 142,
+        expires_at: '2026-12-31',
+        is_active: true,
+        applicable_to: 'all',
+        created_at: '2025-01-01'
+      },
+      {
+        id: 'coup-2',
+        code: 'OBSIDIAN50',
+        description: 'VIP Founding Fellows 50% Half-Off Voucher for Enterprise Cohort Students.',
+        discount_type: 'percentage',
+        discount_value: 50,
+        min_purchase_amount: 80,
+        max_uses: 100,
+        times_used: 68,
+        expires_at: '2026-11-30',
+        is_active: true,
+        applicable_to: 'courses',
+        created_at: '2025-01-15'
+      },
+      {
+        id: 'coup-3',
+        code: 'KERNEL10',
+        description: 'Direct $10 instantaneous voucher for Linux Kernel & eBPF Telemetry courses.',
+        discount_type: 'fixed',
+        discount_value: 10,
+        min_purchase_amount: 50,
+        max_uses: 250,
+        times_used: 89,
+        expires_at: '2026-10-15',
+        is_active: true,
+        applicable_to: 'courses',
+        created_at: '2025-02-01'
       }
     ];
   }

@@ -140,4 +140,35 @@ export class CoursesService {
       reviewCount: course.review_count,
     };
   }
+
+  async getCategories() {
+    return this.db.categories;
+  }
+
+  async createCategory(data: { name: string; slug: string; icon: string }) {
+    const newCategory = {
+      id: `cat-${Date.now()}`,
+      name: data.name,
+      slug: data.slug,
+      icon: data.icon,
+      courseCount: 0,
+    };
+    this.db.categories.push(newCategory);
+    return newCategory;
+  }
+
+  async updateCategory(id: string, updates: Partial<{ name: string; slug: string; icon: string }>) {
+    const cat = this.db.categories.find((c) => c.id === id);
+    if (!cat) {
+      throw new NotFoundException(`Category ${id} not found`);
+    }
+    Object.assign(cat, updates);
+    return cat;
+  }
+
+  async deleteCategory(id: string) {
+    this.db.categories = this.db.categories.filter((c) => c.id !== id);
+    return { success: true, message: `Category ${id} deleted` };
+  }
 }
+

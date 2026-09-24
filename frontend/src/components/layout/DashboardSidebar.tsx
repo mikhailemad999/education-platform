@@ -35,7 +35,9 @@ export const DashboardSidebar: React.FC<DashboardSidebarProps> = ({ isOpen, onCl
           items: [
             { label: 'Studio Overview', path: '/instructor/dashboard', icon: 'dashboard' },
             { label: 'Curriculum Builder', path: '/instructor/courses/new', icon: 'edit_note' },
+            { label: 'Students & Demographics', path: '/instructor/students', icon: 'school', badge: '12.8k' },
             { label: 'Learner Metrics', path: '/instructor/analytics', icon: 'monitoring' },
+            { label: 'Q&A Discussions', path: '/instructor/qa', icon: 'forum', badge: '3' },
             { label: 'Reviews & Feedback', path: '/instructor/reviews', icon: 'rate_review', badge: '12' }
           ]
         }
@@ -48,6 +50,8 @@ export const DashboardSidebar: React.FC<DashboardSidebarProps> = ({ isOpen, onCl
           section: 'OPERATIONS & GOVERNANCE',
           items: [
             { label: 'Operations Hub', path: '/admin', icon: 'admin_panel_settings' },
+            { label: 'Category Taxonomies', path: '/admin/categories', icon: 'category', badge: '6' },
+            { label: 'Promotions & Coupons', path: '/admin/coupons', icon: 'local_offer', badge: '5' },
             { label: 'User Directory', path: '/admin/users', icon: 'group' },
             { label: 'Instructor Approvals', path: '/admin/instructors', icon: 'verified_user', badge: '3' },
             { label: 'Course Moderation', path: '/admin/courses', icon: 'layers', badge: '1' }
@@ -63,6 +67,7 @@ export const DashboardSidebar: React.FC<DashboardSidebarProps> = ({ isOpen, onCl
           items: [
             { label: 'Governance Core', path: '/superadmin', icon: 'shield_with_house' },
             { label: 'Financial Ledger & Refunds', path: '/superadmin/payments', icon: 'receipt_long' },
+            { label: 'Promotions & Coupons', path: '/admin/coupons', icon: 'local_offer' },
             { label: 'Platform Settings', path: '/superadmin/settings', icon: 'tune' },
             { label: 'Security & Audit Logs', path: '/superadmin/audit-logs', icon: 'policy', badge: 'LIVE' }
           ]

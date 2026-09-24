@@ -61,4 +61,31 @@ export class CoursesController {
   async getCourseStats(@Param('id') id: string) {
     return this.coursesService.getCourseStats(id);
   }
+
+  @Get('categories')
+  async getCategories() {
+    return this.coursesService.getCategories();
+  }
+
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin', 'superadmin')
+  @Post('admin/categories')
+  async createCategory(@Body() body: { name: string; slug: string; icon: string }) {
+    return this.coursesService.createCategory(body);
+  }
+
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin', 'superadmin')
+  @Put('admin/categories/:id')
+  async updateCategory(@Param('id') id: string, @Body() updates: any) {
+    return this.coursesService.updateCategory(id, updates);
+  }
+
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('admin', 'superadmin')
+  @Delete('admin/categories/:id')
+  async deleteCategory(@Param('id') id: string) {
+    return this.coursesService.deleteCategory(id);
+  }
 }
+

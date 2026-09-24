@@ -10,9 +10,12 @@ export const CheckoutPage: React.FC = () => {
   const item = useCartStore((state) => state.item);
   const couponCode = useCartStore((state) => state.couponCode);
   const discountPercentage = useCartStore((state) => state.discountPercentage);
+  const discountAmount = useCartStore((state) => state.discountAmount);
+  const appliedCoupon = useCartStore((state) => state.appliedCoupon);
   const paymentMethod = useCartStore((state) => state.paymentMethod);
   const setPaymentMethod = useCartStore((state) => state.setPaymentMethod);
   const applyCoupon = useCartStore((state) => state.applyCoupon);
+  const removeCoupon = useCartStore((state) => state.removeCoupon);
   const processPayment = useCartStore((state) => state.processPayment);
   const enrollInCourse = useLearningStore((state) => state.enrollInCourse);
 
@@ -46,7 +49,9 @@ export const CheckoutPage: React.FC = () => {
   const [completedOrder, setCompletedOrder] = useState<any>(null);
 
   const basePrice = item?.price || 89.99;
-  const discount = (basePrice * discountPercentage) / 100;
+  const discount = discountAmount > 0
+    ? discountAmount
+    : (basePrice * discountPercentage) / 100;
   const total = Math.max(0, Number((basePrice - discount).toFixed(2)));
 
   // Detect card brand
@@ -60,9 +65,9 @@ export const CheckoutPage: React.FC = () => {
 
   const handleApplyCoupon = (e: React.FormEvent) => {
     e.preventDefault();
-    const success = applyCoupon(inputCoupon);
-    if (!success) {
-      setCouponError('Invalid coupon. Try "ARCHITECT20" for 20% off.');
+    const result = applyCoupon(inputCoupon);
+    if (!result.success) {
+      setCouponError(result.message);
     } else {
       setCouponError('');
     }
@@ -545,27 +550,47 @@ export const CheckoutPage: React.FC = () => {
 
             {/* Coupon Code Section */}
             <div>
-              <form onSubmit={handleApplyCoupon} className="flex gap-2">
-                <input
-                  type="text"
-                  value={inputCoupon}
-                  onChange={(e) => setInputCoupon(e.target.value)}
-                  placeholder="Promo code (e.g. ARCHITECT20)"
-                  className="w-full bg-surface-secondary border border-border-control rounded-lg px-3 py-2 text-xs text-text-primary font-mono focus:outline-none focus:border-primary-container uppercase"
-                />
-                <button
-                  type="submit"
-                  className="px-4 rounded-lg bg-surface-interactive hover:bg-surface-elevated text-text-primary text-xs font-semibold border border-border-control shrink-0"
-                >
-                  Apply
-                </button>
-              </form>
-              {couponError && <p className="text-[11px] text-status-danger mt-1.5">{couponError}</p>}
-              {discountPercentage > 0 && (
-                <p className="text-[11px] text-status-success mt-1.5 font-mono">
-                  ✓ {couponCode} applied: {discountPercentage}% OFF saved!
-                </p>
+              {!couponCode ? (
+                <form onSubmit={handleApplyCoupon} className="flex gap-2">
+                  <input
+                    type="text"
+                    value={inputCoupon}
+                    onChange={(e) => setInputCoupon(e.target.value)}
+                    placeholder="Promo code (e.g. ARCHITECT20, OBSIDIAN50)"
+                    className="w-full bg-surface-secondary border border-border-control rounded-lg px-3 py-2 text-xs text-text-primary font-mono focus:outline-none focus:border-primary-container uppercase"
+                  />
+                  <button
+                    type="submit"
+                    className="px-4 rounded-lg bg-surface-interactive hover:bg-surface-elevated text-text-primary text-xs font-semibold border border-border-control shrink-0"
+                  >
+                    Apply
+                  </button>
+                </form>
+              ) : (
+                <div className="flex items-center justify-between p-2.5 rounded-xl bg-status-success/10 border border-status-success/30 text-xs text-status-success font-mono">
+                  <div className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-base">local_offer</span>
+                    <div>
+                      <span className="font-bold">{couponCode}</span>
+                      <span className="text-[11px] text-text-muted ml-1.5">
+                        (-${discount.toFixed(2)} savings)
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      removeCoupon();
+                      setInputCoupon('');
+                    }}
+                    title="Remove coupon"
+                    className="p-1 rounded hover:bg-status-danger/20 text-text-muted hover:text-status-danger transition-colors flex items-center justify-center"
+                  >
+                    <span className="material-symbols-outlined text-sm">close</span>
+                  </button>
+                </div>
               )}
+              {couponError && <p className="text-[11px] text-status-danger mt-1.5">{couponError}</p>}
             </div>
 
             {/* Price Calculations */}

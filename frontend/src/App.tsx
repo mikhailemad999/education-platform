@@ -10,6 +10,7 @@ import { HomePage } from './pages/public/HomePage';
 import { SearchPage } from './pages/public/SearchPage';
 import { CourseDetailPage } from './pages/public/CourseDetailPage';
 import { PricingPage } from './pages/public/PricingPage';
+import { CertificateVerificationPage } from './pages/public/CertificateVerificationPage';
 import { AuthGatewayPage } from './pages/auth/AuthGatewayPage';
 import { StaffLoginPage } from './pages/auth/StaffLoginPage';
 import { AccessDeniedPage } from './pages/auth/AccessDeniedPage';
@@ -24,11 +25,15 @@ import { InstructorDashboardPage } from './pages/instructor/InstructorDashboardP
 import { CourseBuilderPage } from './pages/instructor/CourseBuilderPage';
 import { InstructorAnalyticsPage } from './pages/instructor/InstructorAnalyticsPage';
 import { InstructorReviewsPage } from './pages/instructor/InstructorReviewsPage';
+import { InstructorStudentsPage } from './pages/instructor/InstructorStudentsPage';
+import { InstructorQAPage } from './pages/instructor/InstructorQAPage';
 
 import { AdminConsolePage } from './pages/admin/AdminConsolePage';
 import { AdminUsersPage } from './pages/admin/AdminUsersPage';
 import { AdminInstructorsPage } from './pages/admin/AdminInstructorsPage';
 import { AdminCoursesPage } from './pages/admin/AdminCoursesPage';
+import { AdminCategoriesPage } from './pages/admin/AdminCategoriesPage';
+import { AdminCouponsPage } from './pages/admin/AdminCouponsPage';
 
 import { SuperAdminConsolePage } from './pages/superadmin/SuperAdminConsolePage';
 import { SuperAdminSettingsPage } from './pages/superadmin/SuperAdminSettingsPage';
@@ -103,6 +108,8 @@ export function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/courses/:id" element={<CourseDetailPage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/verify-certificate" element={<CertificateVerificationPage />} />
+          <Route path="/verify-certificate/:code" element={<CertificateVerificationPage />} />
 
           {/* Authentication & Gateway Routes */}
           <Route path="/auth/login" element={<AuthGatewayPage />} />
@@ -203,13 +210,45 @@ export function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/instructor/students"
+            element={
+              <ProtectedRoute allowedRoles={['instructor', 'admin', 'superadmin']}>
+                <InstructorStudentsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/instructor/qa"
+            element={
+              <ProtectedRoute allowedRoles={['instructor', 'admin', 'superadmin']}>
+                <InstructorQAPage />
+              </ProtectedRoute>
+            }
+          />
 
           {/* Admin Operations Hub (Protected: Admin only) */}
           <Route
             path="/admin"
             element={
-              <ProtectedRoute allowedRoles={['admin']}>
+              <ProtectedRoute allowedRoles={['admin', 'superadmin']}>
                 <AdminConsolePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/categories"
+            element={
+              <ProtectedRoute allowedRoles={['admin', 'superadmin']}>
+                <AdminCategoriesPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/coupons"
+            element={
+              <ProtectedRoute allowedRoles={['admin', 'superadmin']}>
+                <AdminCouponsPage />
               </ProtectedRoute>
             }
           />

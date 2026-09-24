@@ -114,16 +114,20 @@ export const CertificatePage: React.FC = () => {
             <div className="text-[11px] text-text-muted">Lead Instructor & Principal Architect</div>
           </div>
 
-          {/* QR Verification Placeholder */}
-          <div className="flex items-center gap-3 bg-surface-secondary px-3.5 py-2.5 rounded-xl border border-border-control">
-            <div className="w-10 h-10 bg-white p-1 rounded flex items-center justify-center">
+          {/* QR Verification Live Link */}
+          <Link
+            to={`/verify-certificate/${credentialId}`}
+            className="flex items-center gap-3 bg-surface-secondary hover:bg-surface-interactive px-3.5 py-2.5 rounded-xl border border-border-control transition-all group shadow-sm"
+            title="Inspect Cryptographic Verification Record"
+          >
+            <div className="w-10 h-10 bg-white p-1 rounded flex items-center justify-center group-hover:scale-105 transition-transform">
               <span className="material-symbols-outlined text-black text-2xl">qr_code_2</span>
             </div>
             <div className="text-left text-[10px] font-mono text-text-muted">
-              <div>SCAN TO VERIFY</div>
-              <div className="text-text-secondary">obsidian.edu/verify</div>
+              <div className="font-bold text-primary group-hover:underline">VERIFY CREDENTIAL ↗</div>
+              <div className="text-text-secondary">{credentialId}</div>
             </div>
-          </div>
+          </Link>
 
           {/* Academic Director Signature */}
           <div className="text-right space-y-1">
